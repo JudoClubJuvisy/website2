@@ -1,0 +1,47 @@
+header {
+  background-color: #343a40;
+  padding: 5px;
+}
+
+.navbar {
+  padding: 5px;
+}
+
+.logo-club {
+  height: 100px;
+  margin-right: 10px;
+}
+
+body {
+  font-family: "Noto Sans", "Roboto", sans-serif;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.col {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .text-md-end {
+    text-align: center !important;
+  }
+  .d-inline-block,
+  .text-end {
+    display: block !important;
+    text-align: center !important;
+  }
+}
+footer {
+  background-color: #343a40;
+}
+
+/*# sourceMappingURL=styles.css.map */

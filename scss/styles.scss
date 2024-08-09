@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'mixins';
+
+header {
+    background-color: $primary-color;
+    padding: 5px;
+}
+
+.navbar {
+    padding: 5px;
+}
+
+.logo-club {
+    height: 100px;
+    margin-right: 10px;
+}
+
+body {
+    font-family: $font-stack;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+.col {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .text-md-end {
+    text-align: center !important;
+  }
+  .d-inline-block,
+  .text-end {
+    display: block !important;
+    text-align: center !important;
+  }
+}
+
+footer {
+    background-color: $primary-color;
+}
