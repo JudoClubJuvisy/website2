@@ -7,6 +7,8 @@
     <link rel="icon" href="assets/images/favicon-192x192.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ajout de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <meta name="description" content="Le site officiel du Judo Club de Juvisy, proposant des cours de judo pour tous les âges et tous les niveaux.">
 </head>
@@ -124,8 +126,66 @@
     </main>
     
     <footer class="bg-dark text-white p-3 text-center">
-        &copy; Judo Club de Juvisy 1958-<span id="current-year"></span>
-    </footer>
+    <div class="container">
+        <!-- Liens pour le mode Desktop avec les réseaux sociaux à la fin -->
+        <div class="d-none d-md-block">
+            <div class="row justify-content-center mb-3">
+                <div class="col-auto">
+                    <a href="mentions-legales.html" class="footer-link text-white">Mentions Légales</a>
+                    <span class="mx-2">|</span>
+                    <a href="reglement-interieur.html" class="footer-link text-white">Règlement Intérieur</a>
+                    <span class="mx-2">|</span>
+                    <a href="statuts.html" class="footer-link text-white">Statuts</a>
+                    <span class="mx-2">|</span>
+                    <a href="plan-du-site.html" class="footer-link text-white">Plan du site</a>
+                    <span class="mx-2">|</span>
+                    <a href="https://www.facebook.com" target="_blank" class="social-link text-white me-3" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-link text-white me-3" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.whatsapp.com" target="_blank" class="social-link text-white" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Liens pour le mode Mobile -->
+        <div class="d-block d-md-none">
+            <div class="row justify-content-center mb-3">
+                <div class="col-auto">
+                    <a href="https://www.facebook.com" target="_blank" class="social-link text-white me-3" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-link text-white me-3" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.whatsapp.com" target="_blank" class="social-link text-white" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row text-center mb-3">
+                <div class="col-12">
+                    <a href="mentions-legales.html" class="footer-link text-white d-block mb-2">Mentions Légales</a>
+                    <a href="reglement-interieur.html" class="footer-link text-white d-block mb-2">Règlement Intérieur</a>
+                    <a href="statuts.html" class="footer-link text-white d-block mb-2">Statuts</a>
+                    <a href="plan-du-site.html" class="footer-link text-white d-block">Plan du site</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Texte de Copyright mutualisé -->
+        <div class="row">
+            <div class="col">
+                &copy; Judo Club de Juvisy 1958-<span id="current-year"></span>
+            </div>
+        </div>
+    </div>
+	</footer>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>

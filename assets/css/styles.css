@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   background-color: #343a40;
   padding: 5px;
@@ -42,6 +43,24 @@ body {
 }
 footer {
   background-color: #343a40;
+}
+
+/* Styles spécifiques pour les liens du footer */
+.footer-link {
+  text-decoration: none;
+  color: inherit; /* Conserve la couleur du texte */
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Styles spécifiques pour les liens des réseaux sociaux */
+.social-link {
+  text-decoration: none;
+  color: inherit; /* Conserve la couleur du texte */
+}
+.social-link:hover {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
