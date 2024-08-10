@@ -1,5 +1,6 @@
-@import 'variables';
-@import 'mixins';
+// Importer les variables et les mixins
+@import "_variables";
+@import "_mixins";
 
 header {
     background-color: $primary-color;
@@ -13,6 +14,11 @@ header {
 .logo-club {
     height: 100px;
     margin-right: 10px;
+}
+
+/* Menu Navbar Active State */
+.navbar-nav .nav-link.active {
+    color: $mainColor !important;
 }
 
 body {

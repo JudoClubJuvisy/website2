@@ -1,0 +1,33 @@
+# Fichiers générés par Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+*.swp
+*~
+
+# Bundler
+Gemfile.lock
+vendor/
+
+# Node modules
+node_modules/
+
+# Cache Yarn
+.yarn/
+.yarnrc.yml
+
+# Cache npm
+package-lock.json
+
+# Configurations IDE (ex: VSCode)
+.vscode/
+.idea/
+
+# Systèmes d'exploitation
+.DS_Store
+Thumbs.db

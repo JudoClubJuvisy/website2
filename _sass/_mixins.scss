@@ -1,0 +1,12 @@
+@mixin responsive-text($size-mobile, $size-desktop) {
+    font-size: $size-mobile;
+    @media (min-width: 768px) {
+        font-size: $size-desktop;
+    }
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
