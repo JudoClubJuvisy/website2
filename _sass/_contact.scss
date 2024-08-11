@@ -1,0 +1,20 @@
+@import "_variables";
+
+/* Styles spécifiques à la page de contact */
+.contact-icon {
+    font-size: 24px;
+    color: $secondaryColor;
+}
+
+.qr-code {
+    max-width: 600px; /* Largeur maximale sur desktop */
+    width: 100%; /* Prend toute la largeur sur mobile */
+    height: auto; /* Conserve le ratio d'aspect */
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .qr-code {
+        width: 100% !important;
+    }
+}

@@ -40,6 +40,34 @@
   border-top: 2px solid #212121;
 }
 
+/* Couleurs */
+/* blanc cassé pour le fond du site */
+/* noir moins dur pour la couleur de la font */
+/* entrées du menu inactive */
+/* gris clair pour les en-têtes de tableau */
+/* Couleurs du club */
+/* Rouge */
+/* Rouge foncé */
+/* Bleu */
+/* Bleu plus clair */
+/* Styles spécifiques à la page de contact */
+.contact-icon {
+  font-size: 24px;
+  color: #002654;
+}
+
+.qr-code {
+  max-width: 600px; /* Largeur maximale sur desktop */
+  width: 100%; /* Prend toute la largeur sur mobile */
+  height: auto; /* Conserve le ratio d'aspect */
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .qr-code {
+    width: 100% !important;
+  }
+}
 header {
   background-color: #343a40;
   padding: 5px;
