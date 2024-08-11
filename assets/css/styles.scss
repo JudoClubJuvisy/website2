@@ -1,67 +1,52 @@
-// Importer les variables et les mixins
+// Importer les variables et mixins en premier
 @import "_variables";
 @import "_mixins";
+
+// Styles personnalisés pour la navbar
+.navbar-nav .nav-link {
+    color: $lightGrayColor; /* Couleur des entrées de menu inactives */
+}
+
+.navbar-nav .nav-link:hover {
+    color: $whiteColor !important; /* Couleur des entrées de menu au survol */
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.show .nav-link {
+    color: $lightMainColor !important; /* Couleur du lien actif */
+    font-weight: 700 !important; /* Texte en gras pour le lien actif */
+}
+
+// Surcharge des variables CSS de Bootstrap
+:root {
+  --bs-navbar-color: $lightGrayColor;
+  --bs-navbar-hover-color: $whiteColor;
+  --bs-navbar-active-color: $lightMainColor;
+}
+
+// Importer les autres styles après
 @import "_tables";
 @import "_contact";
 
-header {
-    background-color: $primary-color;
-    padding: 5px;
-}
-
-.navbar {
-    padding: 5px;
-}
-
-// Variables CSS personnalisées pour la navbar
-.navbar {
-  --bs-navbar-color: $mainColor;
-  --bs-navbar-hover-color: $mainColor;
-  --bs-navbar-active-color: $mainColor;
-}
-
-.navbar-nav {
-  --bs-nav-link-hover-color: $mainColor;
-  --bs-nav-link-active-color: $mainColor;
-}
-
+/* Logo Club */
 .logo-club {
     height: 100px;
     margin-right: 10px;
 }
 
-/* Menu Navbar Active State */
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-item.show .nav-link {
-    color: $mainColor !important;
-}
-
-$navbar-light-active-color: $mainColor;
-
-body {
-    font-family: $font-stack;
-}
-
-/* Pour l'accessibilité numérique */
+/* Accessibilité numérique */
 a:focus, button:focus {
-    outline: 2px solid #b40000; /* Rouge du club */
+    outline: 2px solid $mainColor; /* Rouge du club */
     outline-offset: 2px;
 }
 
-.container-fluid {
-  padding: 0;
-  margin: 0;
+/* Container and Row without padding */
+.container-fluid, .row, .col {
+    padding: 0;
+    margin: 0;
 }
 
-.row {
-  margin: 0;
-}
-
-.col {
-  padding: 0;
-  margin: 0;
-}
-
+/* Align text for mobile */
 @media (max-width: 767.98px) {
   .text-md-end {
     text-align: center !important;
@@ -73,6 +58,7 @@ a:focus, button:focus {
   }
 }
 
+/* Footer Styles */
 footer {
     background-color: $primary-color;
 }

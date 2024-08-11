@@ -1,19 +1,39 @@
 @charset "UTF-8";
 /* Couleurs */
-/* blanc cassé pour le fond du site */
+/* #fbfbfb;  blanc cassé pour le fond du site */
 /* noir moins dur pour la couleur de la font */
 /* entrées du menu inactive */
-/* gris clair pour les en-têtes de tableau */
+/* #f2f2f2; gris clair pour les en-têtes de tableau */
 /* Couleurs du club */
 /* Rouge */
 /* Rouge foncé */
 /* Bleu */
 /* Bleu plus clair */
+.navbar-nav .nav-link {
+  color: #77B5FE; /* Couleur des entrées de menu inactives */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFFF00 !important; /* Couleur des entrées de menu au survol */
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.show .nav-link {
+  color: #d20000 !important; /* Couleur du lien actif */
+  font-weight: 700 !important; /* Texte en gras pour le lien actif */
+}
+
+:root {
+  --bs-navbar-color: $lightGrayColor;
+  --bs-navbar-hover-color: $whiteColor;
+  --bs-navbar-active-color: $lightMainColor;
+}
+
 /* Couleurs */
-/* blanc cassé pour le fond du site */
+/* #fbfbfb;  blanc cassé pour le fond du site */
 /* noir moins dur pour la couleur de la font */
 /* entrées du menu inactive */
-/* gris clair pour les en-têtes de tableau */
+/* #f2f2f2; gris clair pour les en-têtes de tableau */
 /* Couleurs du club */
 /* Rouge */
 /* Rouge foncé */
@@ -24,15 +44,15 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1rem;
-  background-color: #fbfbfb;
+  background-color: #FFFF00;
 }
 .table th, .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid #77B5FE;
 }
 .table th {
-  background-color: #f2f2f2;
+  background-color: #77B5FE;
   font-weight: bold;
   text-align: left;
 }
@@ -41,10 +61,10 @@
 }
 
 /* Couleurs */
-/* blanc cassé pour le fond du site */
+/* #fbfbfb;  blanc cassé pour le fond du site */
 /* noir moins dur pour la couleur de la font */
 /* entrées du menu inactive */
-/* gris clair pour les en-têtes de tableau */
+/* #f2f2f2; gris clair pour les en-têtes de tableau */
 /* Couleurs du club */
 /* Rouge */
 /* Rouge foncé */
@@ -68,61 +88,25 @@
     width: 100% !important;
   }
 }
-header {
-  background-color: #343a40;
-  padding: 5px;
-}
-
-.navbar {
-  padding: 5px;
-}
-
-.navbar {
-  --bs-navbar-color: $mainColor;
-  --bs-navbar-hover-color: $mainColor;
-  --bs-navbar-active-color: $mainColor;
-}
-
-.navbar-nav {
-  --bs-nav-link-hover-color: $mainColor;
-  --bs-nav-link-active-color: $mainColor;
-}
-
+/* Logo Club */
 .logo-club {
   height: 100px;
   margin-right: 10px;
 }
 
-/* Menu Navbar Active State */
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-item.show .nav-link {
-  color: #b40000 !important;
-}
-
-body {
-  font-family: "Noto Sans", "Roboto", sans-serif;
-}
-
-/* Pour l'accessibilité numérique */
+/* Accessibilité numérique */
 a:focus, button:focus {
   outline: 2px solid #b40000; /* Rouge du club */
   outline-offset: 2px;
 }
 
-.container-fluid {
+/* Container and Row without padding */
+.container-fluid, .row, .col {
   padding: 0;
   margin: 0;
 }
 
-.row {
-  margin: 0;
-}
-
-.col {
-  padding: 0;
-  margin: 0;
-}
-
+/* Align text for mobile */
 @media (max-width: 767.98px) {
   .text-md-end {
     text-align: center !important;
@@ -133,6 +117,7 @@ a:focus, button:focus {
     text-align: center !important;
   }
 }
+/* Footer Styles */
 footer {
   background-color: #343a40;
 }
