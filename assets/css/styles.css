@@ -9,6 +9,37 @@
 /* Rouge foncé */
 /* Bleu */
 /* Bleu plus clair */
+/* Couleurs */
+/* blanc cassé pour le fond du site */
+/* noir moins dur pour la couleur de la font */
+/* entrées du menu inactive */
+/* gris clair pour les en-têtes de tableau */
+/* Couleurs du club */
+/* Rouge */
+/* Rouge foncé */
+/* Bleu */
+/* Bleu plus clair */
+/* Styles pour les tableaux */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background-color: #fbfbfb;
+}
+.table th, .table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #f2f2f2;
+}
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+.table tbody + tbody {
+  border-top: 2px solid #212121;
+}
+
 header {
   background-color: #343a40;
   padding: 5px;
@@ -18,18 +49,36 @@ header {
   padding: 5px;
 }
 
+.navbar {
+  --bs-navbar-color: $mainColor;
+  --bs-navbar-hover-color: $mainColor;
+  --bs-navbar-active-color: $mainColor;
+}
+
+.navbar-nav {
+  --bs-nav-link-hover-color: $mainColor;
+  --bs-nav-link-active-color: $mainColor;
+}
+
 .logo-club {
   height: 100px;
   margin-right: 10px;
 }
 
 /* Menu Navbar Active State */
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.show .nav-link {
   color: #b40000 !important;
 }
 
 body {
   font-family: "Noto Sans", "Roboto", sans-serif;
+}
+
+/* Pour l'accessibilité numérique */
+a:focus, button:focus {
+  outline: 2px solid #b40000; /* Rouge du club */
+  outline-offset: 2px;
 }
 
 .container-fluid {

@@ -1,6 +1,7 @@
 // Importer les variables et les mixins
 @import "_variables";
 @import "_mixins";
+@import "_tables";
 
 header {
     background-color: $primary-color;
@@ -11,18 +12,39 @@ header {
     padding: 5px;
 }
 
+// Variables CSS personnalisées pour la navbar
+.navbar {
+  --bs-navbar-color: $mainColor;
+  --bs-navbar-hover-color: $mainColor;
+  --bs-navbar-active-color: $mainColor;
+}
+
+.navbar-nav {
+  --bs-nav-link-hover-color: $mainColor;
+  --bs-nav-link-active-color: $mainColor;
+}
+
 .logo-club {
     height: 100px;
     margin-right: 10px;
 }
 
 /* Menu Navbar Active State */
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.show .nav-link {
     color: $mainColor !important;
 }
 
+$navbar-light-active-color: $mainColor;
+
 body {
     font-family: $font-stack;
+}
+
+/* Pour l'accessibilité numérique */
+a:focus, button:focus {
+    outline: 2px solid #b40000; /* Rouge du club */
+    outline-offset: 2px;
 }
 
 .container-fluid {

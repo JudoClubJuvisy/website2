@@ -1,59 +1,82 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entraînements - Judo Club de Juvisy</title>
-    <link rel="icon" href="assets/images/favicon-192x192.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-    <header class="bg-dark text-white">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/images/logo.png" alt="Logo Judo Club de Juvisy" class="logo-club">
-                    Judo Club de Juvisy
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="inscription.html">Inscription</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="entrainements.html">Entraînements</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+---
+layout: default
+title: Entraînements
+---
+
+<div class="container my-5">
+    <section aria-labelledby="trainings">
+        <h2 id="trainings">Les entraînements</h2>
+        <p>Les entraînements ont lieu au <strong>gymnase Delaune, 38 rue Paul Doumer, à Juvisy</strong>.</p>
+        <div style="text-align:center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2633.650294157062!2d2.3655987777120586!3d48.69305037131024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5df58efde16a9%3A0x6e354691ea4c9325!2s38%20Rue%20Paul%20Doumer%2C%2091260%20Juvisy-sur-Orge!5e0!3m2!1sen!2sfr!4v1720263131535!5m2!1sen!2sfr" 
+                    style="width:100%; height:450px; border:0;" allowfullscreen="" loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade" aria-label="Map of Gymnase Delaune, Juvisy-sur-Orge"></iframe>
         </div>
-    </header>
-    <main class="container my-5">
-        <h1>Entraînements</h1>
+
+        <h3 id="stations">Stations de bus à proximité :</h3>
         <ul>
-            <li>Lundi: 18h - 20h</li>
-            <li>Mardi: 18h - 20h</li>
-            <li>Mercredi: 18h - 20h</li>
-            <li>Jeudi: 18h - 20h</li>
-            <li>Vendredi: 18h - 20h</li>
-            <li>Samedi: 10h - 12h</li>
+            <li>Ecole Jean Jaurès (Bus 486)</li>
+            <li>Mairie de Juvisy (Bus 285 et 486)</li>
         </ul>
-    </main>
-    <footer class="bg-dark text-white p-3 text-center">
-        &copy; 1958-<span id="current-year"></span> Judo Club de Juvisy
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-</body>
-</html>
+
+        <h3 id="schedule">Horaires :</h3>
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Cours</th>
+                        <th>Horaires</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Baby (à partir de 3 ans / 2020 + 2021)</td>
+                        <td>Un cours par semaine soit les lundis soit les samedis.<br>Lundi : 17h30 à 18h30<br>Samedi : 13h00 à 14h00</td>
+                    </tr>
+                    <tr>
+                        <td>Éveil (2019 + 2020)</td>
+                        <td>Mercredi : 14h30 à 15h30<br>Samedi : 14h00 à 15h00</td>
+                    </tr>
+                    <tr>
+                        <td>Mini-poussin (2017 + 2018)</td>
+                        <td>Mercredi : 15h30 à 16h30<br>Samedi : 15h00 à 16h00</td>
+                    </tr>
+                    <tr>
+                        <td>Poussin (2015 + 2016)</td>
+                        <td>Mercredi : 16h30 à 17h30<br>Samedi : 16h00 à 17h00</td>
+                    </tr>
+                    <tr>
+                        <td>Benjamin (2013 + 2014)</td>
+                        <td>Mercredi : 17h30 à 18h30<br>Samedi : 17h00 à 18h00</td>
+                    </tr>
+                    <tr>
+                        <td>Minime (2011 + 2012)</td>
+                        <td>Mercredi : 18h30 à 20h00<br>Samedi : 18h00 à 19h30</td>
+                    </tr>
+                    <tr>
+                        <td>Adulte (à partir des cadets : 2010, 2009…)</td>
+                        <td>Ju-Jitsu, les lundis de 20h00 à 21h30<br>Judo, les mercredis et vendredis de 20h00 à 21h30<br>Taïso, les jeudis de 20h00 à 21h30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 id="benefits">Les bienfaits des disciplines :</h3>
+        <p>
+            Nous sommes ravis de vous inviter à enrichir votre pratique martiale en participant aux cours de Judo et de Ju-Jitsu. Le Judo et le Ju-Jitsu sont des disciplines complémentaires offrant de nombreux bienfaits physiques et mentaux.
+        </p>
+        <p>
+            Le Judo sollicite intensément les muscles et le système cardiovasculaire, améliorant force, endurance et flexibilité. Le Ju-Jitsu, quant à lui, met l’accent sur la coordination et l’agilité, renforçant la maîtrise de soi et la précision des mouvements.
+        </p>
+        <p>
+            Le Ju-Jitsu se concentre également sur les techniques d’autodéfense, complétant parfaitement les techniques de projection et de contrôle du Judo.
+        </p>
+        <p>
+            Nous avons espacé les cours pour vous permettre de pratiquer les deux disciplines dans les meilleures conditions possibles.
+        </p>
+        <p>
+            Par ailleurs, nous sommes ravis de continuer à vous proposer le Taïso, qui développera votre condition physique générale, tonus musculaire, flexibilité et équilibre, tout en étant adapté à tous les niveaux de forme physique.
+        </p>
+    </section>
+</div>

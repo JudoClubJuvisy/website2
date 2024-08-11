@@ -1,0 +1,25 @@
+@import "_variables";
+
+/* Styles pour les tableaux */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    background-color: $whiteColor;
+
+    th, td {
+        padding: 0.75rem;
+        vertical-align: top;
+        border-top: 1px solid $lightGrayColor;
+    }
+
+    th {
+        background-color: $lightGrayColor;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    tbody + tbody {
+        border-top: 2px solid $blackColor;
+    }
+}
