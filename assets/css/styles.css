@@ -100,6 +100,131 @@ a:focus, button:focus {
   outline-offset: 2px;
 }
 
+/* Importer les polices */
+body {
+  font-family: "Noto Sans", "Roboto", sans-serif;
+  font-size: 16px; /* Taille de base pour le texte */
+  line-height: 1.6; /* Ligne pour une lisibilité optimale */
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Noto Sans", "Roboto", sans-serif;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem; /* Taille de police de base pour h1 */
+}
+
+h2 {
+  font-size: 2rem; /* Taille de police de base pour h2 */
+}
+
+h3 {
+  font-size: 1.75rem; /* Taille de police de base pour h3 */
+}
+
+h4 {
+  font-size: 1.5rem; /* Taille de police de base pour h4 */
+}
+
+h5 {
+  font-size: 1.25rem; /* Taille de police de base pour h5 */
+}
+
+h6 {
+  font-size: 1rem; /* Taille de police de base pour h6 */
+}
+
+/* Paragraphe */
+p {
+  font-size: 1rem; /* Taille de police de base pour le texte */
+  margin-bottom: 1rem;
+}
+
+/* Responsive Typographie */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.875rem;
+  }
+  h3 {
+    font-size: 1.625rem;
+  }
+  h4 {
+    font-size: 1.375rem;
+  }
+  h5 {
+    font-size: 1.125rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  h4 {
+    font-size: 1.125rem;
+  }
+  h5 {
+    font-size: 0.875rem;
+  }
+  h6 {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.875rem;
+  }
+  h5 {
+    font-size: 0.75rem;
+  }
+  h6 {
+    font-size: 0.625rem;
+  }
+}
 /* Container and Row without padding */
 .container-fluid, .row, .col {
   padding: 0;
