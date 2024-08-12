@@ -19,7 +19,7 @@
 
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-item.show .nav-link {
-  color: #d20000 !important; /* Couleur du lien actif */
+  color: #E9383F !important; /* Couleur du lien actif */
   font-weight: 700 !important; /* Texte en gras pour le lien actif */
 }
 
@@ -73,7 +73,7 @@
 /* Styles spécifiques à la page de contact */
 .contact-icon {
   font-size: 24px;
-  color: #002654;
+  color: #02479c;
 }
 
 .qr-code {
@@ -88,6 +88,27 @@
     width: 100% !important;
   }
 }
+/* _home.scss */
+/* Styles spécifiques pour la page d'accueil */
+/* Background color autour du texte avec un border-radius */
+.home-highlight {
+  display: inline-block;
+  background-color: #ffffe0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-family: "Noto Sans", "Roboto", sans-serif;
+  color: #212121;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: end;
+}
+
+/* Suppression du padding pour le main uniquement sur la page d'accueil */
+.home-container {
+  padding: 0 !important;
+}
+
 /* Logo Club */
 .logo-club {
   height: 100px;

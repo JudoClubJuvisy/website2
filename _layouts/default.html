@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     <meta name="description" content="{{ site.description }}">
 </head>
-<body>
+<body class="{% if page.title == "Accueil" %}home{% endif %}">
     {% include header.html %}
-    <main class="container">
+    <main class="container{% if page.title == "Accueil" %} home-container{% endif %}">
         {{ content }}
     </main>
     {% include footer.html %}
