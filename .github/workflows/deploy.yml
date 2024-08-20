@@ -1,0 +1,44 @@
+name: Déployer le site Jekyll sur GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Déclenche le workflow lors des pushs sur la branche main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Récupérer le code
+      uses: actions/checkout@v2
+
+    - name: Configurer Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'  # Assurez-vous que cela correspond à la version de Ruby dans votre Gemfile
+
+    - name: Configurer Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'  # Ajustez cela si vous utilisez une version différente de Node.js
+
+    - name: Installer les dépendances NPM
+      run: npm install  # Installe les dépendances Node.js, y compris celles pour compiler SCSS
+
+    - name: Compiler SCSS en CSS
+      run: npm run build-css  # Cela exécute votre script pour compiler les fichiers SCSS en CSS
+
+    - name: Installer les dépendances Ruby
+      run: |
+        gem install bundler
+        bundle install
+
+    - name: Construire le site Jekyll
+      run: bundle exec jekyll build
+
+    - name: Déployer sur GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_site  # C'est ici que Jekyll génère les fichiers du site
