@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /junk/
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.zip$
+
+Sitemap: https://www.judoclubjuvisy.fr/sitemap.xml
