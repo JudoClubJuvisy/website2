@@ -1,56 +1,65 @@
-<footer class="bg-dark text-white p-3 text-center">
+<footer class="bg-dark text-white p-3 text-center" role="contentinfo">
     <div class="container">
+        <!-- Section du footer pour les écrans moyens et grands -->
         <div class="d-none d-md-block">
             <div class="row justify-content-center mb-3">
                 <div class="col-auto">
-                    <a href="{{ '/mentions-legales.html' | relative_url }}" class="footer-link text-white">Mentions Légales</a>
-                    <span class="mx-2">|</span>
-                    <a href="{{ '/reglement-interieur.html' | relative_url }}" class="footer-link text-white">Règlement Intérieur</a>
-                    <span class="mx-2">|</span>
-                    <a href="{{ '/statuts.html' | relative_url }}" class="footer-link text-white">Statuts</a>
-                    <span class="mx-2">|</span>
-                    <a href="{{ '/plan-du-site.html' | relative_url }}" class="footer-link text-white">Plan du site</a>
-                    <span class="mx-2">|</span>
-                    <a href="https://www.facebook.com" target="_blank" class="social-link text-white me-3" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
+                    <!-- Liens légaux -->
+                    <a href="{{ '/mentions-legales.html' | relative_url }}" class="footer-link text-white" aria-label="Lire les mentions légales">Mentions Légales</a>
+                    <span class="mx-2" aria-hidden="true">|</span>
+                    <a href="{{ '/reglement-interieur.html' | relative_url }}" class="footer-link text-white" aria-label="Lire le règlement intérieur">Règlement Intérieur</a>
+                    <span class="mx-2" aria-hidden="true">|</span>
+                    <!-- Lien désactivé pour les statuts -->
+                    <a href="#" class="footer-link text-white disabled" aria-disabled="true" aria-label="Statuts (non disponible)">Statuts</a>
+                    <span class="mx-2" aria-hidden="true">|</span>
+                    <a href="{{ '/plan-du-site.html' | relative_url }}" class="footer-link text-white" aria-label="Voir le plan du site">Plan du site</a>
+                    <span class="mx-2" aria-hidden="true">|</span>
+                    <!-- Liens des réseaux sociaux avec aria-label pour l'accessibilité -->
+                    <a href="https://www.facebook.com/groups/46020097566" target="_blank" class="social-link text-white me-3" aria-label="Visiter notre page Facebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-link text-white me-3" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/judoclub.juvisy" target="_blank" class="social-link text-white me-3" aria-label="Visiter notre page Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.whatsapp.com" target="_blank" class="social-link text-white" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
+                    <a href="https://chat.whatsapp.com/JWRQ5h7vFeD1V6rXQImvNJ" target="_blank" class="social-link text-white" aria-label="Nous contacter sur WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
         </div>
         
+        <!-- Section du footer pour les petits écrans -->
         <div class="d-block d-md-none">
             <div class="row justify-content-center mb-3">
                 <div class="col-auto">
-                    <a href="https://www.facebook.com" target="_blank" class="social-link text-white me-3" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
+                    <!-- Liens des réseaux sociaux avec aria-label pour l'accessibilité -->
+                    <a href="https://www.facebook.com/groups/46020097566" target="_blank" class="social-link text-white me-3" aria-label="Visiter notre page Facebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" class="social-link text-white me-3" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/judoclub.juvisy" target="_blank" class="social-link text-white me-3" aria-label="Visiter notre page Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.whatsapp.com" target="_blank" class="social-link text-white" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
+                    <a href="https://chat.whatsapp.com/JWRQ5h7vFeD1V6rXQImvNJ" target="_blank" class="social-link text-white" aria-label="Nous contacter sur WhatsApp">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
             <div class="row text-center mb-3">
                 <div class="col-12">
-                    <a href="{{ '/mentions-legales.html' | relative_url }}" class="footer-link text-white d-block mb-2">Mentions Légales</a>
-                    <a href="{{ '/reglement-interieur.html' | relative_url }}" class="footer-link text-white d-block mb-2">Règlement Intérieur</a>
-                    <a href="{{ '/statuts.html' | relative_url }}" class="footer-link text-white d-block mb-2">Statuts</a>
-                    <a href="{{ '/plan-du-site.html' | relative_url }}" class="footer-link text-white d-block">Plan du site</a>
+                    <!-- Liens légaux pour petits écrans -->
+                    <a href="{{ '/mentions-legales.html' | relative_url }}" class="footer-link text-white d-block mb-2" aria-label="Lire les mentions légales">Mentions Légales</a>
+                    <a href="{{ '/reglement-interieur.html' | relative_url }}" class="footer-link text-white d-block mb-2" aria-label="Lire le règlement intérieur">Règlement Intérieur</a>
+                    <!-- Lien désactivé pour les statuts -->
+                    <a href="#" class="footer-link text-white d-block mb-2 disabled" aria-disabled="true" aria-label="Statuts (non disponible)">Statuts</a>
+                    <a href="{{ '/plan-du-site.html' | relative_url }}" class="footer-link text-white d-block" aria-label="Voir le plan du site">Plan du site</a>
                 </div>
             </div>
         </div>
         
+        <!-- Informations de copyright -->
         <div class="row">
             <div class="col">
-                &copy; Judo Club de Juvisy 1958-<span id="current-year"></span>
+                <span aria-label="Copyright">©</span> Judo Club de Juvisy 1958-<span id="current-year"></span>
             </div>
         </div>
     </div>
