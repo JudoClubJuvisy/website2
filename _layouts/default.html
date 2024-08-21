@@ -20,14 +20,14 @@
     <!-- End Google Tag Manager -->
 
 </head>
-<body class="{% if page.title == "Accueil" %}home{% endif %}">
+<body class="{% if page.title contains 'Accueil' %}home{% endif %}">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTTXXLGB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     {% include header.html %}
-    <main class="container{% if page.title == "Accueil" %} home-container{% endif %}">
+    <main class="container{% if page.title contains 'Accueil' %} home-container{% endif %}">
         {{ content }}
     </main>
     {% include footer.html %}
