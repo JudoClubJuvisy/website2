@@ -17,6 +17,21 @@
     font-weight: 700 !important; /* Texte en gras pour le lien actif */
 }
 
+// Style pour le menu déroulant (dropdown) afin d'utiliser la même couleur de fond que le menu principal
+.dropdown-menu {
+    background-color: #212529; /* Couleur de fond du menu déroulant */
+    border: none; /* Suppression des bordures */
+}
+
+.dropdown-item {
+    color: $lightGrayColor; /* Couleur des éléments du menu déroulant */
+    
+    &:hover {
+        color: $whiteColor; /* Couleur des éléments au survol */
+        background-color: #343a40; /* Couleur de fond au survol */
+    }
+}
+
 // Surcharge des variables CSS de Bootstrap
 :root {
   --bs-navbar-color: $lightGrayColor;
