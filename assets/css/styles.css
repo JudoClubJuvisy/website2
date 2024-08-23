@@ -17,6 +17,14 @@
   height: 24px;
 }
 
+.icon-smallcontainer {
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-right: 0px;
+  width: 24px;
+  height: 24px;
+}
+
 .icon-green {
   filter: invert(34%) sepia(73%) saturate(586%) hue-rotate(86deg) brightness(95%) contrast(89%);
 }
