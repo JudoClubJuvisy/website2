@@ -11,58 +11,101 @@ title: Inscription au Judo Club de Juvisy en Essonne
     <hr>
 
     <!-- Introduction sur la procédure d'inscription -->
-    <p>Bienvenue sur la page d'inscription pour la saison 2024-2025 du Judo Club de Juvisy.</p>
     <p><strong>Suivez bien les étapes ci-dessous</strong> pour compléter votre inscription en toute simplicité.</p>
     
     <hr>
 
     <!-- Étape 1 : Connaître les valeurs du club -->
-    <h2>Étape 1 : Prenez le temps de comprendre nos valeurs</h2>
-    
-    <p><strong>Même si nous avons essayé de simplifier au maximum l’adhésion à notre club, il faut prendre le temps de bien comprendre nos valeurs et de vous assurer que vous y adhérez.</strong></p>
-	<p>Avant toute chose, il est important de bien prendre connaissance de notre règlement intérieur. Le judo n'est pas simplement un sport, mais un art martial qui repose sur des valeurs fondamentales comme le respect, la discipline, et l'honneur. 
-		En vous inscrivant, vous vous engagez à respecter ces valeurs et à les intégrer dans votre pratique quotidienne. 
-    </p>
-    <p>
-        <!-- Lien vers le règlement intérieur avec un aria-label pour l'accessibilité -->
-        Téléchargez le <a href="{{ '/assets/files/reglement_interieur.pdf' | relative_url }}" aria-label="Télécharger le règlement intérieur du Judo Club de Juvisy">règlement intérieur ici</a>.
-    </p>
+    <h2>Étape 1 : Comprendre nos valeurs</h2>
+
+    <p><strong>Avant de vous inscrire, prenez le temps de découvrir nos valeurs.</strong></p>
+    <p>Le judo est plus qu'un simple sport ; c'est un art martial fondé sur le respect, la discipline et l'honneur.</p>
+    <p>En rejoignant notre club, vous vous engagez à respecter ces valeurs et à les intégrer dans votre pratique quotidienne.</p>
+
+    <p>Téléchargez le <a href="{{ '/assets/files/reglement_interieur.pdf' | relative_url }}" aria-label="Télécharger le règlement intérieur du Judo Club de Juvisy">règlement intérieur</a>.</p>
 
     <hr>
 
     <!-- Étape 2 : Documents médicaux -->
-    <h2>Étape 2 : Préparez vos documents médicaux</h2>
-    
-    <p>Les nouvelles règles concernant les certificats médicaux et les questionnaires de santé sont en vigueur depuis le 1er septembre 2022.</p>
-	<p>Voici ce que vous devez faire en fonction de votre âge et de votre situation :</p>
-    
-	<p><strong>Pour les mineurs (moins de 18 ans) :</strong></p>
-        <ul>
-            <li>Questionnaire de santé obligatoire : Chaque année, vous devez remplir un questionnaire de santé. Si vous répondez <strong>NON</strong> à toutes les questions, une attestation sur l'honneur suffira. En cas de <strong>OUI</strong> à l'une des questions, un certificat médical sera nécessaire.</li>
-            <li>Cas particulier : Si vous avez 17 ans au moment de l'inscription mais que vous aurez 18 ans avant le 31 août, vous devez fournir un certificat médical.</li>
-            <!-- Lien vers le questionnaire de santé pour mineurs avec un aria-label -->
-            <li><a href="https://www.ffjudo.com/uploads/elfinder/ACTUALITES/2023/ACTU%20TERRITOIRES/QUESTIONNAIRE%20ETAT%20DE%20SANTE%20DU%20SPORTIF%20MINEUR.pdf" target="_blank" aria-label="Télécharger le questionnaire de santé pour mineurs, ouvre un nouvel onglet">Téléchargez le questionnaire de santé pour mineurs</a> (sans le renvoyer)</li>
-            <!-- Lien vers l'attestation pour mineurs avec un aria-label -->
-            <li><a href="https://www.ffjudo.com/uploads/elfinder/ACTUALITES/2023/DIVERS/ATTESTATION%20questionnaire%20sant%C3%A9%20SPORT%20mineurs.pdf" target="_blank" aria-label="Télécharger l'attestation pour mineurs, ouvre un nouvel onglet">Téléchargez l'attestation pour mineurs</a> à transmettre lors de l'inscription</li>
-        </ul>
-		
-    <p><strong>Pour les majeurs (18 ans et plus) :</strong></p>
-        <ul>
-            <li>Première inscription : Fournissez un certificat médical datant de moins d'un an.</li>
-            <li>Déjà licencié : Remplissez le questionnaire de santé. Si vous répondez <strong>NON</strong> à toutes les questions, une attestation sur l'honneur suffit. Si vous répondez <strong>OUI</strong> à l'une des questions, un certificat médical sera nécessaire.</li>
-            <li>Cas particuliers : Si vous avez 30, 35, 40 ans, etc., entre le 1er septembre et le 31 août de l'année suivante, un certificat médical sera nécessaire.</li>
-            <!-- Lien vers le questionnaire de santé pour majeurs avec un aria-label -->
-            <li><a href="https://www.formulaires.service-public.fr/gf/cerfa_15699.do" target="_blank" aria-label="Télécharger le questionnaire de santé pour majeurs, ouvre un nouvel onglet">Téléchargez le questionnaire de santé pour majeurs</a></li>
-            <!-- Lien vers l'attestation pour majeurs avec un aria-label -->
-            <li><a href="https://www.ffjudo.com/uploads/elfinder/ACTUALITES/2023/DIVERS/ATTESTATION%20QS%20sport%20majeur.pdf" target="_blank" aria-label="Télécharger l'attestation pour majeurs, ouvre un nouvel onglet">Téléchargez l'attestation pour majeurs</a> à transmettre lors de l'inscription</li>
-        </ul>
+    <h2>Étape 2 : Préparer le document médical</h2>
 
-    <p>Si vous devez fournir un certificat médical, il doit être daté de moins de 6 mois et comporter explicitement la mention autorisant ou interdisant la pratique du judo en compétition.</p>
+    <p>Voici ce que vous devez faire en fonction de votre âge et de votre situation :</p>
+
+    <div class="accordion" id="medicalDocumentsAccordion">
+
+        <!-- Accordéon pour les mineurs -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="headingMinors">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMinors" aria-expanded="true" aria-controls="collapseMinors">
+                    Pour les mineurs (moins de 18 ans)
+                </button>
+            </h3>
+            <div id="collapseMinors" class="accordion-collapse collapse show" aria-labelledby="headingMinors" data-bs-parent="#medicalDocumentsAccordion">
+                <div class="accordion-body">
+                    <p>
+                        <img src="{{ '/assets/icons/rule_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône de diagnostic" class="icon icon-blue">
+                        Chaque année, vous devez remplir le questionnaire de santé :
+                    </p>
+                    <p class="indent-response">- Si vous répondez <strong>NON</strong> à toutes les questions, l'attestation sur l'honneur suffit.</p>
+                    <p class="indent-response">- Si vous répondez <strong>OUI</strong> à l'une des questions, un certificat médical est nécessaire.</p>
+                    <p>
+                        <img src="{{ '/assets/icons/warning_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône d'avertissement" class="icon icon-orange">
+                        Cas particulier : Si vous avez 17 ans au moment de l'inscription mais que vous aurez 18 ans avant le 31 août, vous devez fournir un certificat médical.
+                    </p>
+                    <p>
+                        <img src="{{ '/assets/icons/quick_reference_all_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône de référence rapide" class="icon icon-blue">
+                        Téléchargez le <a href="https://www.ffjudo.com/uploads/elfinder/ACTUALITES/2023/ACTU%20TERRITOIRES/QUESTIONNAIRE%20ETAT%20DE%20SANTE%20DU%20SPORTIF%20MINEUR.pdf" target="_blank" aria-label="Télécharger le questionnaire de santé pour les mineurs, ouvre un nouvel onglet">questionnaire de santé pour les mineurs</a> (sans le renvoyer).
+                    </p>
+                    <p>
+                        <img src="{{ '/assets/icons/task_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône de tâche" class="icon icon-green">
+                        Téléchargez l'<a href="https://www.ffjudo.com/uploads/elfinder/ACTUALITES/2023/DIVERS/ATTESTATION%20questionnaire%20sant%C3%A9%20SPORT%20mineurs.pdf" target="_blank" aria-label="Télécharger l'attestation pour les mineurs, ouvre un nouvel onglet">attestation pour les mineurs</a> à transmettre lors de l'inscription.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accordéon pour les majeurs -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="headingAdults">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdults" aria-expanded="false" aria-controls="collapseAdults">
+                    Pour les majeurs (18 ans et plus)
+                </button>
+            </h3>
+            <div id="collapseAdults" class="accordion-collapse collapse" aria-labelledby="headingAdults" data-bs-parent="#medicalDocumentsAccordion">
+                <div class="accordion-body">
+                    <p>
+                        <img src="{{ '/assets/icons/stethoscope_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône de stéthoscope" class="icon icon-green">
+                        Première inscription : Fournissez un certificat médical datant de moins d'un an.
+                    </p>
+                    <p>
+                        <img src="{{ '/assets/icons/diagnosis_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône de diagnostic" class="icon icon-blue">
+                        Déjà licencié : Remplissez le questionnaire de santé :
+                    </p>
+                    <p class="indent-response">- Si vous répondez <strong>NON</strong> à toutes les questions, l'attestation sur l'honneur suffit.</p>
+                    <p class="indent-response">- Si vous répondez <strong>OUI</strong> à l'une des questions, un certificat médical est nécessaire.</p>
+                    <p>
+                        <img src="{{ '/assets/icons/warning_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône d'avertissement" class="icon icon-orange">
+                        Cas particuliers : Si vous avez 30, 35, 40 ans... entre le 1er septembre et le 31 août de l'année suivante, vous devez fournir un certificat médical.
+                    </p>
+                    <p>
+                        <img src="{{ '/assets/icons/quick_reference_all_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône de référence rapide" class="icon icon-blue">
+                        Téléchargez le <a href="https://www.formulaires.service-public.fr/gf/cerfa_15699.do" target="_blank" aria-label="Télécharger le questionnaire de santé pour les majeurs, ouvre un nouvel onglet">questionnaire de santé pour les majeurs</a> (sans le renvoyer).
+                    </p>
+                    <p>
+                        <img src="{{ '/assets/icons/task_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône de tâche" class="icon icon-green">
+                        Téléchargez l'<a href="https://www.ffjudo.com/uploads/elfinder/ACTUALITES/2023/DIVERS/ATTESTATION%20QS%20sport%20majeur.pdf" target="_blank" aria-label="Télécharger l'attestation pour les majeurs, ouvre un nouvel onglet">attestation pour les majeurs</a> à transmettre lors de l'inscription.
+                    </p>
+                    <p>Pour les compétitions adultes, vous devez fournir un certificat médical de moins de 6 mois comportant la mention autorisant la pratique du judo en compétition.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <hr>
 
     <!-- Étape 3 : Inscription en ligne -->
-    <h2>Étape 3 : Inscrivez-vous en ligne</h2>
+    <h2>Étape 3 : S'inscrire en ligne</h2>
     
     <p>Pour faciliter votre inscription, nous vous recommandons de vous inscrire en ligne via la plateforme sécurisée HelloAsso. Vous aurez la possibilité de payer en 1 fois ou en 3 fois :</p>
     

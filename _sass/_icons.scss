@@ -1,0 +1,21 @@
+// _icons.scss
+
+.icon {
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.icon-green {
+    filter: invert(34%) sepia(73%) saturate(586%) hue-rotate(86deg) brightness(95%) contrast(89%);
+}
+
+.icon-blue {
+    filter: invert(22%) sepia(97%) saturate(2424%) hue-rotate(184deg) brightness(94%) contrast(103%);
+}
+
+.icon-orange {
+    filter: invert(58%) sepia(70%) saturate(2607%) hue-rotate(348deg) brightness(100%) contrast(107%);
+}
