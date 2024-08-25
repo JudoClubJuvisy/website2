@@ -120,80 +120,113 @@ title: Inscription au Judo Club de Juvisy en Essonne
 
     <hr>
 
-    <!-- Modes de paiement -->
-    <h2>Modes de paiement</h2>
-    <p>Vous pouvez régler la cotisation de plusieurs façons :</p>
-    <ul>
-        <li><strong>En ligne :</strong> lors de votre inscription sur HelloAsso</li>
-        <li><strong>Par carte bancaire :</strong> au stand du club lors de la journée des associations le <strong>dimanche 8 septembre 2024</strong>, de 9h à 18h, au parc des Grottes à Juvisy-sur-Orge.</li>
-        <li><strong>Par chèque :</strong> à l'ordre du Judo Club de Juvisy.</li>
-    </ul>
-    <p>Une permanence sera également tenue tous les samedis du mois de septembre 2024 au Gymnase Delaune (38 rue Paul Doumer, Juvisy) durant les heures d'entraînements.</p>
+    <!-- Autres informations -->
+    <h2>Autres informations utiles</h2>	
+    <p>Une permanence sera tenue tous les samedis du mois de septembre 2024 au Gymnase Delaune (38 rue Paul Doumer, Juvisy) durant les heures d'entraînements.</p>
 
-    <hr>
+    <div class="accordion" id="additionalInfoAccordion">
 
-    <!-- Tarifs des cotisations -->
-    <h2>Tarifs des cotisations</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Cours</th>
-                <th>Cotisation</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Baby Judo</td>
-                <td>140€</td>
-            </tr>
-            <tr>
-                <td>Judo Enfant</td>
-                <td>170€</td>
-            </tr>
-            <tr>
-                <td>Judo Adulte</td>
-                <td>170€</td>
-            </tr>
-            <tr>
-                <td>Ju-Jitsu / Self-défense</td>
-                <td>130€</td>
-            </tr>
-            <tr>
-                <td>Taïso</td>
-                <td>130€</td>
-            </tr>
-        </tbody>
-    </table>
+        <!-- Accordéon pour les modes de règlement -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="headingPayment">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePayment" aria-expanded="false" aria-controls="collapsePayment">
+                    Les modes de règlement
+                </button>
+            </h3>
+            <div id="collapsePayment" class="accordion-collapse collapse" aria-labelledby="headingPayment" data-bs-parent="#additionalInfoAccordion">
+                <div class="accordion-body">
+                    <p>Vous pouvez régler la cotisation de plusieurs façons :</p>
+                    <ul>
+                        <li><strong>En ligne :</strong> lors de votre inscription sur HelloAsso</li>
+                        <li><strong>Par carte bancaire :</strong> au stand du club lors de la journée des associations le <strong>dimanche 8 septembre 2024</strong>, de 9h à 18h, au parc des Grottes à Juvisy-sur-Orge.</li>
+                        <li><strong>Par chèque :</strong> à l'ordre du Judo Club de Juvisy.</li>
+                    </ul>
+                    <p>Notre association accepte le Pass’sport (du ministère des sports) ainsi que les Chèques-vacances et les Coupons sport de l'ANCV.</p>
+                </div>
+            </div>
+        </div>
 
-    <!-- Frais administratifs -->
-    <h2>Frais administratifs</h2>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Frais administratif</th>
-                <th>Coût</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Licence FFJDA annuelle obligatoire</td>
-                <td>41€</td>
-            </tr>
-            <tr>
-                <td>Passeport sportif judo (si compétitions officielles)</td>
-                <td>8€</td>
-            </tr>
-        </tbody>
-    </table>
+        <!-- Accordéon pour les tarifs des cotisations -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="headingFees">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFees" aria-expanded="false" aria-controls="collapseFees">
+                    Les tarifs des cotisations
+                </button>
+            </h3>
+            <div id="collapseFees" class="accordion-collapse collapse" aria-labelledby="headingFees" data-bs-parent="#additionalInfoAccordion">
+                <div class="accordion-body">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Cours</th>
+                                <th>Cotisation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Baby Judo</td>
+                                <td>140€</td>
+                            </tr>
+                            <tr>
+                                <td>Judo Enfant</td>
+                                <td>170€</td>
+                            </tr>
+                            <tr>
+                                <td>Judo Adulte</td>
+                                <td>170€</td>
+                            </tr>
+                            <tr>
+                                <td>Ju-Jitsu / Self-défense</td>
+                                <td>130€</td>
+                            </tr>
+                            <tr>
+                                <td>Taïso</td>
+                                <td>130€</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-    <!-- Remises -->
-    <h2>Remises</h2>
-    <p>Des remises sont applicables si plusieurs adhésions sont effectuées dans un même foyer :</p>
-    <ul>
-        <li>-10€ sur la deuxième cotisation</li>
-        <li>-20€ sur la troisième cotisation...</li>
-    </ul>
-    
-    <p>Notre association participe également au dispositif Pass’sport.</p>
+                    <!-- Frais administratifs -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>+ Frais administratif</th>
+                                <th>Coût</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Licence FFJDA annuelle obligatoire</td>
+                                <td>41€</td>
+                            </tr>
+                            <tr>
+                                <td>Passeport sportif judo (si compétitions officielles)</td>
+                                <td>8€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accordéon pour les remises famille -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="headingDiscounts">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDiscounts" aria-expanded="false" aria-controls="collapseDiscounts">
+                    Les remises famille
+                </button>
+            </h3>
+            <div id="collapseDiscounts" class="accordion-collapse collapse" aria-labelledby="headingDiscounts" data-bs-parent="#additionalInfoAccordion">
+                <div class="accordion-body">
+                    <p>Des remises sont applicables si plusieurs adhésions sont effectuées dans un même foyer :</p>
+                    <ul>
+                        <li>-10€ sur la deuxième cotisation</li>
+                        <li>-20€ sur la troisième cotisation...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </section>
