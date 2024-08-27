@@ -25,6 +25,14 @@
   height: 24px;
 }
 
+.icon-btn {
+  vertical-align: middle;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 24px;
+  height: 24px;
+}
+
 .icon-green {
   filter: invert(34%) sepia(73%) saturate(586%) hue-rotate(86deg) brightness(95%) contrast(89%);
 }
@@ -35,6 +43,10 @@
 
 .icon-orange {
   filter: invert(58%) sepia(70%) saturate(2607%) hue-rotate(348deg) brightness(100%) contrast(107%);
+}
+
+.icon-white {
+  filter: invert(100%) brightness(1000%) contrast(100%);
 }
 
 .navbar-nav .nav-link {
@@ -312,6 +324,11 @@ p {
 /* décalage de paragraphe dans la page inscription.html */
 .indent-response {
   padding-left: 14px;
+}
+
+.btn-inscription {
+  padding-right: 6px;
+  padding-left: 3px;
 }
 
 /* Footer Styles */
