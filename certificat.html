@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Judo à Juvisy-sur-Orge - Judo Club de Juvisy</title>
+    <title>Certificat Médical ou attestation santé - Judo Club de Juvisy - Judo Club de Juvisy</title>
     <link rel="icon" href="/assets/images/favicon-192x192.png" type="image/png">
 	
 	<!-- Font Google Noto Sans -->
@@ -95,39 +95,58 @@
 
 
     <main class="container">
-        <section class="container my-3">
-    <h1>Le Judo</h1>
-		
-		<hr>
+        <section class="container my-5">
+    <h1>Je dois fournir un certificat médical ou une attestation liée au questionnaire de santé ?</h1>
+    <p>Pour obtenir ma licence à la Fédération Française de Judo, je dois fournir un certificat médical d'absence de contre-indication (CACI) ou une attestation de questionnaire de santé.</p>
 
-    <p>
-        Le Judo, qui signifie littéralement "voie de la souplesse", est un art martial et un sport de combat japonais créé par Jigorō Kanō. Il se distingue par son approche unique qui combine techniques de projection, contrôle au sol, et valeurs éducatives. Le Judo est à la fois une discipline physique et mentale qui vise à développer non seulement le corps, mais aussi l'esprit.
-    </p>
+    <!-- Message d'erreur accessible -->
+    <div id="errorMessage" aria-live="assertive" class="alert alert-danger d-none"></div>
 
-    <h2>Histoire du Judo</h2>
-    <p>
-        Le Judo a été fondé au Japon en 1882 par Jigorō Kanō, qui a synthétisé différentes techniques de combat du Jujitsu pour créer un nouvel art martial. Jigorō Kanō a introduit une approche philosophique et éducative dans le Judo, visant à former des individus équilibrés et respectueux. Dès le début, il a intégré des valeurs morales fortes dans le Judo, comme le respect de soi et des autres, le courage, et la modestie.
-    </p>
+    <!-- Formulaire interactif -->
+    <form id="certificatForm" aria-labelledby="formTitle">
+        <fieldset>
+            <legend id="formTitle" class="visually-hidden">Informations du certificat médical</legend>
 
-    <h2>Les techniques du Judo</h2>
-    <p>
-        Le Judo se compose principalement de techniques de projection (nage-waza), de techniques de contrôle au sol (osae-komi-waza), de techniques d'étranglement (shime-waza), et de clefs articulaires (kansetsu-waza). Les pratiquants, appelés judokas, apprennent à utiliser la force de leur adversaire à leur avantage, en appliquant les principes de "Seiryoku zen'yō" (la meilleure utilisation de l'énergie) et "Jita kyōei" (entraide et prospérité mutuelle).
-    </p>
+            <div class="mb-3">
+                <label for="birthDate" class="form-label">Je renseigne ma date de naissance :</label>
+                <input type="text" class="form-control col-4" id="birthDate" aria-describedby="birthDateHelp" required>
+                <small id="birthDateHelp" class="form-text text-muted">Ma date de naissance doit être au format JJ-MM-AAAA.</small>
+            </div>
 
-    <h2>Les valeurs du Judo</h2>
-    <p>
-        Le Judo inculque des valeurs essentielles qui vont au-delà de la simple pratique sportive. Les judokas sont formés à respecter les principes du code moral du Judo : la politesse, le courage, la sincérité, l'honneur, la modestie, le respect, le contrôle de soi, et l'amitié. Ces valeurs sont intégrées dans chaque entraînement et compétition, formant ainsi des individus responsables et respectueux.
-    </p>
+            <div class="mb-3">
+                <label class="form-label">C'est ma première licence de Judo ?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="firstLicense" id="firstLicenseYes" value="yes" checked>
+                    <label class="form-check-label" for="firstLicenseYes">Oui</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="firstLicense" id="firstLicenseNo" value="no">
+                    <label class="form-check-label" for="firstLicenseNo">Non</label>
+                </div>
+            </div>
 
-    <h2>Les bienfaits du Judo</h2>
-    <p>
-        Pratiquer le Judo apporte de nombreux bienfaits physiques et mentaux. Sur le plan physique, le Judo améliore la condition physique générale, développe la force, la souplesse, l'endurance, et la coordination. Sur le plan mental, il aide à renforcer la confiance en soi, la discipline, et la maîtrise de soi. Le Judo est également une excellente activité pour apprendre à gérer le stress et à développer une attitude positive face aux défis.
-    </p>
+            <div class="mb-3">
+                <label class="form-label">Je vais pratiquer le judo en compétition cette saison ?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="competition" id="competitionYes" value="yes" checked>
+                    <label class="form-check-label" for="competitionYes">Oui</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="competition" id="competitionNo" value="no">
+                    <label class="form-check-label" for="competitionNo">Non</label>
+                </div>
+            </div>
 
-    <h2>Le Judo pour tous</h2>
-    <p>
-        Le Judo est accessible à tous, quel que soit l'âge ou le niveau de condition physique. Que vous soyez un enfant, un adolescent, un adulte ou un senior, le Judo offre une pratique adaptée à chacun. Au Judo Club de Juvisy, nous accueillons des pratiquants de tous niveaux, des débutants aux judokas confirmés, dans un environnement chaleureux et inclusif.
-    </p>
+            <button type="submit" class="btn btn-primary w-100">Vérifier</button>
+        </fieldset>
+    </form>
+
+	<!-- Résultats -->
+	<div id="results" class="mt-4 d-none" aria-live="polite">
+		<p>Mon anniversaire <span id="verbBirthday"></span> le <span id="valueBirthday"></span> et j'<span id="verbAge"></span> <span id="valueAge"></span>.</p>
+		<p><strong><span id="reasonCertificat"></span></strong></p>
+	</div>
+	
 </section>
 
     </main>
