@@ -1,0 +1,27 @@
+// Styles spécifiques pour la page des certificats
+#certificatForm {
+    .form-label {
+        font-weight: bold;
+    }
+
+    .form-check {
+        margin-bottom: 10px;
+    }
+
+    .form-check-label {
+        margin-left: 5px;
+    }
+
+    .btn {
+        margin-top: 20px;
+    }
+}
+
+#results {
+    font-size: 1.2rem;
+    margin-top: 30px;
+
+    p {
+        margin-bottom: 15px;
+    }
+}

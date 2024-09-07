@@ -162,6 +162,27 @@
   padding: 0 !important;
 }
 
+#certificatForm .form-label {
+  font-weight: bold;
+}
+#certificatForm .form-check {
+  margin-bottom: 10px;
+}
+#certificatForm .form-check-label {
+  margin-left: 5px;
+}
+#certificatForm .btn {
+  margin-top: 20px;
+}
+
+#results {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+#results p {
+  margin-bottom: 15px;
+}
+
 /* Logo Club */
 .logo-club {
   height: 100px;
