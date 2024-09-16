@@ -288,7 +288,7 @@
 @media (max-width: 768px) {
   .custom-title {
     font-size: 1.1rem; /* Augmentation de la taille sur mobile */
-    line-height: 1.5; /* Augmenter l'interligne sur mobile */
+    line-height: 1.6; /* Augmenter l'interligne sur mobile */
     margin-top: 1.2rem; /* Ajout d'espace au-dessus pour séparer du contenu */
   }
 }
