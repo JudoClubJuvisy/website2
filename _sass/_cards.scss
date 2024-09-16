@@ -1,0 +1,58 @@
+/* Styles pour les cartes de judogis */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    margin-bottom: 1.5rem; /* Augmenter l'espace entre les cartes */
+}
+
+/* Espacement supplémentaire pour la grille */
+.row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Contrôler la hauteur des images sur les différentes tailles d'écran */
+@media (min-width: 576px) {
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-reference {
+    font-size: 1.5rem; /* Plus grand pour mettre en avant la référence */
+    font-weight: bold;
+    color: #004080; /* Couleur différente pour la référence */
+    margin-bottom: 1rem; /* Espace sous la référence */
+}
+
+.list-group-item {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+}
+
+/* Styles personnalisés pour les boutons */
+.card .btn-primary {
+    background-color: #004080;
+    border-color: #004080;
+}
+
+.card .btn-primary:hover {
+    background-color: darken(#004080, 10%);
+    border-color: darken(#004080, 10%);
+}

@@ -1,0 +1,111 @@
+/* Styles pour les images en pleine largeur */
+.full-width-image img {
+    width: 100%;        /* Prend toute la largeur de l'écran */
+    height: auto;       /* Conserve le ratio de l'image */
+    object-fit: cover;  /* Couvre toute la largeur sans déformer l'image */
+    margin-bottom: 1.5rem; /* Espace entre l'image et le contenu suivant */
+}
+
+/* Styles pour le logo IJF avec un contour rouge foncé */
+.img-bordered {
+    border: 2px solid #800000; /* Contour rouge foncé */
+    padding: 4px; /* Espace entre l'image et le contour */
+}
+
+/* Comportement sur mobile : logo IJF au-dessus du texte */
+@media (max-width: 768px) {
+    .text-image-wrapper {
+        flex-direction: column;  /* Aligne le texte et l'image en colonne */
+        img {
+            width: 100%;          /* Le logo prend toute la largeur sur mobile */
+            margin-bottom: 1rem;  /* Espace sous le logo */
+        }
+    }
+}
+
+/* Styles pour la bannière du judogi plié */
+.banner-image img {
+    width: 100%;        /* Prend toute la largeur du conteneur */
+    height: auto;       /* Conserve le ratio de l'image */
+    object-fit: cover;  /* Couvre toute la largeur sans déformer l'image */
+    margin-bottom: 2rem; /* Espace sous la bannière */
+}
+
+/* Styles pour les images dans les cartes */
+.card-img-top {
+    width: 100%;        /* Prend toute la largeur du conteneur */
+    object-fit: cover;  /* Couvre l'image sans la déformer */
+    margin-bottom: 1rem; /* Espace sous l'image */
+}
+
+/* Contrôle des hauteurs d'image sur desktop */
+@media (min-width: 576px) {
+    .card-img-top {
+        height: 200px; /* Fixe une hauteur sur les écrans de plus de 576px */
+    }
+}
+
+/* Ajout d'espacement supplémentaire pour les cartes */
+.card {
+    margin-bottom: 2rem; /* Ajout d'espace entre les cartes */
+}
+
+/* Styles pour les titres de cartes */
+.card-title {
+    font-weight: bold;
+    text-align: center;  /* Centrer les titres des cartes */
+    margin-bottom: 0.5rem;
+}
+
+.card-subtitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;  /* Centrer les sous-titres des cartes */
+    color: #004080; /* Couleur différente pour les sous-titres */
+    margin-bottom: 1rem; /* Ajout d'espace sous le sous-titre */
+}
+
+/* Styles pour les boutons dans les cartes */
+.card .btn-primary {
+    background-color: #004080;
+    border-color: #004080;
+}
+
+.card .btn-primary:hover {
+    background-color: darken(#004080, 10%);
+    border-color: darken(#004080, 10%);
+}
+
+/* Styles pour la grille des images */
+.row {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Utilisation d'un système de grille pour le texte et l'image */
+.text-image-wrapper.grid-system {
+    display: grid;
+    grid-template-columns: 11fr 1fr;  /* 11 colonnes pour le texte, 1 pour l'image */
+    gap: 1.5rem;  /* Espace entre les colonnes */
+    align-items: center; /* Centre verticalement le texte et l'image */
+}
+
+/* Comportement sur mobile : colonne unique */
+@media (max-width: 768px) {
+    .text-image-wrapper.grid-system {
+        grid-template-columns: 1fr; /* Colonne unique sur mobile */
+    }
+}
+
+/* Amélioration de la visibilité des titres h3 avec la classe custom-title */
+.custom-title {
+    font-size: 1.5rem; /* Taille par défaut pour desktop */
+    color: #004080;
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+        font-size: 1.1rem; /* Augmentation de la taille sur mobile */
+        line-height: 1.6; /* Augmenter l'interligne sur mobile */
+        margin-top: 1.2rem; /* Ajout d'espace au-dessus pour séparer du contenu */
+    }
+}
