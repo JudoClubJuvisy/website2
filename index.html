@@ -77,9 +77,15 @@
                         <li class="nav-item">
                             <a class="nav-link" id="nav-inscription" href="/inscription.html" aria-label="S'inscrire">S'inscrire</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="nav-entrainements" href="/entrainements.html" aria-label="Les entraînements">Les entraînements</a>
-                        </li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarTrainings" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Voir les entraînements">
+								Les entraînements
+							</a>
+							<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarTrainings">
+								<li><a class="dropdown-item" href="/horaires.html" aria-label="Voir les horaires des entraînements">Les horaires</a></li>
+								<li><a class="dropdown-item" href="/equipement.html" aria-label="Voir les équipements nécessaires">L'équipement</a></li>
+							</ul>
+						</li>
                         <li class="nav-item">
                             <a class="nav-link" id="nav-competitions" href="/competitions.html" aria-label="Les compétitions">Les compétitions</a>
                         </li>
@@ -95,7 +101,7 @@
 
 
     <main class="container home-container">
-        <div class="container-fluid py-0">
+        <div class="homepage-container container-fluid py-0">
     <div class="row gx-0">
         <!-- Colonne 1: Juste un fond -->
         <div class="col-2 d-none d-md-block" style="background-color: #ffe436;"></div>

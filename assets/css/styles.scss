@@ -45,6 +45,8 @@
 @import "_contact";
 @import "_home";
 @import "_certificat";
+@import "_equipement";
+@import "_cards";
 
 /* Logo Club */
 .logo-club {
@@ -187,11 +189,17 @@ p {
     }
 }
 
-
-/* Container and Row without padding */
-.container-fluid, .row, .col {
+.homepage-container .row,
+.homepage-container .col {
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .homepage-container.container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }
 
 /* Align text for mobile */
