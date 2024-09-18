@@ -255,8 +255,21 @@
 }
 
 .card .btn-primary:hover {
-  background-color: #00274d;
-  border-color: #00274d;
+  background-color: rgb(0, 38.5, 77);
+  border-color: rgb(0, 38.5, 77);
+}
+
+/* Styles pour les boutons de la boutique du club */
+.btn-club {
+  background-color: #0d6efd !important; /* Couleur par défaut de Bootstrap */
+  border-color: #0d6efd !important;
+  color: white !important; /* Assurer que le texte est blanc */
+}
+
+/* Surcharge pour les boutons normaux des cartes */
+.card .btn-primary:not(.btn-club) {
+  background-color: #004080;
+  border-color: #004080;
 }
 
 /* Styles pour la grille des images */
@@ -291,6 +304,24 @@
     line-height: 1.6; /* Augmenter l'interligne sur mobile */
     margin-top: 1.2rem; /* Ajout d'espace au-dessus pour séparer du contenu */
   }
+}
+
+/* Style pour centrer le paragraphe et le bouton */
+.cta-button {
+  text-align: center;
+  margin: 2rem 0; /* Ajoute un espace de 2rem en haut et en bas */
+}
+
+.cta-text {
+  color: #0066cc;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem; /* Ajoute un espace sous le texte */
+}
+
+/* Ajoute un margin en bas du bouton */
+.cta-button .btn-lg {
+  margin-bottom: 2rem;
 }
 
 /* Styles pour les cartes de judogis */
@@ -347,8 +378,8 @@
 }
 
 .card .btn-primary:hover {
-  background-color: #00274d;
-  border-color: #00274d;
+  background-color: rgb(0, 38.5, 77);
+  border-color: rgb(0, 38.5, 77);
 }
 
 /* Logo Club */
