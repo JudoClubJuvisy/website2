@@ -9,11 +9,8 @@
 	<!-- Font Google Noto Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
 
-	<!-- Bootstrap CSS / à mettre à jour régulièrement / Voir si pertinent de récupérer le fichier -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-	<!-- Icons Font Awesome / à voir si encore utilisé -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<!-- Bootstrap CSS local -->
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     
 	<!-- La feuille de style du site -->
 	<link rel="stylesheet" href="/assets/css/styles.css">
@@ -106,24 +103,37 @@
     <nav aria-labelledby="site-map-heading">
         <ul>
             <!-- Menu principal -->
-            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/">Accueil</a></li>
             <li><a href="/le-club.html">Le Club</a></li>
-            <li><a href="/inscription.html">Inscription</a></li>
-            <li><a href="/entrainements.html">Entraînements</a></li>
             <li>
-                <a href="/competitions.html">Compétitions</a>
+                <a href="#">Nos disciplines</a>
                 <ul>
-                    <li><a href="https://judo91.com/" target="_blank" rel="noopener">Comité de Judo de l’Essonne</a></li>
-                    <li><a href="https://www.idfjudo.com/" target="_blank" rel="noopener">Ligue Île-de-France de Judo</a></li>
-                    <li><a href="https://www.ffjudo.com/" target="_blank" rel="noopener">Fédération Française de Judo</a></li>
+                    <li><a href="/jujitsu.html">Le Ju-Jitsu</a></li>
+                    <li><a href="/judo.html">Le Judo</a></li>
+                    <li><a href="/taiso.html">Le Taïso</a></li>
                 </ul>
             </li>
-            <li><a href="/contact.html">Contact</a></li>
-
-            <!-- Footer links -->
+            <li><a href="/inscription.html">S'inscrire</a></li>
+            <li>
+                <a href="#">Les entraînements</a>
+                <ul>
+                    <li><a href="/horaires.html">Les horaires</a></li>
+                    <li><a href="/equipement.html">L'équipement</a></li>
+                </ul>
+            </li>
+            <li>
+				<a href="/competitions.html">Les compétitions</a>
+				<ul>
+					<li><a href="https://judo91.com/" target="_blank" rel="noopener">Comité de Judo de l’Essonne</a></li>
+                    <li><a href="https://www.idfjudo.com/" target="_blank" rel="noopener">Ligue Île-de-France de Judo</a></li>
+                    <li><a href="https://www.ffjudo.com/" target="_blank" rel="noopener">Fédération Française de Judo</a></li>
+				</ul>
+			</li>
+            <li><a href="/contact.html">Nous contacter</a></li>
+            <!-- Liens du pied de page -->
             <li><a href="/mentions-legales.html">Mentions Légales</a></li>
             <li><a href="/reglement-interieur.html">Règlement Intérieur</a></li>
-            <li><a href="/statuts.html">Statuts</a></li>
+            <li><a href="/plan-du-site.html">Plan du site</a></li>
         </ul>
     </nav>
 </section>
@@ -201,8 +211,8 @@
 </footer>
 
 
-	<!-- Bootstrap JS / à mettre à jour régulièrement / Voir si pertinent de récupérer le fichier -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Bootstrap Bundle JS local -->
+	<script src="/assets/js/bootstrap.bundle.min.js"></script>
 	
 	<!-- Flatpickr JS -->
 	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
