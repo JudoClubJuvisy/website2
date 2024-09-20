@@ -9,15 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentUrl = window.location.pathname;
 
     // Correspondance entre l'URL et l'ID du lien de navigation
-    const navItems = {
-        "/index.html": "nav-home",
-        "/le-club.html": "nav-club",
-        "/inscription.html": "nav-inscription",
-        "/entrainements.html": "nav-entrainements",
-        "/competitions.html": "nav-competitions",
-        "/contact.html": "nav-contact",
-        "/certificat.html": "nav-certificat"
-    };
+	const navItems = {
+		"/index.html": "nav-home",
+		"/le-club.html": "nav-club",
+		"/inscription.html": "nav-inscription",
+		"/entrainements.html": "nav-entrainements",
+		"/competitions.html": "nav-competitions",
+		"/boutique.html": "nav-boutique",
+		"/contact.html": "nav-contact"
+	};
+
 
     // Récupérer l'ID correspondant à l'URL actuelle
     const activeNavId = navItems[currentUrl];
