@@ -2,21 +2,36 @@
 
 /* Styles spécifiques pour la page d'accueil */
 
-/* Background color autour du texte avec un border-radius */
+/* Conteneur principal de la page d'accueil */
+.home-container {
+    padding: 0 !important;
+}
+
+/* Mise en évidence du texte avec un fond et un border-radius */
 .home-highlight {
     display: inline-block;
     background-color: #ffffe0;
     padding: 0.5rem;
     border-radius: 10px;
-    font-family: 'Noto Sans', 'Roboto', sans-serif;
-    color: #212121;
+    font-family: $font-stack;
+    color: $blackColor;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5em;
     text-align: end;
 }
 
-/* Suppression du padding pour le main uniquement sur la page d'accueil */
-.home-container {
-    padding: 0 !important;
+/* Suppression du padding pour les éléments row et col de la page d'accueil */
+.homepage-container .row,
+.homepage-container .col {
+    padding: 0;
+    margin: 0;
+}
+
+/* Suppression du padding pour le container-fluid sur mobile */
+@media (max-width: 768px) {
+    .homepage-container.container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 }

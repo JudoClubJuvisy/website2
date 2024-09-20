@@ -1,0 +1,9 @@
+/* _images.scss */
+
+/* Styles globaux pour les images */
+
+/* Assure que les images ne dépassent pas leur conteneur et conservent leur proportion */
+img {
+    max-width: 100%;
+    height: auto;
+}

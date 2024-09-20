@@ -1,59 +1,61 @@
+/* _cards.scss */
+
 /* Styles pour les cartes de judogis */
+
+/* Conteneur de la carte */
 .card {
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    transition: transform 0.2s;
-    margin-bottom: 1.5rem; /* Augmenter l'espace entre les cartes */
-}
-
-/* Espacement supplémentaire pour la grille */
-.row {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    @include transition(transform, 0.2s, ease);
+    margin-bottom: 1.5rem; /* Espace entre les cartes */
 }
 
 .card:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    @include box-shadow(0, 4px, 8px, rgba(0, 0, 0, 0.2));
 }
 
+/* Image en haut de la carte */
 .card-img-top {
-    width: 100%;
-    object-fit: cover;
+    width: 100%;        /* Prend toute la largeur du conteneur */
+    object-fit: cover;  /* Couvre l'image sans la déformer */
+    margin-bottom: 1rem; /* Espace sous l'image */
 }
 
-/* Contrôler la hauteur des images sur les différentes tailles d'écran */
+/* Hauteur des images sur différents écrans */
 @media (min-width: 576px) {
     .card-img-top {
         height: 200px;
     }
 }
 
+/* Titres de la carte */
 .card-title {
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
-.card-reference {
-    font-size: 1.5rem; /* Plus grand pour mettre en avant la référence */
+/* Sous-titres de la carte */
+.card-subtitle {
+    font-size: 1.25rem;
     font-weight: bold;
-    color: #004080; /* Couleur différente pour la référence */
-    margin-bottom: 1rem; /* Espace sous la référence */
+    text-align: center;
+    color: #004080;
+    margin-bottom: 1rem;
 }
 
+/* Référence de la carte */
+.card-reference {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+/* Items de la liste dans la carte */
 .list-group-item {
     font-size: 0.9rem;
     padding: 0.75rem 1.25rem;
 }
-
-/* Styles personnalisés pour les boutons */
-.card .btn-primary {
-    background-color: #004080;
-    border-color: #004080;
-}
-
-.card .btn-primary:hover {
-    background-color: darken(#004080, 10%);
-    border-color: darken(#004080, 10%);
-}
-

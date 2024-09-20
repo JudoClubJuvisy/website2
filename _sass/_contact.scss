@@ -1,11 +1,14 @@
-@import "_variables";
+/* _contact.scss */
 
 /* Styles spécifiques à la page de contact */
+
+/* Icône de contact */
 .contact-icon {
     font-size: 24px;
     color: $lightSecondaryColor;
 }
 
+/* Style du QR code */
 .qr-code {
     max-width: 600px; /* Largeur maximale sur desktop */
     width: 100%; /* Prend toute la largeur sur mobile */

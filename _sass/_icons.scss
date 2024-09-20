@@ -1,4 +1,6 @@
-// _icons.scss
+/* _icons.scss */
+
+/* Styles pour les icônes */
 
 .icon {
     vertical-align: middle;
@@ -24,6 +26,7 @@
     height: 24px;
 }
 
+/* Filtres pour changer la couleur des icônes */
 .icon-green {
     filter: invert(34%) sepia(73%) saturate(586%) hue-rotate(86deg) brightness(95%) contrast(89%);
 }

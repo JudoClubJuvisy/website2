@@ -1,4 +1,8 @@
-// Styles spécifiques pour la page des certificats
+/* _certificat.scss */
+
+/* Styles spécifiques pour la page des certificats */
+
+/* Formulaire interactif */
 #certificatForm {
     .form-label {
         font-weight: bold;
@@ -17,6 +21,7 @@
     }
 }
 
+/* Résultats du formulaire */
 #results {
     font-size: 1.2rem;
     margin-top: 30px;

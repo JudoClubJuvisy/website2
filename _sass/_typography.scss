@@ -1,0 +1,82 @@
+/* _typography.scss */
+
+/* Styles de typographie globaux */
+
+/* Polices globales */
+body {
+    font-family: $font-stack;
+    font-size: 16px; /* Taille de base pour le texte */
+    line-height: 1.6; /* Ligne pour une lisibilité optimale */
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-stack;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+/* Styles pour les titres basés sur la taille de l'écran */
+/* Taille de police pour les grands écrans (par défaut) */
+h1 {font-size: 2.5rem;}
+h2 {font-size: 2rem;}
+h3 {font-size: 1.75rem;}
+h4 {font-size: 1.5rem;}
+h5 {font-size: 1.25rem;}
+h6 {font-size: 1rem;}
+
+/* Responsive typographie pour les tailles d'écran plus petites */
+@media (max-width: 1200px) {
+    h1 {font-size: 2.25rem;}
+    h2 {font-size: 1.875rem;}
+    h3 {font-size: 1.625rem;}
+    h4 {font-size: 1.375rem;}
+    h5 {font-size: 1.125rem;}
+    h6 {font-size: 0.875rem;}
+}
+
+@media (max-width: 992px) {
+    h1 {font-size: 2rem;}
+    h2 {font-size: 1.75rem;}
+    h3 {font-size: 1.5rem;}
+    h4 {font-size: 1.25rem;}
+    h5 {font-size: 1rem;}
+    h6 {font-size: 0.875rem;}
+}
+
+@media (max-width: 768px) {
+    h1 {font-size: 1.75rem;}
+    h2 {font-size: 1.5rem;}
+    h3 {font-size: 1.25rem;}
+    h4 {font-size: 1.125rem;}
+    h5 {font-size: 0.875rem;}
+    h6 {font-size: 0.75rem;}
+}
+
+@media (max-width: 576px) {
+    h1 {font-size: 1.5rem;}
+    h2 {font-size: 1.25rem;}
+    h3 {font-size: 1rem;}
+    h4 {font-size: 0.875rem;}
+    h5 {font-size: 0.75rem;}
+    h6 {font-size: 0.625rem;}
+}
+
+/* Paragraphe */
+p {
+    font-size: 1rem; /* Taille de police de base pour le texte */
+    margin-bottom: 1rem;
+}
+
+/* Alignement du texte pour mobile */
+/* Ces styles alignent le texte au centre sur les petits écrans pour une meilleure lisibilité */
+@media (max-width: 768px) {
+    .text-md-end {
+        text-align: center !important;
+    }
+    .d-inline-block,
+    .text-end {
+        display: block !important;
+        text-align: center !important;
+    }
+}

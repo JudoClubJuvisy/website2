@@ -1,0 +1,48 @@
+/* _navbar.scss */
+
+/* Styles pour la barre de navigation */
+
+/* Couleur des liens inactifs */
+.navbar-nav .nav-link {
+    color: $lightGrayColor; /* Couleur des entrées de menu inactives */
+}
+
+/* Couleur des liens au survol */
+.navbar-nav .nav-link:hover {
+    color: $whiteColor !important; /* Couleur des entrées de menu au survol */
+}
+
+/* Couleur des liens actifs */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.show .nav-link {
+    color: $lightMainColor !important; /* Couleur du lien actif */
+    font-weight: 700 !important; /* Texte en gras pour le lien actif */
+}
+
+/* Style pour le menu déroulant (dropdown) */
+.dropdown-menu {
+    background-color: #212529; /* Couleur de fond du menu déroulant */
+    border: none; /* Suppression des bordures */
+}
+
+.dropdown-item {
+    color: $lightGrayColor; /* Couleur des éléments du menu déroulant */
+    
+    &:hover {
+        color: $whiteColor; /* Couleur des éléments au survol */
+        background-color: #343a40; /* Couleur de fond au survol */
+    }
+}
+
+/* Surcharge des variables CSS de Bootstrap pour la navbar */
+:root {
+  --bs-navbar-color: $lightGrayColor;
+  --bs-navbar-hover-color: $whiteColor;
+  --bs-navbar-active-color: $lightMainColor;
+}
+
+/* Style pour le logo du club dans la navbar */
+.logo-club {
+    height: 100px;
+    margin-right: 10px;
+}

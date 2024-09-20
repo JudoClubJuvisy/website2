@@ -8,24 +8,37 @@ title: Plan du site
     <nav aria-labelledby="site-map-heading">
         <ul>
             <!-- Menu principal -->
-            <li><a href="{{ '/index.html' | relative_url }}">Accueil</a></li>
+            <li><a href="{{ '/' | relative_url }}">Accueil</a></li>
             <li><a href="{{ '/le-club.html' | relative_url }}">Le Club</a></li>
-            <li><a href="{{ '/inscription.html' | relative_url }}">Inscription</a></li>
-            <li><a href="{{ '/entrainements.html' | relative_url }}">Entraînements</a></li>
             <li>
-                <a href="{{ '/competitions.html' | relative_url }}">Compétitions</a>
+                <a href="#">Nos disciplines</a>
                 <ul>
-                    <li><a href="https://judo91.com/" target="_blank" rel="noopener">Comité de Judo de l’Essonne</a></li>
-                    <li><a href="https://www.idfjudo.com/" target="_blank" rel="noopener">Ligue Île-de-France de Judo</a></li>
-                    <li><a href="https://www.ffjudo.com/" target="_blank" rel="noopener">Fédération Française de Judo</a></li>
+                    <li><a href="{{ '/jujitsu.html' | relative_url }}">Le Ju-Jitsu</a></li>
+                    <li><a href="{{ '/judo.html' | relative_url }}">Le Judo</a></li>
+                    <li><a href="{{ '/taiso.html' | relative_url }}">Le Taïso</a></li>
                 </ul>
             </li>
-            <li><a href="{{ '/contact.html' | relative_url }}">Contact</a></li>
-
-            <!-- Footer links -->
+            <li><a href="{{ '/inscription.html' | relative_url }}">S'inscrire</a></li>
+            <li>
+                <a href="#">Les entraînements</a>
+                <ul>
+                    <li><a href="{{ '/horaires.html' | relative_url }}">Les horaires</a></li>
+                    <li><a href="{{ '/equipement.html' | relative_url }}">L'équipement</a></li>
+                </ul>
+            </li>
+            <li>
+				<a href="{{ '/competitions.html' | relative_url }}">Les compétitions</a>
+				<ul>
+					<li><a href="https://judo91.com/" target="_blank" rel="noopener">Comité de Judo de l’Essonne</a></li>
+                    <li><a href="https://www.idfjudo.com/" target="_blank" rel="noopener">Ligue Île-de-France de Judo</a></li>
+                    <li><a href="https://www.ffjudo.com/" target="_blank" rel="noopener">Fédération Française de Judo</a></li>
+				</ul>
+			</li>
+            <li><a href="{{ '/contact.html' | relative_url }}">Nous contacter</a></li>
+            <!-- Liens du pied de page -->
             <li><a href="{{ '/mentions-legales.html' | relative_url }}">Mentions Légales</a></li>
             <li><a href="{{ '/reglement-interieur.html' | relative_url }}">Règlement Intérieur</a></li>
-            <li><a href="{{ '/statuts.html' | relative_url }}">Statuts</a></li>
+            <li><a href="{{ '/plan-du-site.html' | relative_url }}">Plan du site</a></li>
         </ul>
     </nav>
 </section>

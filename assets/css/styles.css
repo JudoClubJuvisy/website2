@@ -1,400 +1,21 @@
 @charset "UTF-8";
-/* Couleurs */
-/* #fbfbfb;  blanc cassé pour le fond du site */
-/* noir moins dur pour la couleur de la font */
-/* entrées du menu inactive */
-/* #f2f2f2; gris clair pour les en-têtes de tableau */
+/* _variables.scss */
+/* Couleurs globales */
+/* Blanc cassé pour le fond du site */
+/* Noir moins dur pour la couleur de la police */
+/* Couleur pour les entrées de menu inactives */
+/* Gris clair pour les en-têtes de tableau */
 /* Couleurs du club */
-/* Rouge */
+/* Rouge principal */
 /* Rouge foncé */
-/* Bleu */
+/* Bleu principal */
 /* Bleu plus clair */
-.icon {
-  vertical-align: middle;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: 24px;
-  height: 24px;
-}
-
-.icon-smallcontainer {
-  vertical-align: middle;
-  margin-left: 4px;
-  margin-right: 0px;
-  width: 24px;
-  height: 24px;
-}
-
-.icon-btn {
-  vertical-align: middle;
-  margin-left: 3px;
-  margin-right: 3px;
-  width: 24px;
-  height: 24px;
-}
-
-.icon-green {
-  filter: invert(34%) sepia(73%) saturate(586%) hue-rotate(86deg) brightness(95%) contrast(89%);
-}
-
-.icon-blue {
-  filter: invert(22%) sepia(97%) saturate(2424%) hue-rotate(184deg) brightness(94%) contrast(103%);
-}
-
-.icon-orange {
-  filter: invert(58%) sepia(70%) saturate(2607%) hue-rotate(348deg) brightness(100%) contrast(107%);
-}
-
-.icon-white {
-  filter: invert(100%) brightness(1000%) contrast(100%);
-}
-
-.navbar-nav .nav-link {
-  color: #77B5FE; /* Couleur des entrées de menu inactives */
-}
-
-.navbar-nav .nav-link:hover {
-  color: #FFFF00 !important; /* Couleur des entrées de menu au survol */
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-item.show .nav-link {
-  color: #E9383F !important; /* Couleur du lien actif */
-  font-weight: 700 !important; /* Texte en gras pour le lien actif */
-}
-
-.dropdown-menu {
-  background-color: #212529; /* Couleur de fond du menu déroulant */
-  border: none; /* Suppression des bordures */
-}
-
-.dropdown-item {
-  color: #77B5FE; /* Couleur des éléments du menu déroulant */
-}
-.dropdown-item:hover {
-  color: #FFFF00; /* Couleur des éléments au survol */
-  background-color: #343a40; /* Couleur de fond au survol */
-}
-
-:root {
-  --bs-navbar-color: $lightGrayColor;
-  --bs-navbar-hover-color: $whiteColor;
-  --bs-navbar-active-color: $lightMainColor;
-}
-
-/* Couleurs */
-/* #fbfbfb;  blanc cassé pour le fond du site */
-/* noir moins dur pour la couleur de la font */
-/* entrées du menu inactive */
-/* #f2f2f2; gris clair pour les en-têtes de tableau */
-/* Couleurs du club */
-/* Rouge */
-/* Rouge foncé */
-/* Bleu */
-/* Bleu plus clair */
-/* Styles pour les tableaux */
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1rem;
-  background-color: #FFFF00;
-}
-.table th, .table td {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid #77B5FE;
-}
-.table th {
-  background-color: #77B5FE;
-  font-weight: bold;
-  text-align: left;
-}
-.table tbody + tbody {
-  border-top: 2px solid #212121;
-}
-
-/* Couleurs */
-/* #fbfbfb;  blanc cassé pour le fond du site */
-/* noir moins dur pour la couleur de la font */
-/* entrées du menu inactive */
-/* #f2f2f2; gris clair pour les en-têtes de tableau */
-/* Couleurs du club */
-/* Rouge */
-/* Rouge foncé */
-/* Bleu */
-/* Bleu plus clair */
-/* Styles spécifiques à la page de contact */
-.contact-icon {
-  font-size: 24px;
-  color: #02479c;
-}
-
-.qr-code {
-  max-width: 600px; /* Largeur maximale sur desktop */
-  width: 100%; /* Prend toute la largeur sur mobile */
-  height: auto; /* Conserve le ratio d'aspect */
-  margin: 0 auto;
-}
-
-@media (max-width: 600px) {
-  .qr-code {
-    width: 100% !important;
-  }
-}
-/* _home.scss */
-/* Styles spécifiques pour la page d'accueil */
-/* Background color autour du texte avec un border-radius */
-.home-highlight {
-  display: inline-block;
-  background-color: #ffffe0;
-  padding: 0.5rem;
-  border-radius: 10px;
-  font-family: "Noto Sans", "Roboto", sans-serif;
-  color: #212121;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5em;
-  text-align: end;
-}
-
-/* Suppression du padding pour le main uniquement sur la page d'accueil */
-.home-container {
-  padding: 0 !important;
-}
-
-#certificatForm .form-label {
-  font-weight: bold;
-}
-#certificatForm .form-check {
-  margin-bottom: 10px;
-}
-#certificatForm .form-check-label {
-  margin-left: 5px;
-}
-#certificatForm .btn {
-  margin-top: 20px;
-}
-
-#results {
-  font-size: 1.2rem;
-  margin-top: 30px;
-}
-#results p {
-  margin-bottom: 15px;
-}
-
-/* Styles pour les images en pleine largeur */
-.full-width-image img {
-  width: 100%; /* Prend toute la largeur de l'écran */
-  height: auto; /* Conserve le ratio de l'image */
-  object-fit: cover; /* Couvre toute la largeur sans déformer l'image */
-  margin-bottom: 1.5rem; /* Espace entre l'image et le contenu suivant */
-}
-
-/* Styles pour le logo IJF avec un contour rouge foncé */
-.img-bordered {
-  border: 2px solid #800000; /* Contour rouge foncé */
-  padding: 4px; /* Espace entre l'image et le contour */
-}
-
-/* Comportement sur mobile : logo IJF au-dessus du texte */
-@media (max-width: 768px) {
-  .text-image-wrapper {
-    flex-direction: column; /* Aligne le texte et l'image en colonne */
-  }
-  .text-image-wrapper img {
-    width: 100%; /* Le logo prend toute la largeur sur mobile */
-    margin-bottom: 1rem; /* Espace sous le logo */
-  }
-}
-/* Styles pour la bannière du judogi plié */
-.banner-image img {
-  width: 100%; /* Prend toute la largeur du conteneur */
-  height: auto; /* Conserve le ratio de l'image */
-  object-fit: cover; /* Couvre toute la largeur sans déformer l'image */
-  margin-bottom: 2rem; /* Espace sous la bannière */
-}
-
-/* Styles pour les images dans les cartes */
-.card-img-top {
-  width: 100%; /* Prend toute la largeur du conteneur */
-  object-fit: cover; /* Couvre l'image sans la déformer */
-  margin-bottom: 1rem; /* Espace sous l'image */
-}
-
-/* Contrôle des hauteurs d'image sur desktop */
-@media (min-width: 576px) {
-  .card-img-top {
-    height: 200px; /* Fixe une hauteur sur les écrans de plus de 576px */
-  }
-}
-/* Ajout d'espacement supplémentaire pour les cartes */
-.card {
-  margin-bottom: 2rem; /* Ajout d'espace entre les cartes */
-}
-
-/* Styles pour les titres de cartes */
-.card-title {
-  font-weight: bold;
-  text-align: center; /* Centrer les titres des cartes */
-  margin-bottom: 0.5rem;
-}
-
-.card-subtitle {
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-align: center; /* Centrer les sous-titres des cartes */
-  color: #004080; /* Couleur différente pour les sous-titres */
-  margin-bottom: 1rem; /* Ajout d'espace sous le sous-titre */
-}
-
-/* Styles pour les boutons dans les cartes */
-.card .btn-primary {
-  background-color: #004080;
-  border-color: #004080;
-}
-
-.card .btn-primary:hover {
-  background-color: #00274d;
-  border-color: #00274d;
-}
-
-/* Styles pour les boutons de la boutique du club */
-.btn-club {
-  background-color: #0d6efd !important; /* Couleur par défaut de Bootstrap */
-  border-color: #0d6efd !important;
-  color: white !important; /* Assurer que le texte est blanc */
-}
-
-/* Surcharge pour les boutons normaux des cartes */
-.card .btn-primary:not(.btn-club) {
-  background-color: #004080;
-  border-color: #004080;
-}
-
-/* Styles pour la grille des images */
-.row {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Utilisation d'un système de grille pour le texte et l'image */
-.text-image-wrapper.grid-system {
-  display: grid;
-  grid-template-columns: 11fr 1fr; /* 11 colonnes pour le texte, 1 pour l'image */
-  gap: 1.5rem; /* Espace entre les colonnes */
-  align-items: center; /* Centre verticalement le texte et l'image */
-}
-
-/* Comportement sur mobile : colonne unique */
-@media (max-width: 768px) {
-  .text-image-wrapper.grid-system {
-    grid-template-columns: 1fr; /* Colonne unique sur mobile */
-  }
-}
-/* Amélioration de la visibilité des titres h3 avec la classe custom-title */
-.custom-title {
-  font-size: 1.5rem; /* Taille par défaut pour desktop */
-  color: #004080;
-  font-weight: bold;
-}
-@media (max-width: 768px) {
-  .custom-title {
-    font-size: 1.1rem; /* Augmentation de la taille sur mobile */
-    line-height: 1.6; /* Augmenter l'interligne sur mobile */
-    margin-top: 1.2rem; /* Ajout d'espace au-dessus pour séparer du contenu */
-  }
-}
-
-/* Style pour centrer le paragraphe et le bouton */
-.cta-button {
-  text-align: center;
-  margin: 2rem 0; /* Ajoute un espace de 2rem en haut et en bas */
-}
-
-.cta-text {
-  color: #0066cc;
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 1rem; /* Ajoute un espace sous le texte */
-}
-
-/* Ajoute un margin en bas du bouton */
-.cta-button .btn-lg {
-  margin-bottom: 2rem;
-}
-
-/* Styles pour les cartes de judogis */
-.card {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.2s;
-  margin-bottom: 1.5rem; /* Augmenter l'espace entre les cartes */
-}
-
-/* Espacement supplémentaire pour la grille */
-.row {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.card-img-top {
-  width: 100%;
-  object-fit: cover;
-}
-
-/* Contrôler la hauteur des images sur les différentes tailles d'écran */
-@media (min-width: 576px) {
-  .card-img-top {
-    height: 200px;
-  }
-}
-.card-title {
-  font-weight: bold;
-}
-
-.card-reference {
-  font-size: 1.5rem; /* Plus grand pour mettre en avant la référence */
-  font-weight: bold;
-  color: #004080; /* Couleur différente pour la référence */
-  margin-bottom: 1rem; /* Espace sous la référence */
-}
-
-.list-group-item {
-  font-size: 0.9rem;
-  padding: 0.75rem 1.25rem;
-}
-
-/* Styles personnalisés pour les boutons */
-.card .btn-primary {
-  background-color: #004080;
-  border-color: #004080;
-}
-
-.card .btn-primary:hover {
-  background-color: #00274d;
-  border-color: #00274d;
-}
-
-/* Logo Club */
-.logo-club {
-  height: 100px;
-  margin-right: 10px;
-}
-
-/* Accessibilité numérique */
-a:focus, button:focus {
-  outline: 2px solid #b40000; /* Rouge du club */
-  outline-offset: 2px;
-}
-
-/* Importer les polices */
+/* Polices */
+/* _mixins.scss */
+/* Mixins pour les styles récurrents */
+/* _typography.scss */
+/* Styles de typographie globaux */
+/* Polices globales */
 body {
   font-family: "Noto Sans", "Roboto", sans-serif;
   font-size: 16px; /* Taille de base pour le texte */
@@ -408,37 +29,33 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
+/* Styles pour les titres basés sur la taille de l'écran */
+/* Taille de police pour les grands écrans (par défaut) */
 h1 {
-  font-size: 2.5rem; /* Taille de police de base pour h1 */
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem; /* Taille de police de base pour h2 */
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: 1.75rem; /* Taille de police de base pour h3 */
+  font-size: 1.75rem;
 }
 
 h4 {
-  font-size: 1.5rem; /* Taille de police de base pour h4 */
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 1.25rem; /* Taille de police de base pour h5 */
+  font-size: 1.25rem;
 }
 
 h6 {
-  font-size: 1rem; /* Taille de police de base pour h6 */
+  font-size: 1rem;
 }
 
-/* Paragraphe */
-p {
-  font-size: 1rem; /* Taille de police de base pour le texte */
-  margin-bottom: 1rem;
-}
-
-/* Responsive Typographie */
+/* Responsive typographie pour les tailles d'écran plus petites */
 @media (max-width: 1200px) {
   h1 {
     font-size: 2.25rem;
@@ -519,20 +136,15 @@ p {
     font-size: 0.625rem;
   }
 }
-.homepage-container .row,
-.homepage-container .col {
-  padding: 0;
-  margin: 0;
+/* Paragraphe */
+p {
+  font-size: 1rem; /* Taille de police de base pour le texte */
+  margin-bottom: 1rem;
 }
 
+/* Alignement du texte pour mobile */
+/* Ces styles alignent le texte au centre sur les petits écrans pour une meilleure lisibilité */
 @media (max-width: 768px) {
-  .homepage-container.container-fluid {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-/* Align text for mobile */
-@media (max-width: 767.98px) {
   .text-md-end {
     text-align: center !important;
   }
@@ -542,27 +154,226 @@ p {
     text-align: center !important;
   }
 }
-/* petite animation pour l'ouverture et la fermeture de l'accordéon pour améliorer l'expérience utilisateur */
-.accordion-collapse {
-  transition: height 0.3s ease;
+/* _accessibility.scss */
+/* Styles pour améliorer l'accessibilité du site */
+/* Styles pour le focus des liens et des boutons */
+a:focus, button:focus {
+  outline: 2px solid #b40000; /* Rouge du club pour le focus */
+  outline-offset: 2px;
 }
 
-/* décalage de paragraphe dans la page inscription.html */
-.indent-response {
-  padding-left: 14px;
+/* _images.scss */
+/* Styles globaux pour les images */
+/* Assure que les images ne dépassent pas leur conteneur et conservent leur proportion */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
+/* _buttons.scss */
+/* Styles pour les boutons */
+/* Bouton spécifique pour la boutique du club */
+.btn-club {
+  background-color: #b40000;
+  border-color: #b40000;
+  color: #FCFCFC;
+}
+.btn-club:hover {
+  background-color: #810000;
+  border-color: #810000;
+  color: #FFFFFF;
+}
+
+/* Bouton d'inscription avec padding ajusté */
 .btn-inscription {
   padding-right: 6px;
   padding-left: 3px;
 }
 
-/* Footer Styles */
+/* _cards.scss */
+/* Styles pour les cartes de judogis */
+/* Conteneur de la carte */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  margin-bottom: 1.5rem; /* Espace entre les cartes */
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image en haut de la carte */
+.card-img-top {
+  width: 100%; /* Prend toute la largeur du conteneur */
+  object-fit: cover; /* Couvre l'image sans la déformer */
+  margin-bottom: 1rem; /* Espace sous l'image */
+}
+
+/* Hauteur des images sur différents écrans */
+@media (min-width: 576px) {
+  .card-img-top {
+    height: 200px;
+  }
+}
+/* Titres de la carte */
+.card-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Sous-titres de la carte */
+.card-subtitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+/* Référence de la carte */
+.card-reference {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #004080;
+  margin-bottom: 1rem;
+}
+
+/* Items de la liste dans la carte */
+.list-group-item {
+  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+}
+
+/* _tables.scss */
+/* Styles pour les tableaux */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background-color: #FCFCFC;
+}
+.table th, .table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #77B5FE;
+}
+.table th {
+  background-color: #77B5FE;
+  font-weight: bold;
+  text-align: left;
+}
+.table tbody + tbody {
+  border-top: 2px solid #212121;
+}
+
+/* _icons.scss */
+/* Styles pour les icônes */
+.icon {
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-smallcontainer {
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-right: 0px;
+  width: 24px;
+  height: 24px;
+}
+
+.icon-btn {
+  vertical-align: middle;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Filtres pour changer la couleur des icônes */
+.icon-green {
+  filter: invert(34%) sepia(73%) saturate(586%) hue-rotate(86deg) brightness(95%) contrast(89%);
+}
+
+.icon-blue {
+  filter: invert(22%) sepia(97%) saturate(2424%) hue-rotate(184deg) brightness(94%) contrast(103%);
+}
+
+.icon-orange {
+  filter: invert(58%) sepia(70%) saturate(2607%) hue-rotate(348deg) brightness(100%) contrast(107%);
+}
+
+.icon-white {
+  filter: invert(100%) brightness(1000%) contrast(100%);
+}
+
+/* _accordions.scss */
+/* Styles pour les accordéons */
+/* Animation pour l'ouverture et la fermeture de l'accordéon */
+.accordion-collapse {
+  transition: height 0.3s ease;
+}
+
+/* _navbar.scss */
+/* Styles pour la barre de navigation */
+/* Couleur des liens inactifs */
+.navbar-nav .nav-link {
+  color: #77B5FE; /* Couleur des entrées de menu inactives */
+}
+
+/* Couleur des liens au survol */
+.navbar-nav .nav-link:hover {
+  color: #FCFCFC !important; /* Couleur des entrées de menu au survol */
+}
+
+/* Couleur des liens actifs */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.show .nav-link {
+  color: #E9383F !important; /* Couleur du lien actif */
+  font-weight: 700 !important; /* Texte en gras pour le lien actif */
+}
+
+/* Style pour le menu déroulant (dropdown) */
+.dropdown-menu {
+  background-color: #212529; /* Couleur de fond du menu déroulant */
+  border: none; /* Suppression des bordures */
+}
+
+.dropdown-item {
+  color: #77B5FE; /* Couleur des éléments du menu déroulant */
+}
+.dropdown-item:hover {
+  color: #FCFCFC; /* Couleur des éléments au survol */
+  background-color: #343a40; /* Couleur de fond au survol */
+}
+
+/* Surcharge des variables CSS de Bootstrap pour la navbar */
+:root {
+  --bs-navbar-color: $lightGrayColor;
+  --bs-navbar-hover-color: $whiteColor;
+  --bs-navbar-active-color: $lightMainColor;
+}
+
+/* Style pour le logo du club dans la navbar */
+.logo-club {
+  height: 100px;
+  margin-right: 10px;
+}
+
+/* _footer.scss */
+/* Styles pour le pied de page */
 footer {
   background-color: #343a40;
 }
 
-/* Styles spécifiques pour les liens du footer */
+/* Styles pour les liens du footer */
 .footer-link {
   text-decoration: none;
   color: inherit; /* Conserve la couleur du texte */
@@ -571,7 +382,7 @@ footer {
   text-decoration: underline;
 }
 
-/* Styles spécifiques pour les liens des réseaux sociaux */
+/* Styles pour les liens des réseaux sociaux dans le footer */
 .social-link {
   text-decoration: none;
   color: inherit; /* Conserve la couleur du texte */
@@ -579,3 +390,179 @@ footer {
 .social-link:hover {
   text-decoration: none;
 }
+
+/* _home.scss */
+/* Styles spécifiques pour la page d'accueil */
+/* Conteneur principal de la page d'accueil */
+.home-container {
+  padding: 0 !important;
+}
+
+/* Mise en évidence du texte avec un fond et un border-radius */
+.home-highlight {
+  display: inline-block;
+  background-color: #ffffe0;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-family: "Noto Sans", "Roboto", sans-serif;
+  color: #212121;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5em;
+  text-align: end;
+}
+
+/* Suppression du padding pour les éléments row et col de la page d'accueil */
+.homepage-container .row,
+.homepage-container .col {
+  padding: 0;
+  margin: 0;
+}
+
+/* Suppression du padding pour le container-fluid sur mobile */
+@media (max-width: 768px) {
+  .homepage-container.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+/* _equipement.scss */
+/* Styles spécifiques à la page équipement */
+/* Images en pleine largeur */
+.full-width-image img {
+  width: 100%; /* Prend toute la largeur de l'écran */
+  height: auto; /* Conserve le ratio de l'image */
+  object-fit: cover; /* Couvre toute la largeur sans déformer l'image */
+  margin-bottom: 1.5rem; /* Espace entre l'image et le contenu suivant */
+}
+
+/* Logo IJF avec un contour rouge foncé */
+.img-bordered {
+  border: 2px solid #800000; /* Contour rouge foncé */
+  padding: 4px; /* Espace entre l'image et le contour */
+}
+
+/* Comportement sur mobile pour le logo IJF */
+@media (max-width: 768px) {
+  .text-image-wrapper {
+    flex-direction: column; /* Aligne le texte et l'image en colonne */
+  }
+  .text-image-wrapper img {
+    width: 100%; /* Le logo prend toute la largeur sur mobile */
+    margin-bottom: 1rem; /* Espace sous le logo */
+  }
+}
+/* Bannière du judogi plié */
+.banner-image img {
+  width: 100%; /* Prend toute la largeur du conteneur */
+  height: auto; /* Conserve le ratio de l'image */
+  object-fit: cover; /* Couvre toute la largeur sans déformer l'image */
+  margin-bottom: 2rem; /* Espace sous la bannière */
+}
+
+/* Grille des images */
+.row {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Système de grille pour le texte et l'image */
+.text-image-wrapper.grid-system {
+  display: grid;
+  grid-template-columns: 11fr 1fr; /* 11 colonnes pour le texte, 1 pour l'image */
+  gap: 1.5rem; /* Espace entre les colonnes */
+  align-items: center; /* Centre verticalement le texte et l'image */
+}
+
+/* Comportement sur mobile : colonne unique */
+@media (max-width: 768px) {
+  .text-image-wrapper.grid-system {
+    grid-template-columns: 1fr; /* Colonne unique sur mobile */
+  }
+}
+/* Styles pour les titres personnalisés */
+.custom-title {
+  font-size: 1.5rem; /* Taille par défaut pour desktop */
+  color: #004080;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .custom-title {
+    font-size: 1.1rem; /* Taille sur mobile */
+    line-height: 1.6;
+    margin-top: 1.2rem;
+  }
+}
+
+/* Centrer le paragraphe et le bouton */
+.cta-button {
+  text-align: center;
+  margin: 2rem 0; /* Espace en haut et en bas */
+}
+
+.cta-text {
+  color: #0066cc;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Margin en bas du bouton */
+.cta-button .btn-lg {
+  margin-bottom: 2rem;
+}
+
+/* _contact.scss */
+/* Styles spécifiques à la page de contact */
+/* Icône de contact */
+.contact-icon {
+  font-size: 24px;
+  color: #02479c;
+}
+
+/* Style du QR code */
+.qr-code {
+  max-width: 600px; /* Largeur maximale sur desktop */
+  width: 100%; /* Prend toute la largeur sur mobile */
+  height: auto; /* Conserve le ratio d'aspect */
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .qr-code {
+    width: 100% !important;
+  }
+}
+/* _certificat.scss */
+/* Styles spécifiques pour la page des certificats */
+/* Formulaire interactif */
+#certificatForm .form-label {
+  font-weight: bold;
+}
+#certificatForm .form-check {
+  margin-bottom: 10px;
+}
+#certificatForm .form-check-label {
+  margin-left: 5px;
+}
+#certificatForm .btn {
+  margin-top: 20px;
+}
+
+/* Résultats du formulaire */
+#results {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+#results p {
+  margin-bottom: 15px;
+}
+
+/* _inscription.scss */
+/* Styles spécifiques pour la page inscription */
+/* Style pour la réponse décalée dans la page inscription.html */
+.indent-response {
+  padding-left: 14px;
+}
+
+/* Styles globaux supplémentaires (ajoutez ici tout style global supplémentaire) */

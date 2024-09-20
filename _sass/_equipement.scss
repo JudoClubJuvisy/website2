@@ -1,4 +1,8 @@
-/* Styles pour les images en pleine largeur */
+/* _equipement.scss */
+
+/* Styles spécifiques à la page équipement */
+
+/* Images en pleine largeur */
 .full-width-image img {
     width: 100%;        /* Prend toute la largeur de l'écran */
     height: auto;       /* Conserve le ratio de l'image */
@@ -6,13 +10,13 @@
     margin-bottom: 1.5rem; /* Espace entre l'image et le contenu suivant */
 }
 
-/* Styles pour le logo IJF avec un contour rouge foncé */
+/* Logo IJF avec un contour rouge foncé */
 .img-bordered {
     border: 2px solid #800000; /* Contour rouge foncé */
     padding: 4px; /* Espace entre l'image et le contour */
 }
 
-/* Comportement sur mobile : logo IJF au-dessus du texte */
+/* Comportement sur mobile pour le logo IJF */
 @media (max-width: 768px) {
     .text-image-wrapper {
         flex-direction: column;  /* Aligne le texte et l'image en colonne */
@@ -23,7 +27,7 @@
     }
 }
 
-/* Styles pour la bannière du judogi plié */
+/* Bannière du judogi plié */
 .banner-image img {
     width: 100%;        /* Prend toute la largeur du conteneur */
     height: auto;       /* Conserve le ratio de l'image */
@@ -31,72 +35,13 @@
     margin-bottom: 2rem; /* Espace sous la bannière */
 }
 
-/* Styles pour les images dans les cartes */
-.card-img-top {
-    width: 100%;        /* Prend toute la largeur du conteneur */
-    object-fit: cover;  /* Couvre l'image sans la déformer */
-    margin-bottom: 1rem; /* Espace sous l'image */
-}
-
-/* Contrôle des hauteurs d'image sur desktop */
-@media (min-width: 576px) {
-    .card-img-top {
-        height: 200px; /* Fixe une hauteur sur les écrans de plus de 576px */
-    }
-}
-
-/* Ajout d'espacement supplémentaire pour les cartes */
-.card {
-    margin-bottom: 2rem; /* Ajout d'espace entre les cartes */
-}
-
-/* Styles pour les titres de cartes */
-.card-title {
-    font-weight: bold;
-    text-align: center;  /* Centrer les titres des cartes */
-    margin-bottom: 0.5rem;
-}
-
-.card-subtitle {
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-align: center;  /* Centrer les sous-titres des cartes */
-    color: #004080; /* Couleur différente pour les sous-titres */
-    margin-bottom: 1rem; /* Ajout d'espace sous le sous-titre */
-}
-
-/* Styles pour les boutons dans les cartes */
-.card .btn-primary {
-    background-color: #004080;
-    border-color: #004080;
-}
-
-.card .btn-primary:hover {
-    background-color: darken(#004080, 10%);
-    border-color: darken(#004080, 10%);
-}
-
-/* Styles pour les boutons de la boutique du club */
-.btn-club {
-    background-color: #0d6efd !important; /* Couleur par défaut de Bootstrap */
-    border-color: #0d6efd !important;
-    color: white !important; /* Assurer que le texte est blanc */
-}
-
-/* Surcharge pour les boutons normaux des cartes */
-.card .btn-primary:not(.btn-club) {
-    background-color: #004080;
-    border-color: #004080;
-}
-
-
-/* Styles pour la grille des images */
+/* Grille des images */
 .row {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
-/* Utilisation d'un système de grille pour le texte et l'image */
+/* Système de grille pour le texte et l'image */
 .text-image-wrapper.grid-system {
     display: grid;
     grid-template-columns: 11fr 1fr;  /* 11 colonnes pour le texte, 1 pour l'image */
@@ -111,33 +56,33 @@
     }
 }
 
-/* Amélioration de la visibilité des titres h3 avec la classe custom-title */
+/* Styles pour les titres personnalisés */
 .custom-title {
     font-size: 1.5rem; /* Taille par défaut pour desktop */
     color: #004080;
     font-weight: bold;
 
     @media (max-width: 768px) {
-        font-size: 1.1rem; /* Augmentation de la taille sur mobile */
-        line-height: 1.6; /* Augmenter l'interligne sur mobile */
-        margin-top: 1.2rem; /* Ajout d'espace au-dessus pour séparer du contenu */
+        font-size: 1.1rem; /* Taille sur mobile */
+        line-height: 1.6;
+        margin-top: 1.2rem;
     }
 }
 
-/* Style pour centrer le paragraphe et le bouton */
+/* Centrer le paragraphe et le bouton */
 .cta-button {
     text-align: center;
-    margin: 2rem 0; /* Ajoute un espace de 2rem en haut et en bas */
+    margin: 2rem 0; /* Espace en haut et en bas */
 }
 
 .cta-text {
     color: #0066cc;
     font-weight: bold;
     font-size: 1.2rem;
-    margin-bottom: 1rem; /* Ajoute un espace sous le texte */
+    margin-bottom: 1rem;
 }
 
-/* Ajoute un margin en bas du bouton */
+/* Margin en bas du bouton */
 .cta-button .btn-lg {
     margin-bottom: 2rem;
 }

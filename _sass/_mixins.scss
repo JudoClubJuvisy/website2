@@ -1,3 +1,7 @@
+/* _mixins.scss */
+
+/* Mixins pour les styles récurrents */
+
 @mixin responsive-text($size-mobile, $size-desktop) {
     font-size: $size-mobile;
     @media (min-width: 768px) {
@@ -6,7 +10,13 @@
 }
 
 @mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
     border-radius: $radius;
+}
+
+@mixin transition($property, $duration, $timing) {
+    transition: $property $duration $timing;
+}
+
+@mixin box-shadow($horizontal, $vertical, $blur, $color) {
+    box-shadow: $horizontal $vertical $blur $color;
 }

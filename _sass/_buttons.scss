@@ -1,0 +1,22 @@
+/* _buttons.scss */
+
+/* Styles pour les boutons */
+
+/* Bouton spécifique pour la boutique du club */
+.btn-club {
+    background-color: $mainColor;
+    border-color: $mainColor;
+    color: $whiteColor;
+
+    &:hover {
+        background-color: darken($mainColor, 10%);
+        border-color: darken($mainColor, 10%);
+		color: #FFFFFF
+    }
+}
+
+/* Bouton d'inscription avec padding ajusté */
+.btn-inscription {
+    padding-right: 6px;
+    padding-left: 3px;
+}

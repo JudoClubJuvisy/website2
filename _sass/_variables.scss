@@ -1,16 +1,18 @@
-$primary-color: #343a40;
+/* _variables.scss */
 
-/* Couleurs */
-$whiteColor: #FFFF00; /* #fbfbfb;  blanc cassé pour le fond du site */
-$blackColor: #212121; /* noir moins dur pour la couleur de la font */
-$darkGrayColor: #757575; /* entrées du menu inactive */
-$lightGrayColor: #77B5FE; /* #f2f2f2; gris clair pour les en-têtes de tableau */
+/* Couleurs globales */
+$primary-color: #343a40;
+$whiteColor: #FCFCFC; /* Blanc cassé pour le fond du site */
+$blackColor: #212121; /* Noir moins dur pour la couleur de la police */
+$darkGrayColor: #757575; /* Couleur pour les entrées de menu inactives */
+$lightGrayColor: #77B5FE; /* Gris clair pour les en-têtes de tableau */
 
 /* Couleurs du club */
 $lightMainColor: #E9383F;
-$mainColor: #b40000; /* Rouge */
+$mainColor: #b40000; /* Rouge principal */
 $darkMainColor: #780000; /* Rouge foncé */
-$secondaryColor: #002654; /* Bleu */
+$secondaryColor: #002654; /* Bleu principal */
 $lightSecondaryColor: #02479c; /* Bleu plus clair */
 
+/* Polices */
 $font-stack: 'Noto Sans', 'Roboto', sans-serif;

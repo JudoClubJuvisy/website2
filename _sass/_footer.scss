@@ -1,0 +1,27 @@
+/* _footer.scss */
+
+/* Styles pour le pied de page */
+
+footer {
+    background-color: $primary-color;
+}
+
+/* Styles pour les liens du footer */
+.footer-link {
+    text-decoration: none;
+    color: inherit; /* Conserve la couleur du texte */
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Styles pour les liens des réseaux sociaux dans le footer */
+.social-link {
+    text-decoration: none;
+    color: inherit; /* Conserve la couleur du texte */
+
+    &:hover {
+        text-decoration: none;
+    }
+}
