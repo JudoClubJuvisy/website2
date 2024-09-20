@@ -325,12 +325,12 @@ img {
 /* Styles pour la barre de navigation */
 /* Couleur des liens inactifs */
 .navbar-nav .nav-link {
-  color: #77B5FE; /* Couleur des entrées de menu inactives */
+  color: #FCFCFC; /* Couleur des entrées de menu inactives */
 }
 
 /* Couleur des liens au survol */
 .navbar-nav .nav-link:hover {
-  color: #FCFCFC !important; /* Couleur des entrées de menu au survol */
+  color: #77B5FE !important; /* Couleur des entrées de menu au survol */
 }
 
 /* Couleur des liens actifs */
@@ -347,17 +347,17 @@ img {
 }
 
 .dropdown-item {
-  color: #77B5FE; /* Couleur des éléments du menu déroulant */
+  color: #FCFCFC; /* Couleur des éléments du menu déroulant */
 }
 .dropdown-item:hover {
-  color: #FCFCFC; /* Couleur des éléments au survol */
+  color: #77B5FE; /* Couleur des éléments au survol */
   background-color: #343a40; /* Couleur de fond au survol */
 }
 
 /* Surcharge des variables CSS de Bootstrap pour la navbar */
 :root {
-  --bs-navbar-color: $lightGrayColor;
-  --bs-navbar-hover-color: $whiteColor;
+  --bs-navbar-color: $whiteColor;
+  --bs-navbar-hover-color: $lightGrayColor;
   --bs-navbar-active-color: $lightMainColor;
 }
 
