@@ -20,9 +20,12 @@
                 <!-- Menu de navigation aligné à droite -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
+                        
+                        <!-- Lien vers la page qui présente le club -->						
+						<li class="nav-item">
                             <a class="nav-link" id="nav-club" href="{{ '/le-club.html' | relative_url }}" aria-label="Le Club">Le Club</a>
                         </li>
+						
                         <!-- Menu déroulant pour les disciplines -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDisciplines" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Voir les disciplines">
@@ -34,9 +37,13 @@
                                 <li><a class="dropdown-item" href="{{ '/taiso.html' | relative_url }}" aria-label="Découvrir le Taïso">Le Taïso</a></li>
                             </ul>
                         </li>
+
+                        <!-- Lien vers la page inscription -->							
                         <li class="nav-item">
                             <a class="nav-link" id="nav-inscription" href="{{ '/inscription.html' | relative_url }}" aria-label="S'inscrire">S'inscrire</a>
                         </li>
+
+                        <!-- Menu déroulant pour les entraînements -->						
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarTrainings" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Voir les entraînements">
 								Les entraînements
@@ -46,15 +53,29 @@
 								<li><a class="dropdown-item" href="{{ '/equipement.html' | relative_url }}" aria-label="Voir les équipements nécessaires">L'équipement</a></li>
 							</ul>
 						</li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="nav-competitions" href="{{ '/competitions.html' | relative_url }}" aria-label="Les compétitions">Les compétitions</a>
+
+                        <!-- Menu déroulant pour les compétitions -->								
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarCompetitions" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Les compétitions">
+								Les compétitions
+							</a>
+							<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarCompetitions">
+								<li><a class="dropdown-item" href="{{ '/agenda-competitions.html' | relative_url }}" aria-label="Agenda des compétitions">L'agenda des compétitions</a></li>
+								<li><a class="dropdown-item" href="{{ '/competitions-officielles.html' | relative_url }}" aria-label="Les compétitions officielles">Les compétitions officielles</a></li>
+								<li><a class="dropdown-item" href="{{ '/competitions-amicales.html' | relative_url }}" aria-label="Les compétitions amicales">Les compétitions amicales</a></li>
+							</ul>
                         </li>
+						
+                        <!-- Lien vers la boutique -->
 						<li class="nav-item" id="nav-boutique">
 							<a class="nav-link" href="https://www.helloasso.com/associations/judo-club-de-juvisy/boutiques/judogis-du-club" target="_blank" rel="noopener">La boutique</a>
 						</li>
+						
+                        <!-- Lien vers la page sur les informations pour nous oontacter -->						
                         <li class="nav-item">
                             <a class="nav-link" id="nav-contact" href="{{ '/contact.html' | relative_url }}" aria-label="Nous contacter">Nous contacter</a>
                         </li>
+						
                     </ul>
                 </div>
             </div>
