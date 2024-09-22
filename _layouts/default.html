@@ -37,7 +37,7 @@
 
     {% include header.html %}
 
-    <main class="container{% if page.title contains 'Accueil' %} home-container{% endif %}">
+    <main class="container main-container {% if page.title contains 'Accueil' %}home-container{% endif %}">
         {{ content }}
     </main>
 
