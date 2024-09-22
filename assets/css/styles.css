@@ -18,6 +18,7 @@
 /* Polices globales */
 body {
   font-family: "Noto Sans", "Roboto", sans-serif;
+  color: #212121;
   font-size: 16px; /* Taille de base pour le texte */
   line-height: 1.6; /* Ligne pour une lisibilité optimale */
 }
@@ -25,6 +26,7 @@ body {
 /* Titres */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Noto Sans", "Roboto", sans-serif;
+  color: #212121;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
@@ -295,6 +297,13 @@ img {
   margin-right: 3px;
   width: 24px;
   height: 24px;
+}
+
+/* Spécificité pour les icônes du footer */
+.icon-social-link {
+  width: 24px;
+  height: 24px;
+  filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Couleur blanche pour les icônes du footer */
 }
 
 /* Filtres pour changer la couleur des icônes */
