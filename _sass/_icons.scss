@@ -26,6 +26,13 @@
     height: 24px;
 }
 
+/* Spécificité pour les icônes du footer */
+.icon-social-link {
+    width: 24px;
+    height: 24px;
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%); /* Couleur blanche pour les icônes du footer */
+}
+
 /* Filtres pour changer la couleur des icônes */
 .icon-green {
     filter: invert(34%) sepia(73%) saturate(586%) hue-rotate(86deg) brightness(95%) contrast(89%);

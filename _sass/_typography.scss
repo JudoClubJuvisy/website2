@@ -5,6 +5,7 @@
 /* Polices globales */
 body {
     font-family: $font-stack;
+	color: $blackColor;
     font-size: 16px; /* Taille de base pour le texte */
     line-height: 1.6; /* Ligne pour une lisibilité optimale */
 }
@@ -12,6 +13,7 @@ body {
 /* Titres */
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-stack;
+	color: $blackColor;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
