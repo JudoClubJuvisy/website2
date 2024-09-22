@@ -28,3 +28,10 @@
 @import "_inscription";  // Styles spécifiques à la page inscription
 
 /* Styles globaux supplémentaires (ajoutez ici tout style global supplémentaire) */
+.main-container {
+    background-color: $whiteColor; // Fond blanc pour le conteneur principal
+    min-height: 100vh; // S'assurer que le container principal couvre toute la hauteur de la page
+    padding-top: 20px; // Espace en haut pour séparer du header
+    padding-bottom: 20px; // Espace en bas pour séparer du footer
+    box-sizing: border-box; // Prend en compte le padding dans la hauteur
+}

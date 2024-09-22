@@ -575,3 +575,10 @@ footer {
 }
 
 /* Styles globaux supplémentaires (ajoutez ici tout style global supplémentaire) */
+.main-container {
+  background-color: #FCFCFC;
+  min-height: 100vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
