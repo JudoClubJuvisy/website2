@@ -535,7 +535,7 @@ footer {
 }
 @media (max-width: 1200px) {
   .competition-event {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     padding: 0.9rem;
   }
 }
@@ -547,14 +547,14 @@ footer {
 }
 @media (max-width: 768px) {
   .competition-event {
-    font-size: 1rem;
-    padding: 0.7rem;
+    font-size: 1.1rem;
+    padding: 0.8rem;
   }
 }
 @media (max-width: 576px) {
   .competition-event {
-    font-size: 0.95rem;
-    padding: 0.6rem;
+    font-size: 1.05rem;
+    padding: 0.8rem;
   }
 }
 
