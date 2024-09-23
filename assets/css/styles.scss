@@ -22,10 +22,11 @@
 
 // Styles spécifiques aux pages
 @import "_home";         // Styles spécifiques à la page d'accueil
+@import "_inscription";  // Styles spécifiques à la page inscription
 @import "_equipement";   // Styles spécifiques à la page équipement
+@import "_agenda";       // Styles spécifiques à la page agenda-competition
 @import "_contact";      // Styles spécifiques à la page contact
 @import "_certificat";   // Styles spécifiques à la page certificat
-@import "_inscription";  // Styles spécifiques à la page inscription
 
 /* Styles globaux supplémentaires (ajoutez ici tout style global supplémentaire) */
 .main-container {
