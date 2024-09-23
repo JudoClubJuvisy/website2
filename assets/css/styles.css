@@ -435,6 +435,13 @@ footer {
     padding-right: 0 !important;
   }
 }
+/* _inscription.scss */
+/* Styles spécifiques pour la page inscription */
+/* Style pour la réponse décalée dans la page inscription.html */
+.indent-response {
+  padding-left: 14px;
+}
+
 /* _equipement.scss */
 /* Styles spécifiques à la page équipement */
 /* Images en pleine largeur */
@@ -521,6 +528,40 @@ footer {
   margin-bottom: 2rem;
 }
 
+/* _agenda.scss */
+.competition-event {
+  font-size: 1rem;
+  padding: 1rem;
+}
+@media (max-width: 1200px) {
+  .competition-event {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+}
+@media (max-width: 992px) {
+  .competition-event {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .competition-event {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+}
+@media (max-width: 576px) {
+  .competition-event {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+}
+
+.competition-event + .competition-event {
+  margin-top: 0.5rem;
+}
+
 /* _contact.scss */
 /* Styles spécifiques à la page de contact */
 /* Icône de contact */
@@ -565,13 +606,6 @@ footer {
 }
 #results p {
   margin-bottom: 15px;
-}
-
-/* _inscription.scss */
-/* Styles spécifiques pour la page inscription */
-/* Style pour la réponse décalée dans la page inscription.html */
-.indent-response {
-  padding-left: 14px;
 }
 
 /* Styles globaux supplémentaires (ajoutez ici tout style global supplémentaire) */
