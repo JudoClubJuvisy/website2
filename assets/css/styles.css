@@ -261,7 +261,7 @@ img {
 }
 .table th, .table td {
   padding: 0.75rem;
-  vertical-align: top;
+  vertical-align: middle;
   border-top: 1px solid #77B5FE;
 }
 .table th {
