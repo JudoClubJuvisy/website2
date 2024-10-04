@@ -1,6 +1,12 @@
 <!-- Header principal contenant la navigation du site -->
 <header class="bg-dark text-white p-0" role="banner" aria-label="Header principal">
-    <div class="container-fluid p-0">
+    <!-- Bannière Octobre Rose, cachée par défaut -->
+    <div class="octobre-rose-banner text-center py-2 d-none">
+        <a href="https://octobrerose.fondation-arc.org/" class="octobre-rose-link" target="_blank" rel="noopener" aria-label="Visiter le site d'Octobre Rose">
+            🎗️ Le Judo Club de Juvisy soutient Octobre Rose pour la lutte contre le cancer du sein 🎗️
+        </a>
+    </div>
+   <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg navbar-dark" id="main-navbar" aria-label="Navigation principale">
 
             <!-- Conteneur principal de la navbar -->
@@ -8,7 +14,10 @@
 
                 <!-- Logo aligné à gauche avec lien vers la page d'accueil -->
                 <a class="navbar-brand" href="{{ '/' | relative_url }}" aria-label="Retour à l'accueil">
-                    <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo Judo Club de Juvisy" class="logo-club">
+                    <img src="{{ '/assets/images/logo.png' | relative_url }}"
+                         data-logo-regular="{{ '/assets/images/logo.png' | relative_url }}"
+                         data-logo-octobre="{{ '/assets/images/logo_octobre_rose.png' | relative_url }}"
+                         alt="Logo Judo Club de Juvisy" class="logo-club" id="logo-club">
                     Judo Club de Juvisy
                 </a>
 

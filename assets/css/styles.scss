@@ -36,3 +36,20 @@
     padding-bottom: 20px; // Espace en bas pour séparer du footer
     box-sizing: border-box; // Prend en compte le padding dans la hauteur
 }
+
+/* Styles pour la bannière Octobre Rose */
+.octobre-rose-banner {
+    background-color: #FFC0CB;
+    color: $blackColor;
+    font-weight: bold;
+    padding: 15px; /* Ajout de padding pour l'espace intérieur */
+
+    .octobre-rose-link {
+        color: $blackColor;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

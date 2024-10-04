@@ -35,6 +35,49 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentUrl === "/certificat.html") {
         initCertificatPage();
     }
+
+	// Ajout du code pour Octobre Rose
+    // Obtenir le mois actuel (0-11)
+    const currentMonth = new Date().getMonth();
+
+    // Vérifier si c'est le mois d'octobre (mois 9 car 0-indexé)
+    if (currentMonth === 9) {
+        // Changer le logo en 'logo_octobre_rose.png'
+        const logoImage = document.getElementById('logo-club');
+        if (logoImage) {
+            logoImage.src = logoImage.getAttribute('data-logo-octobre');
+        }
+
+        // Changer la couleur du titre en rose
+        const navbarBrand = document.querySelector('.navbar-brand');
+        if (navbarBrand) {
+            navbarBrand.classList.add('octobre-rose');
+        }
+
+        // Afficher la bannière
+        const banner = document.querySelector('.octobre-rose-banner');
+        if (banner) {
+            banner.classList.remove('d-none');
+        }
+    } else {
+        // Changer le logo en 'logo.png'
+        const logoImage = document.getElementById('logo-club');
+        if (logoImage) {
+            logoImage.src = logoImage.getAttribute('data-logo-regular');
+        }
+
+        // Remettre la couleur du titre à la couleur par défaut
+        const navbarBrand = document.querySelector('.navbar-brand');
+        if (navbarBrand) {
+            navbarBrand.classList.remove('octobre-rose');
+        }
+
+        // Cacher la bannière
+        const banner = document.querySelector('.octobre-rose-banner');
+        if (banner) {
+            banner.classList.add('d-none');
+        }
+    }
 });
 
 // Fonction spécifique à la page certificat
