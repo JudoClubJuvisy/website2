@@ -355,6 +355,14 @@ img {
   border: none; /* Suppression des bordures */
 }
 
+/* Style pour le titre du club dans la navbar */
+.navbar-brand {
+  color: #FCFCFC !important; /* Couleur par défaut */
+}
+.navbar-brand.octobre-rose {
+  color: #FFC0CB !important; /* Couleur rose pour Octobre Rose */
+}
+
 .dropdown-item {
   color: #FCFCFC; /* Couleur des éléments du menu déroulant */
 }
@@ -615,4 +623,19 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   box-sizing: border-box;
+}
+
+/* Styles pour la bannière Octobre Rose */
+.octobre-rose-banner {
+  background-color: #FFC0CB;
+  color: #212121;
+  font-weight: bold;
+  padding: 15px; /* Ajout de padding pour l'espace intérieur */
+}
+.octobre-rose-banner .octobre-rose-link {
+  color: #212121;
+  text-decoration: none;
+}
+.octobre-rose-banner .octobre-rose-link:hover {
+  text-decoration: underline;
 }
