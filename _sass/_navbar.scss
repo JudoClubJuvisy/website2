@@ -28,10 +28,6 @@
 /* Style pour le titre du club dans la navbar */
 .navbar-brand {
     color: $whiteColor !important; /* Couleur par défaut */
-
-    &.octobre-rose {
-        color: #FFC0CB !important; /* Couleur rose pour Octobre Rose */
-    }
 }
 
 .dropdown-item {
