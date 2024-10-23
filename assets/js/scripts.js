@@ -36,46 +36,67 @@ document.addEventListener("DOMContentLoaded", function () {
         initCertificatPage();
     }
 
-	// Ajout du code pour Octobre Rose
-    // Obtenir le mois actuel (0-11)
+    // Ajout du code pour les thèmes spéciaux
     const currentMonth = new Date().getMonth();
 
-    // Vérifier si c'est le mois d'octobre (mois 9 car 0-indexé)
-    if (currentMonth === 9) {
-        // Changer le logo en 'logo_octobre_rose.png'
-        const logoImage = document.getElementById('logo-club');
-        if (logoImage) {
-            logoImage.src = logoImage.getAttribute('data-logo-octobre');
-        }
-
-        // Changer la couleur du titre en rose
-        const navbarBrand = document.querySelector('.navbar-brand');
-        if (navbarBrand) {
-            navbarBrand.classList.add('octobre-rose');
-        }
-
-        // Afficher la bannière
-        const banner = document.querySelector('.octobre-rose-banner');
-        if (banner) {
-            banner.classList.remove('d-none');
-        }
+    if (currentMonth === 9) { // Octobre
+        applySpecialTheme('octobre');
+    } else if (currentMonth === 10) { // Novembre
+        applySpecialTheme('novembre');
     } else {
-        // Changer le logo en 'logo.png'
+        applySpecialTheme(null);
+    }
+
+    function applySpecialTheme(theme) {
         const logoImage = document.getElementById('logo-club');
-        if (logoImage) {
-            logoImage.src = logoImage.getAttribute('data-logo-regular');
-        }
-
-        // Remettre la couleur du titre à la couleur par défaut
         const navbarBrand = document.querySelector('.navbar-brand');
-        if (navbarBrand) {
-            navbarBrand.classList.remove('octobre-rose');
-        }
+        const banner = document.querySelector('.special-banner');
 
-        // Cacher la bannière
-        const banner = document.querySelector('.octobre-rose-banner');
-        if (banner) {
-            banner.classList.add('d-none');
+        if (theme === 'octobre') {
+            // Thème Octobre Rose
+            if (logoImage) {
+                logoImage.src = logoImage.getAttribute('data-logo-octobre');
+            }
+            if (navbarBrand) {
+                navbarBrand.classList.add('octobre-rose');
+            }
+            if (banner) {
+                banner.classList.remove('d-none');
+                banner.innerHTML = `
+                    <a href="https://octobrerose.fondation-arc.org/" class="special-link" target="_blank" rel="noopener" aria-label="Visiter le site d'Octobre Rose">
+                        🎗️ Le Judo Club de Juvisy soutient Octobre Rose pour la lutte contre le cancer du sein 🎗️
+                    </a>
+                `;
+                banner.classList.add('octobre-rose-banner');
+            }
+        } else if (theme === 'novembre') {
+            // Thème Movember
+            if (logoImage) {
+                logoImage.src = logoImage.getAttribute('data-logo-novembre');
+            }
+            if (navbarBrand) {
+                navbarBrand.classList.add('novembre-bleu');
+            }
+            if (banner) {
+                banner.classList.remove('d-none');
+                banner.innerHTML = `
+                    <a href="https://www.gustaveroussy.fr/fr/faire-un-don-contre-le-cancer-de-la-prostate" class="special-link" target="_blank" rel="noopener" aria-label="Faire un don contre le cancer de la prostate">
+                        🎗️ Le Judo Club de Juvisy soutient Movember pour la lutte contre les cancers masculins 🎗️
+                    </a>
+                `;
+                banner.classList.add('novembre-bleu-banner');
+            }
+        } else {
+            // Thème par défaut
+            if (logoImage) {
+                logoImage.src = logoImage.getAttribute('data-logo-regular');
+            }
+            if (navbarBrand) {
+                navbarBrand.classList.remove('octobre-rose', 'novembre-bleu');
+            }
+            if (banner) {
+                banner.classList.add('d-none');
+            }
         }
     }
 });

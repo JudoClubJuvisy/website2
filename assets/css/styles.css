@@ -359,9 +359,6 @@ img {
 .navbar-brand {
   color: #FCFCFC !important; /* Couleur par défaut */
 }
-.navbar-brand.octobre-rose {
-  color: #FFC0CB !important; /* Couleur rose pour Octobre Rose */
-}
 
 .dropdown-item {
   color: #FCFCFC; /* Couleur des éléments du menu déroulant */
@@ -625,17 +622,27 @@ footer {
   box-sizing: border-box;
 }
 
-/* Styles pour la bannière Octobre Rose */
+/* Styles pour le thème Octobre Rose */
 .octobre-rose-banner {
-  background-color: #FFC0CB;
-  color: #212121;
-  font-weight: bold;
-  padding: 15px; /* Ajout de padding pour l'espace intérieur */
+  background-color: #FFC0CB; /* Rose */
 }
-.octobre-rose-banner .octobre-rose-link {
+
+/* Styles pour le thème Movember */
+.novembre-bleu-banner {
+  background-color: #a0d1ff; /* Bleu */
+}
+
+/* Styles communs pour la bannière spéciale */
+.special-banner {
+  color: #212121;
+  padding: 15px;
+}
+
+.special-link {
   color: #212121;
   text-decoration: none;
 }
-.octobre-rose-banner .octobre-rose-link:hover {
+
+.special-link:hover {
   text-decoration: underline;
 }
