@@ -10,7 +10,7 @@
 	"author": "Judo Club de Juvisy",
 	"license": "GPL-3.0-or-later",
 	"dependencies": {
-		"nodemon": "^3.1.4",
+		"nodemon": "^3.1.9",
 		"sass": "^1.32.13",
 		"semver": "^7.6.3"
 	}
