@@ -1,32 +1,32 @@
 // styles.scss
 
 // Importer les variables et mixins en premier
-@import "_variables";    // Contient les variables globales de couleur, polices, etc.
-@import "_mixins";       // Contient les mixins réutilisables
+@use "_variables";    // Contient les variables globales de couleur, polices, etc.
+@use "_mixins";       // Contient les mixins réutilisables
 
 // Styles globaux
-@import "_typography";   // Styles de typographie globaux pour le corps du texte et les titres
-@import "_accessibility"; // Styles pour améliorer l'accessibilité du site
-@import "_images";       // Styles globaux pour les images
+@use "_typography";   // Styles de typographie globaux pour le corps du texte et les titres
+@use "_accessibility"; // Styles pour améliorer l'accessibilité du site
+@use "_images";       // Styles globaux pour les images
 
 // Composants génériques
-@import "_buttons";      // Styles pour les boutons utilisés sur l'ensemble du site
-@import "_cards";        // Styles pour les cartes (composants réutilisables)
-@import "_tables";       // Styles pour les tableaux
-@import "_icons";        // Styles pour les icônes
-@import "_accordions";   // Styles pour les accordéons (composant Bootstrap)
+@use "_buttons";      // Styles pour les boutons utilisés sur l'ensemble du site
+@use "_cards";        // Styles pour les cartes (composants réutilisables)
+@use "_tables";       // Styles pour les tableaux
+@use "_icons";        // Styles pour les icônes
+@use "_accordions";   // Styles pour les accordéons (composant Bootstrap)
 
 // Composants de mise en page
-@import "_navbar";       // Styles pour la barre de navigation (header)
-@import "_footer";       // Styles pour le pied de page
+@use "_navbar";       // Styles pour la barre de navigation (header)
+@use "_footer";       // Styles pour le pied de page
 
 // Styles spécifiques aux pages
-@import "_home";         // Styles spécifiques à la page d'accueil
-@import "_inscription";  // Styles spécifiques à la page inscription
-@import "_equipement";   // Styles spécifiques à la page équipement
-@import "_agenda";       // Styles spécifiques à la page agenda-competition
-@import "_contact";      // Styles spécifiques à la page contact
-@import "_certificat";   // Styles spécifiques à la page certificat
+@use "_home";         // Styles spécifiques à la page d'accueil
+@use "_inscription";  // Styles spécifiques à la page inscription
+@use "_equipement";   // Styles spécifiques à la page équipement
+@use "_agenda";       // Styles spécifiques à la page agenda-competition
+@use "_contact";      // Styles spécifiques à la page contact
+@use "_certificat";   // Styles spécifiques à la page certificat
 
 /* Styles globaux supplémentaires (ajoutez ici tout style global supplémentaire) */
 .main-container {
