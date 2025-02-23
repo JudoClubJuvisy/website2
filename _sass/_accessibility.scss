@@ -2,6 +2,8 @@
 
 /* Styles pour améliorer l'accessibilité du site */
 
+@use "_variables" as *;
+
 /* Styles pour le focus des liens et des boutons */
 a:focus, button:focus {
     outline: 2px solid $mainColor; /* Rouge du club pour le focus */
