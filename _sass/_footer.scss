@@ -1,6 +1,7 @@
 /* _footer.scss */
-
 /* Styles pour le pied de page */
+
+@use "config" as *;
 
 footer {
     background-color: $primary-color;

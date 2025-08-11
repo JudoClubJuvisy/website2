@@ -1,6 +1,7 @@
 /* _navbar.scss */
-
 /* Styles pour la barre de navigation */
+
+@use "config" as *;
 
 /* Couleur des liens inactifs */
 .navbar-nav .nav-link {

@@ -1,4 +1,27 @@
-title: Judo Club de Juvisy
-description: Le site officiel du Judo Club de Juvisy, proposant des cours de judo pour tous les âges et tous les niveaux.
-baseurl: ""
-url: ""
+title: "Judo Club de Juvisy"
+description: "Site officiel du Judo Club de Juvisy — Judo, Ju-jitsu, Taïso."
+url: "https://www.judo-juvisy.org"   # domaine custom (CNAME)
+baseurl: ""                          # ne rien mettre si le site est à la racine du domaine
+lang: fr
+
+# Rendu
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Plugins GitHub Pages supportés
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclusions build
+exclude:
+  - node_modules
+  - vendor
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - .github
+  - scripts

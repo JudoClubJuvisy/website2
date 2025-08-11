@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title }} - {{ site.title }}</title>
+
+    {%- seo -%} <!-- Génère title, description, canonical, Open Graph/Twitter, JSON-LD -->
+
     <link rel="icon" href="{{ '/assets/images/favicon-192x192.png' | relative_url }}" type="image/png">
 	
-	<!-- Font Google Noto Sans -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
 
-	<!-- Bootstrap CSS local -->
-	<link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+    <!-- Bootstrap CSS local -->
+    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
     
-	<!-- La feuille de style du site -->
-	<link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+    <!-- Feuille de style du site -->
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 
-	<!-- Flatpickr CSS / pour le data picker -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Flatpickr CSS (date picker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-    <meta name="description" content="{{ site.description }}">
+    <!-- Style minimal pour le lien d’évitement (accessibilité) -->
+    <style>
+      .skip-link{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+      .skip-link:focus{left:0;top:0;width:auto;height:auto;padding:.5rem 1rem;background:#000;color:#fff;z-index:1000}
+    </style>
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -27,7 +33,6 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NTTXXLGB');</script>
     <!-- End Google Tag Manager -->
-
 </head>
 <body class="{% if page.title contains 'Accueil' %}home{% endif %}">
     <!-- Google Tag Manager (noscript) -->
@@ -35,23 +40,28 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    {% include header.html %}
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-    <main class="container main-container {% if page.title contains 'Accueil' %}home-container{% endif %}">
+    <header>
+      {% include header.html %}
+    </header>
+
+    <main id="contenu" class="container main-container {% if page.title contains 'Accueil' %}home-container{% endif %}">
         {{ content }}
     </main>
 
-    {% include footer.html %}
+    <footer>
+      {% include footer.html %}
+    </footer>
 
-	<!-- Bootstrap Bundle JS local -->
-	<script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
+    <!-- Bootstrap Bundle JS local -->
+    <script src="{{ '/assets/js/bootstrap.bundle.min.js' | relative_url }}"></script>
 	
-	<!-- Flatpickr JS -->
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
 	
-	<!-- Fichier avec les scripts Javascript pour le site -->
-	<script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
-	
+    <!-- Scripts du site -->
+    <script src="{{ '/assets/js/scripts.js' | relative_url }}"></script>
 </body>
 </html>

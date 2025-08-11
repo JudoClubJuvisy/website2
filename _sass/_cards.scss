@@ -1,6 +1,7 @@
 /* _cards.scss */
-
 /* Styles pour les cartes de judogis */
+
+@use "config" as *;
 
 /* Conteneur de la carte */
 .card {

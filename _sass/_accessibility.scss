@@ -1,8 +1,8 @@
 /* _accessibility.scss */
-
 /* Styles pour améliorer l'accessibilité du site */
 
-@use "_variables" as *;
+/* _accessibility.scss */
+@use "config" as *;
 
 /* Styles pour le focus des liens et des boutons */
 a:focus, button:focus {

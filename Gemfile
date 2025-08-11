@@ -1,20 +1,17 @@
 # Spécifie la source des gems
+# Gemfile — build local Jekyll + plugins (Windows ok)
 source "https://rubygems.org"
 
 # Dépendances principales
-gem "jekyll", "~> 4.3.3"
-gem "bundler", "~> 2.5.17"
+gem "jekyll", "~> 4.3"
+gem "webrick", "~> 1.8"     # serveur local pour Ruby 3+
 
-# Plugins pour Jekyll
-gem "jekyll-sitemap"
-gem "jekyll-seo-tag"
-gem "jekyll-feed"
+# Plugins Jekyll
+group :jekyll_plugins do
+  gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-feed", "~> 0.17"   # si tu veux un /feed.xml (optionnel)
+end
 
-# Ajouter 'csv' pour résoudre l'avertissement lié à 'csv'
-gem "csv"
-
-# Ajouter 'base64' pour résoudre l'avertissement lié à 'base64'
-gem "base64"
-
-# Ajouter 'wdm' pour améliorer la surveillance des changements sur Windows
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+# Sur Windows : watcher de fichiers plus fiable (optionnel)
+gem "wdm", ">= 0.1.0", platforms: [:mswin, :mingw, :x64_mingw]

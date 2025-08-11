@@ -1,88 +1,86 @@
 /* _equipement.scss */
+@use "config" as *;
 
 /* Styles spécifiques à la page équipement */
 
 /* Images en pleine largeur */
 .full-width-image img {
-    width: 100%;        /* Prend toute la largeur de l'écran */
-    height: auto;       /* Conserve le ratio de l'image */
-    object-fit: cover;  /* Couvre toute la largeur sans déformer l'image */
-    margin-bottom: 1.5rem; /* Espace entre l'image et le contenu suivant */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
 }
 
 /* Logo IJF avec un contour rouge foncé */
 .img-bordered {
-    border: 2px solid #800000; /* Contour rouge foncé */
-    padding: 4px; /* Espace entre l'image et le contour */
+  border: 2px solid #800000;
+  padding: 4px;
 }
 
 /* Comportement sur mobile pour le logo IJF */
 @media (max-width: 768px) {
-    .text-image-wrapper {
-        flex-direction: column;  /* Aligne le texte et l'image en colonne */
-        img {
-            width: 100%;          /* Le logo prend toute la largeur sur mobile */
-            margin-bottom: 1rem;  /* Espace sous le logo */
-        }
+  .text-image-wrapper {
+    flex-direction: column;
+    img {
+      width: 100%;
+      margin-bottom: 1rem;
     }
+  }
 }
 
 /* Bannière du judogi plié */
 .banner-image img {
-    width: 100%;        /* Prend toute la largeur du conteneur */
-    height: auto;       /* Conserve le ratio de l'image */
-    object-fit: cover;  /* Couvre toute la largeur sans déformer l'image */
-    margin-bottom: 2rem; /* Espace sous la bannière */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 2rem;
 }
 
 /* Grille des images */
 .row {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Système de grille pour le texte et l'image */
 .text-image-wrapper.grid-system {
-    display: grid;
-    grid-template-columns: 11fr 1fr;  /* 11 colonnes pour le texte, 1 pour l'image */
-    gap: 1.5rem;  /* Espace entre les colonnes */
-    align-items: center; /* Centre verticalement le texte et l'image */
+  display: grid;
+  grid-template-columns: 11fr 1fr; /* 11 colonnes pour le texte, 1 pour l'image */
+  gap: 1.5rem;
+  align-items: center;
 }
 
 /* Comportement sur mobile : colonne unique */
 @media (max-width: 768px) {
-    .text-image-wrapper.grid-system {
-        grid-template-columns: 1fr; /* Colonne unique sur mobile */
-    }
+  .text-image-wrapper.grid-system {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Styles pour les titres personnalisés */
 .custom-title {
-    font-size: 1.5rem; /* Taille par défaut pour desktop */
-    color: #004080;
-    font-weight: bold;
+  font-size: 1.5rem; /* Desktop */
+  color: #004080;
+  font-weight: bold;
 
-    @media (max-width: 768px) {
-        font-size: 1.1rem; /* Taille sur mobile */
-        line-height: 1.6;
-        margin-top: 1.2rem;
-    }
+  @media (max-width: 768px) {
+    font-size: 1.1rem; /* Mobile */
+    line-height: 1.6;
+    margin-top: 1.2rem;
+  }
 }
 
 /* Centrer le paragraphe et le bouton */
 .cta-button {
-    text-align: center;
-    margin: 2rem 0; /* Espace en haut et en bas */
+  text-align: center;
+  margin: 2rem 0;
 }
-
 .cta-text {
-    color: #0066cc;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+  color: #0066cc;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 /* Margin en bas du bouton */
-.cta-button .btn-lg {
-    margin-bottom: 2rem;
-}
+.cta-button .btn-lg { margin-bottom: 2rem; }

@@ -1,6 +1,7 @@
 /* _home.scss */
-
 /* Styles spécifiques pour la page d'accueil */
+
+@use "config" as *;
 
 /* Conteneur principal de la page d'accueil */
 .home-container {

@@ -1,61 +1,52 @@
-// styles.scss
+---
+# Ce front-matter force Jekyll à compiler ce SCSS en /assets/css/styles.css
+---
 
-// Importer les variables et mixins en premier
-@use "_variables";    // Contient les variables globales de couleur, polices, etc.
-@use "_mixins";       // Contient les mixins réutilisables
+/* styles.scss
+   Version: fix-imports-2025-08-11
+   Objectif: utiliser @import (compat Jekyll/GitHub Pages) et charger les variables AVANT tout le reste.
+*/
 
-// Styles globaux
-@use "_typography";   // Styles de typographie globaux pour le corps du texte et les titres
-@use "_accessibility"; // Styles pour améliorer l'accessibilité du site
-@use "_images";       // Styles globaux pour les images
+/* Variables & mixins accessibles dans ce fichier pour les styles globaux */
+@use "config" as *;
 
-// Composants génériques
-@use "_buttons";      // Styles pour les boutons utilisés sur l'ensemble du site
-@use "_cards";        // Styles pour les cartes (composants réutilisables)
-@use "_tables";       // Styles pour les tableaux
-@use "_icons";        // Styles pour les icônes
-@use "_accordions";   // Styles pour les accordéons (composant Bootstrap)
+/* Styles globaux */
+@use "typography";
+@use "accessibility";
+@use "images";
 
-// Composants de mise en page
-@use "_navbar";       // Styles pour la barre de navigation (header)
-@use "_footer";       // Styles pour le pied de page
+/* Composants génériques */
+@use "buttons";
+@use "cards";
+@use "tables";
+@use "icons";
+@use "accordions";
 
-// Styles spécifiques aux pages
-@use "_home";         // Styles spécifiques à la page d'accueil
-@use "_inscription";  // Styles spécifiques à la page inscription
-@use "_equipement";   // Styles spécifiques à la page équipement
-@use "_agenda";       // Styles spécifiques à la page agenda-competition
-@use "_contact";      // Styles spécifiques à la page contact
-@use "_certificat";   // Styles spécifiques à la page certificat
+/* Layout */
+@use "navbar";
+@use "footer";
 
-/* Styles globaux supplémentaires (ajoutez ici tout style global supplémentaire) */
+/* Pages */
+@use "home";
+@use "inscription";
+@use "equipement";
+@use "agenda";
+@use "contact";
+@use "certificat";
+
+/* Styles globaux supplémentaires */
 .main-container {
-    background-color: $whiteColor; // Fond blanc pour le conteneur principal
-    min-height: 100vh; // S'assurer que le container principal couvre toute la hauteur de la page
-    padding-top: 20px; // Espace en haut pour séparer du header
-    padding-bottom: 20px; // Espace en bas pour séparer du footer
-    box-sizing: border-box; // Prend en compte le padding dans la hauteur
+  background-color: $whiteColor; /* Fond blanc pour le conteneur principal */
+  min-height: 100vh;             /* Couvre toute la hauteur de la page */
+  padding-top: 20px;             /* Espace en haut pour séparer du header */
+  padding-bottom: 20px;          /* Espace en bas pour séparer du footer */
+  box-sizing: border-box;        /* Prend en compte le padding dans la hauteur */
 }
 
-/* Styles pour le thème Octobre Rose */
-.octobre-rose-banner {
-    background-color: #FFC0CB; /* Rose */
-}
+/* Thèmes spéciaux */
+.octobre-rose-banner { background-color: #ffc0cb; } /* Rose - Octobre Rose */
+.novembre-bleu-banner { background-color: #a0d1ff; } /* Bleu - November */
 
-/* Styles pour le thème Movember */
-.novembre-bleu-banner {
-    background-color: #a0d1ff; /* Bleu */
-}
-
-/* Styles communs pour la bannière spéciale */
-.special-banner {
-    color: $blackColor;
-	padding: 15px;
-}
-.special-link {
-    color: $blackColor;
-    text-decoration: none;
-}
-.special-link:hover {
-    text-decoration: underline;
-}
+.special-banner { color: $blackColor; padding: 15px; }
+.special-link { color: $blackColor; text-decoration: none; }
+.special-link:hover { text-decoration: underline; }
