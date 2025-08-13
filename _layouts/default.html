@@ -20,12 +20,6 @@
     <!-- Flatpickr CSS (date picker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-    <!-- Style minimal pour le lien d’évitement (accessibilité) -->
-    <style>
-      .skip-link{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-      .skip-link:focus{left:0;top:0;width:auto;height:auto;padding:.5rem 1rem;background:#000;color:#fff;z-index:1000}
-    </style>
-
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -40,7 +34,8 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <!-- Lien d'évitement (affiché au focus clavier) -->
+    <a class="skip-link visually-hidden-focusable" href="#contenu">Aller au contenu</a>
 
     <header>
       {% include header.html %}

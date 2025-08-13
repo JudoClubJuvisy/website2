@@ -21,14 +21,28 @@
   @extend .visually-hidden;
 }
 
+/* Lien d’évitement : apparence quand il est visible (au focus) */
+.skip-link {
+  position: fixed;
+  top: .5rem;
+  left: .5rem;
+  z-index: 2000;
+  padding: .5rem .75rem;
+  background: #fff;
+  color: #000;
+  border-radius: .25rem;
+  text-decoration: none;
+  box-shadow: 0 0 0 2px $mainColor; /* anneau lisible sur fond sombre */
+}
+
 /* États de focus — anneau visible surtout pour la navigation clavier */
 :focus-visible {
   outline: 2px solid $mainColor;
   outline-offset: 2px;
 }
 
-/* Fallback pour navigateurs sans :focus-visible */
-:focus {
+/* Fallback pour navigateurs sans :focus-visible (évite un double contour) */
+:focus:not(:focus-visible) {
   outline: 2px solid $mainColor;
   outline-offset: 2px;
 }
