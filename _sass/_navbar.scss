@@ -3,52 +3,99 @@
 
 @use "config" as *;
 
-/* Couleur des liens inactifs */
-.navbar-nav .nav-link {
-    color: $whiteColor; /* Couleur des entrées de menu inactives */
+/* ---------- Variables Bootstrap (scopées à la navbar) ---------- */
+#main-navbar {
+  --bs-navbar-color: #{$whiteColor};
+  --bs-navbar-hover-color: #{$lightGrayColor};
+  --bs-navbar-active-color: #{$lightMainColor};
 }
 
-/* Couleur des liens au survol */
-.navbar-nav .nav-link:hover {
-    color: $lightGrayColor !important; /* Couleur des entrées de menu au survol */
+/* ---------- Liens de la navbar ---------- */
+/* Liens inactifs */
+#main-navbar .navbar-nav .nav-link {
+  color: $whiteColor;
 }
 
-/* Couleur des liens actifs */
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-item.show .nav-link {
-    color: $lightMainColor !important; /* Couleur du lien actif */
-    font-weight: 700 !important; /* Texte en gras pour le lien actif */
+/* Lien au survol */
+#main-navbar .navbar-nav .nav-link:hover,
+#main-navbar .navbar-nav .nav-link:focus-visible {
+  color: $lightGrayColor !important;
 }
 
-/* Style pour le menu déroulant (dropdown) */
-.dropdown-menu {
-    background-color: #212529; /* Couleur de fond du menu déroulant */
-    border: none; /* Suppression des bordures */
+/* Lien actif (page courante) → rouge + gras */
+#main-navbar .navbar-nav .nav-link.active {
+  color: $lightMainColor !important;
+  font-weight: 700 !important;
 }
 
-/* Style pour le titre du club dans la navbar */
+/* Un dropdown simplement OUVERT ≠ page active → rester blanc */
+#main-navbar .nav-item.show > .nav-link,
+#main-navbar .nav-link.show {
+  color: $whiteColor !important;
+  font-weight: 400 !important;
+}
+
+/* ---------- Menu déroulant ---------- */
+#main-navbar .dropdown-menu {
+  background-color: #212529;
+  border: none;
+}
+
+#main-navbar .dropdown-item {
+  color: $whiteColor;
+
+  &:hover,
+  &:focus-visible {
+    color: $lightGrayColor;
+    background-color: #343a40;
+  }
+
+  &.active,
+  &:active {
+    color: $whiteColor;
+    background-color: #343a40;
+  }
+}
+
+/* ---------- Brand : logo + texte ---------- */
 .navbar-brand {
-    color: $whiteColor !important; /* Couleur par défaut */
+  color: $whiteColor !important;
+  display: inline-flex;     /* le texte et le <picture> deviennent des items */
+  align-items: center;      /* centrage vertical parfait */
+  column-gap: .75rem;       /* espace entre logo et texte (mobile) */
 }
 
-.dropdown-item {
-    color: $whiteColor; /* Couleur des éléments du menu déroulant */
-    
-    &:hover {
-        color: $lightGrayColor; /* Couleur des éléments au survol */
-        background-color: #343a40; /* Couleur de fond au survol */
-    }
+/* <picture> “neutre” */
+.navbar-brand picture {
+  display: block;
+  line-height: 0;
 }
 
-/* Surcharge des variables CSS de Bootstrap pour la navbar */
-:root {
-  --bs-navbar-color: $whiteColor;
-  --bs-navbar-hover-color: $lightGrayColor;
-  --bs-navbar-active-color: $lightMainColor;
+/* Logo */
+.navbar-brand img.logo-club {
+  display: block;     /* supprime l’espace baseline sous l’image */
+  height: 72px;       /* mobile par défaut */
+  width: auto;
+  max-width: none;    /* n’étire pas à 100% */
+  vertical-align: middle;
+  flex-shrink: 0;     /* le logo ne se compresse pas */
 }
 
-/* Style pour le logo du club dans la navbar */
-.logo-club {
-    height: 100px;
-    margin-right: 10px;
+/* Nudge optique du texte */
+.navbar-brand .brand-text {
+  position: relative;
+  top: -3px;          /* remonte très légèrement le titre */
+  white-space: nowrap;/* évite les retours à la ligne */
+}
+
+/* tablettes */
+@media (min-width: 768px) {
+  .navbar-brand { column-gap: .85rem; }
+  .navbar-brand img.logo-club { height: 84px; }
+}
+
+/* desktop (comme la prod) */
+@media (min-width: 992px) {
+  .navbar-brand { column-gap: 1rem; }
+  .navbar-brand img.logo-club { height: 100px; }
 }

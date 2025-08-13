@@ -1,92 +1,103 @@
 <!-- Header principal contenant la navigation du site -->
 <header class="bg-dark text-white p-0" role="banner" aria-label="Header principal">
+	
 	<!-- Bannière spéciale, cachée par défaut -->
-	<div class="special-banner text-center py-2 d-none">
-		<!-- Le contenu sera injecté par JavaScript -->
+	<div class="special-banner text-center py-2 d-none">   
+	<!-- Le contenu sera injecté par JavaScript -->
 	</div>
-   <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark" id="main-navbar" aria-label="Navigation principale">
 
-            <!-- Conteneur principal de la navbar -->
-            <div class="container">
+	<div class="container-fluid p-0">
+		<nav class="navbar navbar-expand-lg navbar-dark" id="main-navbar" aria-label="Navigation principale">
+		
+			<!-- Conteneur principal de la navbar -->
+			<div class="container">
+			
+				<!-- Logo aligné à gauche avec lien vers la page d'accueil -->
+				<a class="navbar-brand" href="{{ '/' | relative_url }}" aria-label="Retour à l'accueil">
+					<picture id="logo-picture">
+						<!-- Seulement WebP (qualité fidèle) ; pas d’AVIF pour le logo -->
+						<source type="image/webp" srcset="{{ '/assets/images/logo.webp' | relative_url }}" />
+						<img
+						  src="{{ '/assets/images/logo.png' | relative_url }}"
+						  alt="Logo Judo Club de Juvisy"
+						  class="logo-club"
+						  id="logo-club"
+						  width="1500" height="1500"
+						  data-base-regular="{{ '/assets/images/logo' | relative_url }}"
+						  data-base-octobre="{{ '/assets/images/logo_octobre_rose' | relative_url }}"
+						  data-base-novembre="{{ '/assets/images/logo_novembre_bleu' | relative_url }}"
+						/>
+					</picture>
+					<span class="brand-text">Judo Club de Juvisy</span>
+				</a>
 
-                <!-- Logo aligné à gauche avec lien vers la page d'accueil -->
-                <a class="navbar-brand" href="{{ '/' | relative_url }}" aria-label="Retour à l'accueil">
-					<img src="{{ '/assets/images/logo.png' | relative_url }}"
-						 data-logo-regular="{{ '/assets/images/logo.png' | relative_url }}"
-						 data-logo-octobre="{{ '/assets/images/logo_octobre_rose.png' | relative_url }}"
-						 data-logo-novembre="{{ '/assets/images/logo_novembre_bleu.png' | relative_url }}"
-						 alt="Logo Judo Club de Juvisy" class="logo-club" id="logo-club">
-                    Judo Club de Juvisy
-                </a>
+				<!-- Bouton pour ouvrir le menu sur les petits écrans -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-                <!-- Bouton pour ouvrir le menu sur les petits écrans -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+				<!-- Menu de navigation aligné à droite -->
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
 
-                <!-- Menu de navigation aligné à droite -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        
-                        <!-- Lien vers la page qui présente le club -->						
-						<li class="nav-item">
-                            <a class="nav-link" id="nav-club" href="{{ '/le-club.html' | relative_url }}" aria-label="Le Club">Le Club</a>
-                        </li>
-						
-                        <!-- Menu déroulant pour les disciplines -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDisciplines" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Voir les disciplines">
-                                Nos disciplines
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDisciplines">
-                                <li><a class="dropdown-item" href="{{ '/jujitsu.html' | relative_url }}" aria-label="Découvrir le Ju-Jitsu">Le Ju-Jitsu</a></li>
-                                <li><a class="dropdown-item" href="{{ '/judo.html' | relative_url }}" aria-label="Découvrir le Judo">Le Judo</a></li>
-                                <li><a class="dropdown-item" href="{{ '/taiso.html' | relative_url }}" aria-label="Découvrir le Taïso">Le Taïso</a></li>
-                            </ul>
-                        </li>
+					<!-- Lien vers la page qui présente le club -->
+					<li class="nav-item">
+						<a class="nav-link" id="nav-club" href="{{ '/le-club.html' | relative_url }}" aria-label="Le Club">Le Club</a>
+					</li>
 
-                        <!-- Lien vers la page inscription -->							
-                        <li class="nav-item">
-                            <a class="nav-link" id="nav-inscription" href="{{ '/inscription.html' | relative_url }}" aria-label="S'inscrire">S'inscrire</a>
-                        </li>
+					<!-- Menu déroulant pour les disciplines -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDisciplines" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Voir les disciplines">
+						Nos disciplines
+						</a>
+						<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDisciplines">
+							<li><a class="dropdown-item" href="{{ '/jujitsu.html' | relative_url }}" aria-label="Découvrir le Ju-Jitsu">Le Ju-Jitsu</a></li>
+							<li><a class="dropdown-item" href="{{ '/judo.html' | relative_url }}" aria-label="Découvrir le Judo">Le Judo</a></li>
+							<li><a class="dropdown-item" href="{{ '/taiso.html' | relative_url }}" aria-label="Découvrir le Taïso">Le Taïso</a></li>
+						</ul>
+					</li>
 
-                        <!-- Menu déroulant pour les entraînements -->						
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="navbarTrainings" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Voir les entraînements">
-								Les entraînements
-							</a>
-							<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarTrainings">
-								<li><a class="dropdown-item" href="{{ '/horaires.html' | relative_url }}" aria-label="Voir les horaires des entraînements">Les horaires</a></li>
-								<li><a class="dropdown-item" href="{{ '/equipement.html' | relative_url }}" aria-label="Voir les équipements nécessaires">L'équipement</a></li>
-							</ul>
-						</li>
+					<!-- Lien vers la page inscription -->
+					<li class="nav-item">
+						<a class="nav-link" id="nav-inscription" href="{{ '/inscription.html' | relative_url }}" aria-label="S'inscrire">S'inscrire</a>
+					</li>
 
-                        <!-- Menu déroulant pour les compétitions -->								
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarCompetitions" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Les compétitions">
-								Les compétitions
-							</a>
-							<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarCompetitions">
-								<!--<li><a class="dropdown-item" href="{{ '/agenda-competitions.html' | relative_url }}" aria-label="Agenda des compétitions">L'agenda des compétitions</a></li>-->
-								<li><a class="dropdown-item" href="{{ '/competitions-officielles.html' | relative_url }}" aria-label="Les compétitions officielles">Les compétitions officielles</a></li>
-								<li><a class="dropdown-item" href="{{ '/competitions-amicales.html' | relative_url }}" aria-label="Les compétitions amicales">Les compétitions amicales</a></li>
-							</ul>
-                        </li>
-						
-                        <!-- Lien vers la boutique -->
-						<li class="nav-item" id="nav-boutique">
-							<a class="nav-link" href="https://www.helloasso.com/associations/judo-club-de-juvisy/boutiques/judogis-du-club" target="_blank" rel="noopener">La boutique</a>
-						</li>
-						
-                        <!-- Lien vers la page sur les informations pour nous oontacter -->						
-                        <li class="nav-item">
-                            <a class="nav-link" id="nav-contact" href="{{ '/contact.html' | relative_url }}" aria-label="Nous contacter">Nous contacter</a>
-                        </li>
-						
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+					<!-- Menu déroulant pour les entraînements -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarTrainings" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Voir les entraînements">
+						Les entraînements
+						</a>
+						<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarTrainings">
+							<li><a class="dropdown-item" href="{{ '/horaires.html' | relative_url }}" aria-label="Voir les horaires des entraînements">Les horaires</a></li>
+							<li><a class="dropdown-item" href="{{ '/equipement.html' | relative_url }}" aria-label="Voir les équipements nécessaires">L'équipement</a></li>
+						</ul>
+					</li>
+
+					<!-- Menu déroulant pour les compétitions -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarCompetitions" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Les compétitions">
+						Les compétitions
+						</a>
+						<ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarCompetitions">
+							<!--<li><a class="dropdown-item" href="{{ '/agenda-competitions.html' | relative_url }}" aria-label="Agenda des compétitions">L'agenda des compétitions</a></li>-->
+							<li><a class="dropdown-item" href="{{ '/competitions-officielles.html' | relative_url }}" aria-label="Les compétitions officielles">Les compétitions officielles</a></li>
+							<li><a class="dropdown-item" href="{{ '/competitions-amicales.html' | relative_url }}" aria-label="Les compétitions amicales">Les compétitions amicales</a></li>
+						</ul>
+					</li>
+
+					<!-- Lien vers la boutique -->
+					<li class="nav-item" id="nav-boutique">
+						<a class="nav-link" href="https://www.helloasso.com/associations/judo-club-de-juvisy/boutiques/judogis-du-club" target="_blank" rel="noopener">La boutique</a>
+					</li>
+
+					<!-- Lien vers la page sur les informations pour nous contacter -->
+					<li class="nav-item">
+						<a class="nav-link" id="nav-contact" href="{{ '/contact.html' | relative_url }}" aria-label="Nous contacter">Nous contacter</a>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
 </header>
