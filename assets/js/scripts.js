@@ -47,61 +47,60 @@ document.addEventListener("DOMContentLoaded", function () {
         applySpecialTheme(null);
     }
 
-    function applySpecialTheme(theme) {
-        const logoImage = document.getElementById('logo-club');
-        const navbarBrand = document.querySelector('.navbar-brand');
-        const banner = document.querySelector('.special-banner');
+  function setLogoBase(baseWithoutExt) {
+    // Met à jour <source type="image/webp"> + fallback <img src="...png">
+    const picture = document.getElementById('logo-picture');
+    const img = document.getElementById('logo-club');
+    if (!img) return;
 
-        if (theme === 'octobre') {
-            // Thème Octobre Rose
-            if (logoImage) {
-                logoImage.src = logoImage.getAttribute('data-logo-octobre');
-            }
-            if (navbarBrand) {
-                navbarBrand.classList.add('octobre-rose');
-            }
-            if (banner) {
-                banner.classList.remove('d-none');
-                banner.innerHTML = `
-                    <a href="https://octobrerose.fondation-arc.org/" class="special-link" target="_blank" rel="noopener" aria-label="Visiter le site d'Octobre Rose">
-                        🎗️ Le Judo Club de Juvisy soutient Octobre Rose pour la lutte contre le cancer du sein 🎗️
-                    </a>
-                `;
-                banner.classList.add('octobre-rose-banner');
-            }
-        } else if (theme === 'novembre') {
-            // Thème Movember
-            if (logoImage) {
-                logoImage.src = logoImage.getAttribute('data-logo-novembre');
-            }
-            if (navbarBrand) {
-                navbarBrand.classList.add('novembre-bleu');
-            }
-            if (banner) {
-                banner.classList.remove('d-none');
-                banner.innerHTML = `
-                    <a href="https://www.gustaveroussy.fr/fr/faire-un-don-contre-le-cancer-de-la-prostate" class="special-link" target="_blank" rel="noopener" aria-label="Faire un don contre le cancer de la prostate">
-                        🎗️ Le Judo Club de Juvisy soutient Movember pour la lutte contre les cancers masculins 🎗️
-                    </a>
-                `;
-                banner.classList.add('novembre-bleu-banner');
-            }
-        } else {
-            // Thème par défaut
-            if (logoImage) {
-                logoImage.src = logoImage.getAttribute('data-logo-regular');
-            }
-            if (navbarBrand) {
-                navbarBrand.classList.remove('octobre-rose', 'novembre-bleu');
-            }
-            if (banner) {
-                banner.classList.add('d-none');
-            }
-        }
+    const sourceWebp = picture ? picture.querySelector('source[type="image/webp"]') : null;
+
+    if (sourceWebp) sourceWebp.srcset = baseWithoutExt + ".webp";
+    img.src = baseWithoutExt + ".png";
+  }
+
+  function applySpecialTheme(theme) {
+    const img = document.getElementById('logo-club');
+    const navbarBrand = document.querySelector('.navbar-brand');
+    const banner = document.querySelector('.special-banner');
+    if (!img) return;
+
+    const baseRegular  = img.dataset.baseRegular;
+    const baseOctobre  = img.dataset.baseOctobre;
+    const baseNovembre = img.dataset.baseNovembre;
+
+    if (theme === 'octobre' && baseOctobre) {
+      setLogoBase(baseOctobre);
+      if (navbarBrand) navbarBrand.classList.add('octobre-rose');
+      if (banner) {
+        banner.classList.remove('d-none');
+        banner.innerHTML = `
+          <a href="https://octobrerose.fondation-arc.org/" class="special-link" target="_blank" rel="noopener" aria-label="Visiter le site d'Octobre Rose">
+            🎗️ Le Judo Club de Juvisy soutient Octobre Rose pour la lutte contre le cancer du sein 🎗️
+          </a>`;
+        banner.classList.add('octobre-rose-banner');
+      }
+    } else if (theme === 'novembre' && baseNovembre) {
+      setLogoBase(baseNovembre);
+      if (navbarBrand) navbarBrand.classList.add('novembre-bleu');
+      if (banner) {
+        banner.classList.remove('d-none');
+        banner.innerHTML = `
+          <a href="https://www.gustaveroussy.fr/fr/faire-un-don-contre-le-cancer-de-la-prostate" class="special-link" target="_blank" rel="noopener" aria-label="Faire un don contre le cancer de la prostate">
+            🎗️ Le Judo Club de Juvisy soutient Movember pour la lutte contre les cancers masculins 🎗️
+          </a>`;
+        banner.classList.add('novembre-bleu-banner');
+      }
+    } else {
+      // Thème par défaut
+      if (baseRegular) setLogoBase(baseRegular);
+      if (navbarBrand) navbarBrand.classList.remove('octobre-rose', 'novembre-bleu');
+      if (banner) banner.classList.add('d-none');
     }
+  }
 });
 
-// Fonction spécifique à la page certificat
+// ================== Fonction spécifique à la page certificat ==================
 function initCertificatPage() {
     const birthDateInput = document.getElementById('birthDate');
     const firstLicenseYes = document.getElementById('firstLicenseYes');

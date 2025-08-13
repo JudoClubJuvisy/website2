@@ -1,0 +1,55 @@
+{%- comment -%}
+  Include <picture> AVIF + WebP + fallback PNG/JPG
+
+  Usage minimal :
+    {% include picture.html
+       src='/assets/images/nom_sans_extension'
+       ext='png'
+       alt='Texte alternatif'
+       width='W' height='H' %}
+
+  Paramètres :
+    - src            : chemin SANS extension (ex: /assets/images/judokate_8ans) [obligatoire]
+    - ext            : extension fallback (png|jpg). Défaut: png
+    - alt            : texte alternatif ("" si décoratif)
+    - width,height   : dimensions réelles (évite le CLS)
+    - class          : classes CSS optionnelles
+    - id             : id de l’<img> (optionnel)
+    - picture_id     : id du <picture> (optionnel)
+    - sizes          : attribut sizes. Défaut: 100vw
+    - loading        : lazy|eager. Défaut: lazy
+    - decoding       : async|auto. Défaut: async
+    - fetchpriority  : high|low (optionnel)
+    - style          : style inline optionnel
+    - avif           : 'true' | 'false' (active la source AVIF). Défaut: 'true'
+    - data_attrs     : chaîne brute d’attributs data-* à injecter sur <img>
+{%- endcomment -%}
+
+{%- assign base        = include.src -%}
+{%- assign ext         = include.ext        | default: 'png' -%}
+{%- assign sizes       = include.sizes      | default: '100vw' -%}
+{%- assign loading     = include.loading    | default: 'lazy' -%}
+{%- assign decoding    = include.decoding   | default: 'async' -%}
+{%- assign use_avif    = include.avif       | default: 'true' -%}
+
+<picture{% if include.picture_id %} id="{{ include.picture_id }}"{% endif %}>
+  {%- if use_avif == 'true' -%}
+  <source type="image/avif" srcset="{{ base | relative_url }}.avif" sizes="{{ sizes }}">
+  {%- endif -%}
+  <source type="image/webp" srcset="{{ base | relative_url }}.webp" sizes="{{ sizes }}">
+  <img
+    src="{{ base | relative_url }}.{{ ext }}"
+    alt="{{ include.alt | escape }}"
+    width="{{ include.width }}"
+    height="{{ include.height }}"
+    sizes="{{ sizes }}"
+    loading="{{ loading }}"
+    decoding="{{ decoding }}"
+    {% if include.class %}class="{{ include.class }}"{% endif %}
+    {% if include.id %}id="{{ include.id }}"{% endif %}
+    {% if include.fetchpriority %}fetchpriority="{{ include.fetchpriority }}"{% endif %}
+    {% if include.style %}style="{{ include.style }}"{% endif %}
+    {% if include.data_attrs %}{{ include.data_attrs }}{% endif %}
+    {% if include.alt == '' %}aria-hidden="true"{% endif %}
+  >
+</picture>

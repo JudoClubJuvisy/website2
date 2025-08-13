@@ -37,7 +37,16 @@ title: Accueil du Judo Club de Juvisy en Essonne
 
         <!-- Colonne 3: Image -->
         <div class="col-12 col-md-3 d-flex justify-content-center align-items-end" style="background-color: #ffe436;">
-            <img src="{{ '/assets/images/judokate_8ans.png' | relative_url }}" alt="Judokate de 8 ans" class="img-fluid" style="margin: 0; padding: 0;">
+          {% include picture.html
+             src='/assets/images/judokate_8ans'
+             ext='png'
+             alt='Judokate de 8 ans'
+             class='img-fluid img-no-gap'
+             width='618' height='618'
+             sizes='(min-width:1200px) 25vw, (min-width:768px) 30vw, 80vw'
+             loading='eager'
+             decoding='async'
+             fetchpriority='high' %}
         </div>
 
         <!-- Colonne 4: Juste un fond -->
