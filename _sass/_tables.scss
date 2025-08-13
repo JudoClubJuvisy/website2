@@ -4,24 +4,30 @@
 @use "config" as *;
 
 .table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1rem;
-    background-color: $whiteColor;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  background-color: #ffffff; // fond global blanc pur
 
-    th, td {
-        padding: 0.75rem;
-        vertical-align: middle;
-        border-top: 1px solid $lightGrayColor;
-    }
+  /* Par défaut : cellules blanches */
+  th,
+  td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-top: 1px solid $lightGrayColor; // garde ta bordure existante
+    background-color: #ffffff;             // blanc pur pour toutes les cellules
+  }
 
-    th {
-        background-color: $lightGrayColor;
-        font-weight: bold;
-        text-align: left;
-    }
+  /* En-têtes de colonnes uniquement (1ère ligne) */
+  thead th {
+    background-color: $lightGrayColor; // = #77B5FE
+    font-weight: 700;
+    text-align: left;
+  }
 
-    tbody + tbody {
-        border-top: 2px solid $blackColor;
-    }
+  /* En-têtes de ligne (colonne de gauche dans le tbody) : restent blanches */
+  tbody th[scope="row"] {
+    background-color: #ffffff;
+    font-weight: 400;
+  }
 }
