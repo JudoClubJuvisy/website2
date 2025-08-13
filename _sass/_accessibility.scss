@@ -1,11 +1,44 @@
 /* _accessibility.scss */
 /* Styles pour améliorer l'accessibilité du site */
 
-/* _accessibility.scss */
 @use "config" as *;
 
-/* Styles pour le focus des liens et des boutons */
-a:focus, button:focus {
-    outline: 2px solid $mainColor; /* Rouge du club pour le focus */
-    outline-offset: 2px;
+/* Contenu uniquement pour lecteurs d'écran (ex. titres invisibles) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Variante : visible lorsqu’on reçoit le focus clavier (ex. lien “Aller au contenu”) */
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  @extend .visually-hidden;
+}
+
+/* États de focus — anneau visible surtout pour la navigation clavier */
+:focus-visible {
+  outline: 2px solid $mainColor;
+  outline-offset: 2px;
+}
+
+/* Fallback pour navigateurs sans :focus-visible */
+:focus {
+  outline: 2px solid $mainColor;
+  outline-offset: 2px;
+}
+
+/* Respect des préférences d’utilisateur : réduire les animations/transitions */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

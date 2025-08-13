@@ -36,3 +36,10 @@
         padding-right: 0 !important;
     }
 }
+
+/* Garde l'image du hero sans espace, comme en prod */
+.img-no-gap {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
