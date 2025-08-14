@@ -8,17 +8,32 @@ document.addEventListener("DOMContentLoaded", function () {
     // Récupère l'URL actuelle
     const currentUrl = window.location.pathname;
 
-    // Correspondance entre l'URL et l'ID du lien de navigation
-	const navItems = {
-		"/index.html": "nav-home",
-		"/le-club.html": "nav-club",
-		"/inscription.html": "nav-inscription",
-		"/entrainements.html": "nav-entrainements",
-		"/competitions.html": "nav-competitions",
-		"/boutique.html": "nav-boutique",
-		"/contact.html": "nav-contact"
-	};
+    // Correspondance entre l'URL et l'ID du lien de navigation (état actif)
+    // ➜ Les sous-pages pointent vers le bouton parent du dropdown.
+    const navItems = {
+        // Le Club
+        "/le-club.html": "nav-club",
 
+        // Nos disciplines (dropdown)
+        "/jujitsu.html": "navbarDisciplines",
+        "/judo.html": "navbarDisciplines",
+        "/taiso.html": "navbarDisciplines",
+
+        // S'inscrire
+        "/inscription.html": "nav-inscription",
+
+        // Les entraînements (dropdown)
+        "/horaires.html": "navbarTrainings",
+        "/equipement.html": "navbarTrainings",
+
+        // Les compétitions (dropdown)
+        "/competitions-officielles.html": "navbarCompetitions",
+        "/competitions-amicales.html": "navbarCompetitions",
+
+        // Contact
+        "/contact.html": "nav-contact"
+        // Pas de mapping pour la boutique (lien externe) ni pour /index.html (pas de lien "Accueil")
+    };
 
     // Récupérer l'ID correspondant à l'URL actuelle
     const activeNavId = navItems[currentUrl];
@@ -36,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         initCertificatPage();
     }
 
-    // Ajout du code pour les thèmes spéciaux
+    // ================== Thèmes spéciaux (logo + bannière) ==================
     const currentMonth = new Date().getMonth();
 
     if (currentMonth === 9) { // Octobre
@@ -47,57 +62,59 @@ document.addEventListener("DOMContentLoaded", function () {
         applySpecialTheme(null);
     }
 
-  function setLogoBase(baseWithoutExt) {
-    // Met à jour <source type="image/webp"> + fallback <img src="...png">
-    const picture = document.getElementById('logo-picture');
-    const img = document.getElementById('logo-club');
-    if (!img) return;
+    function setLogoBase(baseWithoutExt) {
+        // Met à jour <source type="image/webp"> + fallback <img src="...png">
+        const picture = document.getElementById('logo-picture');
+        const img = document.getElementById('logo-club');
+        if (!img) return;
 
-    const sourceWebp = picture ? picture.querySelector('source[type="image/webp"]') : null;
+        const sourceWebp = picture ? picture.querySelector('source[type="image/webp"]') : null;
 
-    if (sourceWebp) sourceWebp.srcset = baseWithoutExt + ".webp";
-    img.src = baseWithoutExt + ".png";
-  }
-
-  function applySpecialTheme(theme) {
-    const img = document.getElementById('logo-club');
-    const navbarBrand = document.querySelector('.navbar-brand');
-    const banner = document.querySelector('.special-banner');
-    if (!img) return;
-
-    const baseRegular  = img.dataset.baseRegular;
-    const baseOctobre  = img.dataset.baseOctobre;
-    const baseNovembre = img.dataset.baseNovembre;
-
-    if (theme === 'octobre' && baseOctobre) {
-      setLogoBase(baseOctobre);
-      if (navbarBrand) navbarBrand.classList.add('octobre-rose');
-      if (banner) {
-        banner.classList.remove('d-none');
-        banner.innerHTML = `
-          <a href="https://octobrerose.fondation-arc.org/" class="special-link" target="_blank" rel="noopener" aria-label="Visiter le site d'Octobre Rose">
-            🎗️ Le Judo Club de Juvisy soutient Octobre Rose pour la lutte contre le cancer du sein 🎗️
-          </a>`;
-        banner.classList.add('octobre-rose-banner');
-      }
-    } else if (theme === 'novembre' && baseNovembre) {
-      setLogoBase(baseNovembre);
-      if (navbarBrand) navbarBrand.classList.add('novembre-bleu');
-      if (banner) {
-        banner.classList.remove('d-none');
-        banner.innerHTML = `
-          <a href="https://www.gustaveroussy.fr/fr/faire-un-don-contre-le-cancer-de-la-prostate" class="special-link" target="_blank" rel="noopener" aria-label="Faire un don contre le cancer de la prostate">
-            🎗️ Le Judo Club de Juvisy soutient Movember pour la lutte contre les cancers masculins 🎗️
-          </a>`;
-        banner.classList.add('novembre-bleu-banner');
-      }
-    } else {
-      // Thème par défaut
-      if (baseRegular) setLogoBase(baseRegular);
-      if (navbarBrand) navbarBrand.classList.remove('octobre-rose', 'novembre-bleu');
-      if (banner) banner.classList.add('d-none');
+        if (sourceWebp) sourceWebp.srcset = baseWithoutExt + ".webp";
+        img.src = baseWithoutExt + ".png";
     }
-  }
+
+    function applySpecialTheme(theme) {
+        const img = document.getElementById('logo-club');
+        const navbarBrand = document.querySelector('.navbar-brand');
+        const banner = document.querySelector('.special-banner');
+        if (!img) return;
+
+        const baseRegular  = img.dataset.baseRegular;
+        const baseOctobre  = img.dataset.baseOctobre;
+        const baseNovembre = img.dataset.baseNovembre;
+
+        if (theme === 'octobre' && baseOctobre) {
+            setLogoBase(baseOctobre);
+            if (navbarBrand) navbarBrand.classList.add('octobre-rose');
+            if (banner) {
+                banner.classList.remove('d-none');
+                banner.innerHTML = `
+                    <a href="https://octobrerose.fondation-arc.org/" class="special-link" target="_blank" rel="noopener" aria-label="Visiter le site d'Octobre Rose">
+                        🎗️ Le Judo Club de Juvisy soutient Octobre Rose pour la lutte contre le cancer du sein 🎗️
+                    </a>
+                `;
+                banner.classList.add('octobre-rose-banner');
+            }
+        } else if (theme === 'novembre' && baseNovembre) {
+            setLogoBase(baseNovembre);
+            if (navbarBrand) navbarBrand.classList.add('novembre-bleu');
+            if (banner) {
+                banner.classList.remove('d-none');
+                banner.innerHTML = `
+                    <a href="https://www.gustaveroussy.fr/fr/faire-un-don-contre-le-cancer-de-la-prostate" class="special-link" target="_blank" rel="noopener" aria-label="Faire un don contre le cancer de la prostate">
+                        🎗️ Le Judo Club de Juvisy soutient Movember pour la lutte contre les cancers masculins 🎗️
+                    </a>
+                `;
+                banner.classList.add('novembre-bleu-banner');
+            }
+        } else {
+            // Thème par défaut
+            if (baseRegular) setLogoBase(baseRegular);
+            if (navbarBrand) navbarBrand.classList.remove('octobre-rose', 'novembre-bleu');
+            if (banner) banner.classList.add('d-none');
+        }
+    }
 });
 
 // ================== Fonction spécifique à la page certificat ==================
@@ -110,15 +127,14 @@ function initCertificatPage() {
     // Initialise Flatpickr pour le champ de date
     flatpickr("#birthDate", {
         dateFormat: "d-m-Y", // Format jour-mois-année
-        maxDate: "today", // Limiter la date sélectionnée à aujourd'hui
-        locale: "fr" // Paramétrer en français
+        maxDate: "today",    // Limiter la date sélectionnée à aujourd'hui
+        locale: "fr"         // Paramétrer en français
     });
 
     document.getElementById('certificatForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
         let birthDate = birthDateInput.value;  // Récupère la date directement comme une chaîne
-        console.log("Date de naissance entrée : ", birthDate);
 
         if (!birthDate) {
             let errorMessage = document.getElementById('errorMessage');
@@ -128,13 +144,10 @@ function initCertificatPage() {
             document.getElementById('errorMessage').classList.add('d-none');
 
             // Convertit la date en un objet Date
-            const birthDateObj = new Date(birthDate.split('-').reverse().join('-')); // Convertit "JJ-MM-AAAA" en "AAAA-MM-JJ"
+            const birthDateObj = new Date(birthDate.split('-').reverse().join('-')); // "JJ-MM-AAAA" → "AAAA-MM-JJ"
             const age = calculateAge(birthDateObj);
             const isFirstLicense = firstLicenseYes.checked;
             const isCompetition = competitionYes.checked;
-
-            console.log("Date de naissance : ", birthDateObj);
-            console.log("Âge calculé : ", age);
 
             showResults(age, birthDateObj, isFirstLicense, isCompetition);
         }
@@ -168,9 +181,8 @@ function initCertificatPage() {
         const birthDay = birthDateObj.getDate();
         const birthMonth = birthDateObj.getMonth();
 
-        // Calculer l'anniversaire pour l'année en cours
+        // Anniversaire le plus récent (dans l'année en cours ou l'année précédente)
         let birthdayThisYear = new Date(currentYear, birthMonth, birthDay);
-
         if (birthdayThisYear > today) {
             birthdayThisYear = new Date(currentYear - 1, birthMonth, birthDay);
         }
@@ -192,20 +204,20 @@ function initCertificatPage() {
         // Cas spécifique pour les 18 ans
         if (nextAge === 18 && nextBirthday >= startOfEligibility && nextBirthday <= endOfEligibility) {
             reasonCertificat = "Je dois fournir un certificat médical car j’aurai 18 ans entre le 1er septembre et le 31 août.";
-        } 
+        }
         // Cas pour les âges multiples de 5 (30, 35, 40, etc.)
         else if (nextAge >= 30 && nextAge % 5 === 0 && nextBirthday >= startOfEligibility && nextBirthday <= endOfEligibility) {
             reasonCertificat = `Je dois fournir un certificat médical car j’aurai ${nextAge} ans entre le 1er septembre ${currentYear} et le 31 août ${currentYear + 1}.`;
-        } 
-        // Logique pour les mineurs (- de 18 ans)
+        }
+        // Mineurs (< 18 ans)
         else if (age < 18) {
             if (age === 17 && birthMonth < 8) {
                 reasonCertificat = "Je dois fournir un certificat médical car j’aurai 18 ans avant le 31 août.";
             } else {
                 reasonCertificat = "Je réponds au questionnaire de santé. Si toutes mes réponses sont NON, je fournis une attestation sur l'honneur.";
             }
-        } 
-        // Logique pour les majeurs
+        }
+        // Majeurs
         else {
             if (isFirstLicense && age >= 18) {
                 reasonCertificat = "Je dois fournir un certificat médical datant de moins d'un an pour ma première inscription.";
@@ -219,8 +231,8 @@ function initCertificatPage() {
         // Mise à jour des résultats dans l'interface
         verbBirthdayElem.textContent = "était";
         valueBirthdayElem.textContent = formattedBirthdayThisYear;
-        verbAgeElem.textContent = "ai";  // Correction ici pour "ai"
-        valueAgeElem.textContent = `eu ${age} ans`;  // Correction ici pour "eu ... ans"
+        verbAgeElem.textContent = "ai";
+        valueAgeElem.textContent = `eu ${age} ans`;
         reasonCertificatElem.textContent = reasonCertificat;
         resultsDiv.classList.remove('d-none');
     }
