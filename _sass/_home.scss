@@ -29,6 +29,25 @@
     margin: 0;
 }
 
+/* Nouveau bloc hommage : compact, lisible, bien intégré au hero */
+.home-tribute {
+  display: inline-block;       /* évite un bloc pleine largeur */
+  max-width: 520px;            /* limite la largeur pour une meilleure lisibilité */
+  width: 100%;
+  font-family: $font-stack;
+  color: $blackColor;
+
+  font-size: 0.95rem;
+  line-height: 1.35;
+
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+
+  /* Harmonisation avec votre style "highlight" */
+  background-color: #ffffe0 !important;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
 /* Suppression du padding pour le container-fluid sur mobile */
 @media (max-width: 768px) {
     .homepage-container.container-fluid {
