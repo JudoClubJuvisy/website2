@@ -28,7 +28,7 @@
     })(window,document,'script','dataLayer','GTM-NTTXXLGB');</script>
     <!-- End Google Tag Manager -->
 </head>
-<body class="{% if page.title contains 'Accueil' %}home{% endif %}">
+<body class="{% if page.home %}home{% endif %}">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTTXXLGB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -38,15 +38,15 @@
     <a class="skip-link visually-hidden-focusable" href="#contenu">Aller au contenu</a>
 
     <header>
-      {% include header.html %}
+		{% include header.html %}
     </header>
 
-    <main id="contenu" class="container main-container {% if page.title contains 'Accueil' %}home-container{% endif %}">
-        {{ content }}
-    </main>
+    <main id="contenu" class="main-container {% unless page.full_width %}container{% endunless %} {% if page.home %}home-container{% endif %}">
+		{{ content }}
+	</main>
 
     <footer>
-      {% include footer.html %}
+		{% include footer.html %}
     </footer>
 
     <!-- Bootstrap Bundle JS local -->
