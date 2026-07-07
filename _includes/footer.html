@@ -1,64 +1,65 @@
-<footer class="bg-dark text-white p-3 text-center" role="contentinfo">
+<!-- Pied de page du site. La balise <footer> est portée par _layouts/default.html. -->
+<div class="bg-dark text-white p-3 text-center" role="contentinfo">
     <div class="container">
+
         <!-- Section du footer pour les écrans moyens et grands -->
         <div class="d-none d-md-block">
             <div class="row justify-content-center mb-3">
                 <div class="col-auto">
-                    <!-- Liens légaux -->
                     <a href="{{ '/mentions-legales.html' | relative_url }}" class="footer-link text-white" aria-label="Lire les mentions légales">Mentions Légales</a>
+                    <span class="mx-2" aria-hidden="true">|</span>
+                    <a href="{{ '/confidentialite.html' | relative_url }}" class="footer-link text-white" aria-label="Lire la politique de confidentialité">Confidentialité</a>
                     <span class="mx-2" aria-hidden="true">|</span>
                     <a href="{{ '/reglement-interieur.html' | relative_url }}" class="footer-link text-white" aria-label="Lire le règlement intérieur">Règlement Intérieur</a>
                     <span class="mx-2" aria-hidden="true">|</span>
-					<a href="{{ '/certificat.html' | relative_url }}" class="footer-link text-white" aria-label="Accéder à la page de certificat médical">Attestation santé ?</a>
+                    <a href="{{ '/certificat.html' | relative_url }}" class="footer-link text-white" aria-label="Accéder à la page de certificat médical">Attestation santé ?</a>
                     <span class="mx-2" aria-hidden="true">|</span>
-                    <!-- Lien désactivé pour les statuts -->
-                    <a href="#" class="footer-link text-white disabled" aria-disabled="true" aria-label="Statuts (non disponible)">Statuts</a>
+                    <span class="footer-link text-white disabled" aria-disabled="true">Statuts</span>
                     <span class="mx-2" aria-hidden="true">|</span>
                     <a href="{{ '/plan-du-site.html' | relative_url }}" class="footer-link text-white" aria-label="Voir le plan du site">Plan du site</a>
                     <span class="mx-2" aria-hidden="true">|</span>
-                    <!-- Liens des réseaux sociaux avec aria-label pour l'accessibilité -->
-					<a href="https://www.facebook.com/groups/46020097566" target="_blank" class="social-link text-white me-3" aria-label="Visiter notre page Facebook">
-                        <img src="/assets/icons/facebook.svg" alt="Facebook" class="icon-social-link">
+
+                    <a href="https://www.facebook.com/groups/46020097566" target="_blank" rel="noopener" class="social-link text-white me-3" aria-label="Visiter notre page Facebook, ouvre un nouvel onglet">
+                        <img src="{{ '/assets/icons/facebook.svg' | relative_url }}" alt="Facebook" class="icon-social-link">
                     </a>
-                    <a href="https://www.instagram.com/judoclubjuvisy" target="_blank" class="social-link text-white me-3" aria-label="Visiter notre page Instagram">
-                        <img src="/assets/icons/instagram.svg" alt="Instagram" class="icon-social-link">
+                    <a href="https://www.instagram.com/judoclubjuvisy" target="_blank" rel="noopener" class="social-link text-white me-3" aria-label="Visiter notre page Instagram, ouvre un nouvel onglet">
+                        <img src="{{ '/assets/icons/instagram.svg' | relative_url }}" alt="Instagram" class="icon-social-link">
                     </a>
-                    <a href="https://chat.whatsapp.com/JWRQ5h7vFeD1V6rXQImvNJ" target="_blank" class="social-link text-white" aria-label="Nous contacter sur WhatsApp">
-                        <img src="/assets/icons/whatsapp.svg" alt="WhatsApp" class="icon-social-link">
+                    <a href="https://chat.whatsapp.com/JWRQ5h7vFeD1V6rXQImvNJ" target="_blank" rel="noopener" class="social-link text-white" aria-label="Nous contacter sur WhatsApp, ouvre un nouvel onglet">
+                        <img src="{{ '/assets/icons/whatsapp.svg' | relative_url }}" alt="WhatsApp" class="icon-social-link">
                     </a>
                 </div>
             </div>
         </div>
-        
+
         <!-- Section du footer pour les petits écrans -->
         <div class="d-block d-md-none">
             <div class="row justify-content-center mb-3">
                 <div class="col-auto">
-                    <!-- Liens des réseaux sociaux avec aria-label pour l'accessibilité -->
-					<a href="https://www.facebook.com/groups/46020097566" target="_blank" class="social-link text-white me-3" aria-label="Visiter notre page Facebook">
-                        <img src="/assets/icons/facebook.svg" alt="Facebook" class="icon-social-link">
+                    <a href="https://www.facebook.com/groups/46020097566" target="_blank" rel="noopener" class="social-link text-white me-3" aria-label="Visiter notre page Facebook, ouvre un nouvel onglet">
+                        <img src="{{ '/assets/icons/facebook.svg' | relative_url }}" alt="Facebook" class="icon-social-link">
                     </a>
-                    <a href="https://www.instagram.com/judoclubjuvisy" target="_blank" class="social-link text-white me-3" aria-label="Visiter notre page Instagram">
-                        <img src="/assets/icons/instagram.svg" alt="Instagram" class="icon-social-link">
+                    <a href="https://www.instagram.com/judoclubjuvisy" target="_blank" rel="noopener" class="social-link text-white me-3" aria-label="Visiter notre page Instagram, ouvre un nouvel onglet">
+                        <img src="{{ '/assets/icons/instagram.svg' | relative_url }}" alt="Instagram" class="icon-social-link">
                     </a>
-                    <a href="https://chat.whatsapp.com/JWRQ5h7vFeD1V6rXQImvNJ" target="_blank" class="social-link text-white" aria-label="Nous contacter sur WhatsApp">
-                        <img src="/assets/icons/whatsapp.svg" alt="WhatsApp" class="icon-social-link">
+                    <a href="https://chat.whatsapp.com/JWRQ5h7vFeD1V6rXQImvNJ" target="_blank" rel="noopener" class="social-link text-white" aria-label="Nous contacter sur WhatsApp, ouvre un nouvel onglet">
+                        <img src="{{ '/assets/icons/whatsapp.svg' | relative_url }}" alt="WhatsApp" class="icon-social-link">
                     </a>
                 </div>
             </div>
+
             <div class="row text-center mb-3">
                 <div class="col-12">
-                    <!-- Liens légaux pour petits écrans -->
                     <a href="{{ '/mentions-legales.html' | relative_url }}" class="footer-link text-white d-block mb-2" aria-label="Lire les mentions légales">Mentions Légales</a>
+                    <a href="{{ '/confidentialite.html' | relative_url }}" class="footer-link text-white d-block mb-2" aria-label="Lire la politique de confidentialité">Confidentialité</a>
                     <a href="{{ '/reglement-interieur.html' | relative_url }}" class="footer-link text-white d-block mb-2" aria-label="Lire le règlement intérieur">Règlement Intérieur</a>
-					<a href="{{ '/certificat.html' | relative_url }}" class="footer-link text-white d-block mb-2" aria-label="Accéder à la page de certificat médical">Attestation santé ?</a>
-                    <!-- Lien désactivé pour les statuts -->
-                    <a href="#" class="footer-link text-white d-block mb-2 disabled" aria-disabled="true" aria-label="Statuts (non disponible)">Statuts</a>
+                    <a href="{{ '/certificat.html' | relative_url }}" class="footer-link text-white d-block mb-2" aria-label="Accéder à la page de certificat médical">Attestation santé ?</a>
+                    <span class="footer-link text-white d-block mb-2 disabled" aria-disabled="true">Statuts</span>
                     <a href="{{ '/plan-du-site.html' | relative_url }}" class="footer-link text-white d-block" aria-label="Voir le plan du site">Plan du site</a>
                 </div>
             </div>
         </div>
-        
+
         <!-- Informations de copyright -->
         <div class="row">
             <div class="col">
@@ -66,4 +67,4 @@
             </div>
         </div>
     </div>
-</footer>
+</div>

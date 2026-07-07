@@ -1,4 +1,33 @@
+# Autorisation générale d'exploration du site.
 User-agent: *
+Allow: /
+
+# OpenAI / ChatGPT Search : indexation pour les réponses avec recherche.
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI / accès déclenché par un utilisateur de ChatGPT.
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI / exploration pour l'amélioration des modèles.
+User-agent: GPTBot
+Allow: /
+
+# Anthropic / Claude Search : indexation pour la recherche Claude.
+User-agent: Claude-SearchBot
+Allow: /
+
+# Anthropic / accès déclenché par un utilisateur de Claude.
+User-agent: Claude-User
+Allow: /
+
+# Anthropic / exploration pour l'amélioration des modèles Claude.
+User-agent: ClaudeBot
+Allow: /
+
+# Google / contrôle des usages Gemini et Vertex AI.
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://www.judo-juvisy.org/sitemap.xml

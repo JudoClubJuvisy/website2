@@ -1,44 +1,76 @@
 ---
 layout: default
-title: Plan du site
+title: "Plan du site | Judo Club de Juvisy"
+description: "Plan du site du Judo Club de Juvisy : club, disciplines, inscriptions, horaires, compétitions, documents légaux et contact."
 ---
 
-<section class="container my-3">
+<section class="my-3">
     <h1 id="site-map-heading">Plan du site</h1>
+
     <nav aria-labelledby="site-map-heading">
         <ul>
-            <!-- Menu principal -->
             <li><a href="{{ '/' | relative_url }}">Accueil</a></li>
-            <li><a href="{{ '/le-club.html' | relative_url }}">Le Club</a></li>
+
             <li>
-                <a href="#">Nos disciplines</a>
+                Le Club
                 <ul>
-                    <li><a href="{{ '/jujitsu.html' | relative_url }}">Le Ju-Jitsu</a></li>
+                    <li><a href="{{ '/le-club.html' | relative_url }}">Présentation du club</a></li>
+                    <li><a href="{{ '/notre-philosophie.html' | relative_url }}">Notre philosophie</a></li>
+                    <li><a href="{{ '/histoire-du-club.html' | relative_url }}">Notre histoire</a></li>
+                    <li><a href="{{ '/vie-du-club.html' | relative_url }}">La vie du club</a></li>
+                    <li><a href="{{ '/ceintures-noires.html' | relative_url }}">Ceintures noires &amp; transmission</a></li>
+                </ul>
+            </li>
+
+            <li>
+                Nos disciplines
+                <ul>
+                    <li><a href="{{ '/disciplines.html' | relative_url }}">Quelle discipline choisir ?</a></li>
                     <li><a href="{{ '/judo.html' | relative_url }}">Le Judo</a></li>
+                    <li><a href="{{ '/jiu-jitsu-bresilien.html' | relative_url }}">Le Jiu-Jitsu Brésilien</a></li>
+                    <li><a href="{{ '/jujitsu.html' | relative_url }}">Le Ju-Jitsu Japonais</a></li>
                     <li><a href="{{ '/taiso.html' | relative_url }}">Le Taïso</a></li>
                 </ul>
             </li>
-            <li><a href="{{ '/inscription.html' | relative_url }}">S'inscrire</a></li>
+
+            <li><a href="{{ '/inscription.html' | relative_url }}">S’inscrire</a></li>
+
             <li>
-                <a href="#">Les entraînements</a>
+                Les entraînements
                 <ul>
                     <li><a href="{{ '/horaires.html' | relative_url }}">Les horaires</a></li>
-                    <li><a href="{{ '/equipement.html' | relative_url }}">L'équipement</a></li>
+                    <li><a href="{{ '/equipement.html' | relative_url }}">L’équipement</a></li>
                 </ul>
             </li>
+
             <li>
-				<a href="{{ '/competitions.html' | relative_url }}">Les compétitions</a>
-				<ul>
-					<li><a href="https://judo91.com/" target="_blank" rel="noopener">Comité de Judo de l’Essonne</a></li>
-                    <li><a href="https://www.idfjudo.com/" target="_blank" rel="noopener">Ligue Île-de-France de Judo</a></li>
-                    <li><a href="https://www.ffjudo.com/" target="_blank" rel="noopener">Fédération Française de Judo</a></li>
-				</ul>
-			</li>
+                Les compétitions
+                <ul>
+                    <li><a href="{{ '/competitions-officielles.html' | relative_url }}">Les compétitions officielles</a></li>
+                    <li><a href="{{ '/competitions-amicales.html' | relative_url }}">Les compétitions amicales</a></li>
+                </ul>
+            </li>
+
+            <li>
+                Boutique
+                <ul>
+                    <li><a href="https://www.helloasso.com/associations/judo-club-de-juvisy/boutiques/judogis-du-club" target="_blank" rel="noopener">La boutique du club sur HelloAsso</a></li>
+                </ul>
+            </li>
+
             <li><a href="{{ '/contact.html' | relative_url }}">Nous contacter</a></li>
-            <!-- Liens du pied de page -->
-            <li><a href="{{ '/mentions-legales.html' | relative_url }}">Mentions Légales</a></li>
-            <li><a href="{{ '/reglement-interieur.html' | relative_url }}">Règlement Intérieur</a></li>
-            <li><a href="{{ '/plan-du-site.html' | relative_url }}">Plan du site</a></li>
+
+            <li>
+                Informations légales et pratiques
+                <ul>
+                    <li><a href="{{ '/mentions-legales.html' | relative_url }}">Mentions légales</a></li>
+                    <li><a href="{{ '/confidentialite.html' | relative_url }}">Confidentialité</a></li>
+                    <li><a href="{{ '/reglement-interieur.html' | relative_url }}">Règlement intérieur</a></li>
+                    <li><a href="{{ '/certificat.html' | relative_url }}">Attestation santé ?</a></li>
+                    <li>Statuts <span class="text-muted">à venir</span></li>
+                    <li><a href="{{ '/plan-du-site.html' | relative_url }}">Plan du site</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </section>
