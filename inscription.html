@@ -86,30 +86,135 @@ title: Inscriptions Judo, JJB, Ju-Jitsu et Taïso 2026-2027 à Juvisy, Essonne
 
     </div>
 
+    <div class="alert alert-warning mt-3" role="alert">
+        <strong>Je ne transmets jamais le questionnaire de santé au club :</strong> il contient des informations médicales confidentielles.
+        Je télécharge, complète et joins uniquement <strong>l'attestation sur l'honneur</strong> si toutes mes réponses sont négatives,
+        ou <strong>le certificat médical</strong> si au moins une réponse est positive ou si ma situation l'impose.
+    </div>
+
+    <p class="mb-0">
+        <strong>Préinscription Baby :</strong> aucun document médical n'est demandé à ce stade. Je prépare le document correspondant
+        à la situation de mon enfant pour l'inscription définitive, après la séance d'essai et l'accord du professeur.
+    </p>
+
     <hr>
 
     <!-- Étape 3 : Inscription en ligne -->
     <h2>Étape 3 : Je m'inscris en ligne</h2>
     
     <p>Pour faciliter mon inscription, je m'inscris en ligne via la plateforme sécurisée HelloAsso.</p>
-    <p>Je peux payer en 1 fois ou en 3 fois.</p>
-    
-    <div class="text-center my-3">
-        <a href="https://www.helloasso.com/associations/judo-club-de-juvisy" class="btn btn-primary btn-lg btn-inscription" role="button">
-            <img src="{{ '/assets/icons/verified_24dp_5F6368_FILL0_wght300_GRAD0_opsz24.svg' | relative_url }}" alt="Icône vérifiée" class="icon-btn icon-white">
-            Je m'inscris en ligne dès maintenant !
+    <p>
+        <strong>Je choisis le formulaire uniquement selon l'âge du pratiquant :</strong> préinscription Baby pour un enfant concerné par le Baby,
+        inscription Enfant pour toute autre personne mineure, ou inscription Adulte pour une personne majeure.
+    </p>
+
+    <div class="row g-3 my-4">
+
+        <!-- Préinscription Baby -->
+        <div class="col-lg-4">
+            <div class="card h-100 border-warning">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="h4 card-title">Préinscription Baby Judo</h3>
+                    <p><strong>Uniquement pour les enfants nés en 2022 ou 2023.</strong></p>
+                    <p>
+                        Je choisis le cours du lundi ou du samedi et j'inscris mon enfant à une séance d'essai gratuite.
+                        L'inscription définitive est conditionnée à l'avis du professeur.
+                    </p>
+                    <p>
+                        La préinscription est gratuite. Après validation de l'essai, la cotisation annuelle Baby Judo est de
+                        <strong>192€ dont 46€ pour la licence</strong>.
+                    </p>
+                    <div class="alert alert-warning py-2" role="alert">
+                        <strong>Les enfants nés en 2024 ne sont pas acceptés cette saison.</strong>
+                    </div>
+                    <a href="https://www.helloasso.com/associations/judo-club-de-juvisy/adhesions/pre-inscription-baby-judo-saison-2026-2027"
+                       class="btn btn-primary mt-auto" role="button" target="_blank" rel="noopener"
+                       aria-label="Préinscrire mon enfant au Baby Judo sur HelloAsso, ouvre un nouvel onglet">
+                        Préinscrire mon enfant au Baby Judo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inscription Enfant -->
+        <div class="col-lg-4">
+            <div class="card h-100 border-primary">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="h4 card-title">Inscription Enfant</h3>
+                    <p><strong>Pour toute personne mineure, à l'exception des enfants inscrits au Baby Judo.</strong></p>
+                    <p>
+                        Ce formulaire concerne tous les adhérents de moins de 18 ans, quelle que soit la catégorie
+                        ou la discipline pratiquée au club. Il permet notamment de recueillir les informations du représentant légal.
+                    </p>
+                    <div class="alert alert-info py-2" role="alert">
+                        Ce formulaire n'est pas limité à certaines catégories de judo : <strong>tout adhérent mineur non-Baby utilise ce formulaire</strong>.
+                    </div>
+                    <a href="https://www.helloasso.com/associations/judo-club-de-juvisy/adhesions/adhesion-enfant-2026-2027"
+                       class="btn btn-primary mt-auto" role="button" target="_blank" rel="noopener"
+                       aria-label="Inscrire une personne mineure sur HelloAsso, ouvre un nouvel onglet">
+                        Inscrire une personne mineure
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inscription Adulte -->
+        <div class="col-lg-4">
+            <div class="card h-100 border-dark">
+                <div class="card-body d-flex flex-column">
+                    <h3 class="h4 card-title">Inscription Adulte</h3>
+                    <p><strong>Uniquement pour les personnes majeures.</strong></p>
+                    <p>
+                        Ce formulaire concerne tous les adhérents de 18 ans et plus, pour le Judo, le Ju-Jitsu traditionnel,
+                        le Jiu-Jitsu Brésilien ou le Taïso.
+                    </p>
+                    <div class="alert alert-info py-2" role="alert">
+                        Un pratiquant mineur n'utilise jamais ce formulaire, même s'il participe à un cours également ouvert aux adultes.
+                    </div>
+                    <a href="https://www.helloasso.com/associations/judo-club-de-juvisy/adhesions/adhesion-adulte-saison-2026-2027"
+                       class="btn btn-primary mt-auto" role="button" target="_blank" rel="noopener"
+                       aria-label="Inscrire une personne majeure sur HelloAsso, ouvre un nouvel onglet">
+                        Inscrire une personne majeure
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="d-flex flex-wrap gap-2 justify-content-center my-4">
+        <a href="{{ '/horaires.html' | relative_url }}" class="btn btn-outline-primary" role="button">
+            Consulter les horaires
+        </a>
+        <a href="{{ '/disciplines.html' | relative_url }}" class="btn btn-outline-primary" role="button">
+            Découvrir les disciplines proposées
+        </a>
+        <a href="{{ '/equipement.html' | relative_url }}" class="btn btn-outline-primary" role="button">
+            Préparer l'équipement nécessaire
         </a>
     </div>
 
-    <p><strong>Remarque importante :</strong> Au moment de régler ma cotisation, HelloAsso me propose par défaut de les soutenir.</br>
-    <em>« Par exemple, ma contribution à HelloAsso est de 4,15 € par échéance (Soit 12,45 € au total) »</em></br>
+    <div class="alert alert-danger" role="alert">
+        <strong>Attention lorsque j'inscris un enfant :</strong> après avoir sélectionné un tarif, je clique sur
+        « Ajouter une personne » et je renseigne les nom et prénom de l'enfant pratiquant. Je ne laisse pas l'identité
+        du payeur ou du représentant légal dans la rubrique « Adhérent ».
+    </div>
+
+    <p>Je peux payer par carte bancaire en 1 fois ou en 3 fois. Je peux également demander un règlement par chèque ou en espèces lorsque cette possibilité est proposée dans le formulaire.</p>
+
+    <p><strong>Remarque importante :</strong> Au moment de régler ma cotisation, HelloAsso me propose par défaut de les soutenir.<br>
+    <em>« Par exemple, ma contribution à HelloAsso est de 4,15 € par échéance (Soit 12,45 € au total) »</em><br>
     Je clique sur "Modifier" et je choisis la somme désirée. Je peux tout à fait mettre 0€.</p>
 
     <hr>
 
     <!-- Autres informations -->
-    <h2>Des informations utiles</h2>    
-    <p>Une permanence est tenue tous les samedis du mois de septembre 2025 au Gymnase Delaune (38 rue Paul Doumer, Juvisy) durant les heures d'entraînements.</p>
+    <h2>Des informations utiles</h2>
+
+    <p>
+        Nous serons présents à la <strong>Journée des associations le dimanche 6 septembre 2026</strong>, au parc des Grottes à Juvisy-sur-Orge.
+        Les cours reprendront le <strong>lundi 7 septembre 2026</strong> au gymnase Auguste-Delaune, 38 rue Paul-Doumer à Juvisy-sur-Orge.
+    </p>
 
     <div class="accordion" id="additionalInfoAccordion">
 
@@ -122,13 +227,19 @@ title: Inscriptions Judo, JJB, Ju-Jitsu et Taïso 2026-2027 à Juvisy, Essonne
             </h3>
             <div id="collapsePayment" class="accordion-collapse collapse" aria-labelledby="headingPayment" data-bs-parent="#additionalInfoAccordion">
                 <div class="accordion-body">
+                    <p><strong>Quelle que soit la manière dont je règle, je renseigne d'abord le formulaire HelloAsso correspondant au pratiquant.</strong></p>
                     <p>Je peux régler la cotisation de plusieurs façons :</p>
                     <ul>
-                        <li><strong>En ligne :</strong> lors de mon inscription via HelloAsso</li>
-                        <li><strong>Par carte bancaire :</strong> au stand du club lors de la journée des associations le <strong>dimanche 7 septembre 2025</strong>, de 9h à 18h, au parc des Grottes à Juvisy-sur-Orge.</li>
-                        <li><strong>Par chèque :</strong> à l'ordre du Judo Club de Juvisy.</li>
+                        <li><strong>Par carte bancaire en 1 fois :</strong> le montant total est prélevé par HelloAsso.</li>
+                        <li><strong>Par carte bancaire en 3 fois :</strong> les trois échéances sont prélevées par HelloAsso.</li>
+                        <li><strong>Par chèque :</strong> je sélectionne le tarif prévu à cet effet dans HelloAsso, puis je remets mon règlement à l'ordre du Judo Club de Juvisy.</li>
+                        <li><strong>En espèces :</strong> uniquement lorsque ce mode est proposé par le club ; je sélectionne le règlement hors ligne dans HelloAsso.</li>
                     </ul>
-                    <p>Le club accepte le Pass’sport (du ministère des sports), les tickets loisirs jeunes de la CAF91 ainsi les coupons sport de l'ANCV.</p>
+                    <div class="alert alert-warning" role="alert">
+                        Pour un règlement par chèque ou en espèces, HelloAsso affiche <strong>0€</strong>, car aucun paiement n'est encaissé en ligne.
+                        <strong>L'adhésion n'est pas gratuite :</strong> je dois remettre au club le montant correspondant à ma cotisation.
+                    </div>
+                    <p>Le club accepte le Pass’Sport du ministère des Sports, les Tickets Loisirs Jeunes de la CAF91 ainsi que les Coupons Sport de l'ANCV.</p>
                 </div>
             </div>
         </div>
@@ -142,36 +253,53 @@ title: Inscriptions Judo, JJB, Ju-Jitsu et Taïso 2026-2027 à Juvisy, Essonne
             </h3>
             <div id="collapseFees" class="accordion-collapse collapse" aria-labelledby="headingFees" data-bs-parent="#additionalInfoAccordion">
                 <div class="accordion-body">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Cours</th>
-                                <th>Cotisation</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Baby Judo</td>
-                                <td>192€ (dont 46€ pour la licence)</td>
-                            </tr>
-                            <tr>
-                                <td>Judo Enfant</td>
-                                <td>216€ (dont 46€ pour la licence)</td>
-                            </tr>
-                            <tr>
-                                <td>Judo Adulte</td>
-                                <td>228€ (dont 46€ pour la licence)</td>
-                            </tr>
-                            <tr>
-                                <td>Ju-Jitsu / Self-défense</td>
-                                <td>180€ (dont 46€ pour la licence)</td>
-                            </tr>
-                            <tr>
-                                <td>Taïso</td>
-                                <td>180€ (dont 46€ pour la licence)</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-bordered align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Cours ou formule</th>
+                                    <th scope="col">Paiement en 1 fois</th>
+                                    <th scope="col">Paiement par CB en 3 fois</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Baby Judo</td>
+                                    <td>192€ (dont 46€ pour la licence)</td>
+                                    <td>3 × 64€ (192€ au total)</td>
+                                </tr>
+                                <tr>
+                                    <td>Judo Enfant</td>
+                                    <td>216€ (dont 46€ pour la licence)</td>
+                                    <td>3 × 72€ (216€ au total)</td>
+                                </tr>
+                                <tr>
+                                    <td>Judo Enfant avec Pass’Sport, de 14 à 17 ans</td>
+                                    <td>146€</td>
+                                    <td>3 × 49€ (147€ au total)</td>
+                                </tr>
+                                <tr>
+                                    <td>Une seule discipline parmi Ju-Jitsu traditionnel, JJB ou Taïso</td>
+                                    <td>180€ (dont 46€ pour la licence)</td>
+                                    <td>3 × 60€ (180€ au total)</td>
+                                </tr>
+                                <tr>
+                                    <td>Judo pour un pratiquant majeur de moins de 25 ans</td>
+                                    <td>216€ (dont 46€ pour la licence)</td>
+                                    <td>3 × 72€ (216€ au total)</td>
+                                </tr>
+                                <tr>
+                                    <td>Judo à partir de 25 ans ou pratique de deux disciplines et plus</td>
+                                    <td>228€ (dont 46€ pour la licence)</td>
+                                    <td>3 × 76€ (228€ au total)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>
+                        Pour un règlement par chèque ou en espèces, le montant dû est le même que le tarif en 1 fois,
+                        déduction faite, le cas échéant, des aides et remises validées par le club.
+                    </p>
                     <p>La licence FFJDA annuelle est obligatoire pour plusieurs raisons essentielles : la couverture d'assurance, la participation aux compétitions, la reconnaissance officielle du club et de ses membres, et l'accès aux grades.</p>
                     <p>+ 8€ pour le passeport sportif judo si je participe aux compétitions officielles. Le passeport est valable 8 ans.</p>
                 </div>
@@ -191,7 +319,7 @@ title: Inscriptions Judo, JJB, Ju-Jitsu et Taïso 2026-2027 à Juvisy, Essonne
                     <ul>
                         <li>-10€ sur la deuxième cotisation,</li>
                         <li>-20€ sur la troisième cotisation,</li>
-						<li>-30€ sur la quatrième cotisation...</li>
+                        <li>-30€ sur la quatrième cotisation...</li>
                     </ul>
                     <p>Exemple :</p>
                     <table class="table table-bordered">
@@ -224,47 +352,82 @@ title: Inscriptions Judo, JJB, Ju-Jitsu et Taïso 2026-2027 à Juvisy, Essonne
                             </tr>
                         </tbody>
                     </table>
-                    Les 5 membres de cette famille bénéficient d'une remise totale de 100€ (en renseignant le code 5COTIZ)
+                    <p>
+                        Les 5 membres de cette famille bénéficient d'une remise totale de 100€ en renseignant le code 5COTIZ.
+                        Je contacte le club avant de payer si j'ai besoin du code correspondant au nombre d'adhésions de mon foyer.
+                    </p>
                 </div>
             </div>
         </div>
 
-		<!-- Accordéon pour l'inscription alternative -->
+        <!-- Accordéon pour l'identité de l'adhérent -->
         <div class="accordion-item">
-            <h3 class="accordion-header" id="headingAlternative">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAlternative" aria-expanded="false" aria-controls="collapseAlternative">
-                    Inscription alternative
+            <h3 class="accordion-header" id="headingIdentity">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIdentity" aria-expanded="false" aria-controls="collapseIdentity">
+                    Bien renseigner l'identité de l'adhérent
                 </button>
             </h3>
-            <div id="collapseAlternative" class="accordion-collapse collapse" aria-labelledby="headingAlternative" data-bs-parent="#additionalInfoAccordion">
+            <div id="collapseIdentity" class="accordion-collapse collapse" aria-labelledby="headingIdentity" data-bs-parent="#additionalInfoAccordion">
                 <div class="accordion-body">
                     <p>
-                        Bien que l'inscription en ligne via HelloAsso soit la méthode la plus simple et la plus pratique, vous avez également la possibilité de régler par chèque ou carte bancaire.
+                        Dans HelloAsso, la rubrique « Adhérent » désigne toujours la personne qui pratiquera sur le tatami.
+                        Pour une inscription Enfant ou une préinscription Baby, je dois donc y renseigner l'identité de l'enfant,
+                        et non celle du parent ou du payeur.
                     </p>
-                    <p>
-                        <strong>Si je suis déjà licencié</strong>, je me connecte sur le site de la <a href="https://www.ffjudo.com/" target="_blank" aria-label="Site officiel de la fédération française de judo, ouvre un nouvel onglet">Fédération Française de Judo</a> <strong>pour demander le renouvellement de ma licence</strong>.
-					</p>
-                    <p>
-                        <strong>Si je ne suis pas encore licencié</strong>, j'imprime et je remplis le <a href="{{ '/assets/files/Formulaire_2024_2025.pdf' | relative_url }}" target="_blank" aria-label="Télécharger le formulaire d'inscription 2024-2025, ouvre un nouvel onglet">formulaire d'inscription</a>.
+                    <p class="mb-0">
+                        Les informations du représentant légal, du contact principal et du payeur sont demandées séparément dans le formulaire.
                     </p>
-					<p>	
-						Je joins ensuite :
-                    </p>
-                    <ul>
-                        <li>l'attestation du règlement intérieur (voir <strong>Étape 1</strong>),</li>
-                        <li>l'attestation santé ou le certificat médical (voir <strong>Étape 2</strong>),</li>
-                    </ul>
-                    <p>
-                        J'imprime ces documents et je les remets, avec le règlement, lors des permanences du club. 
-                    </p>
-					<p>
-					<strong>Les dossiers incomplets ne seront pas acceptés.</strong>
-					</p>
                 </div>
             </div>
         </div>
 
+        <!-- Accordéon pour la préinscription Baby -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="headingBaby">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBaby" aria-expanded="false" aria-controls="collapseBaby">
+                    Comprendre la préinscription Baby Judo
+                </button>
+            </h3>
+            <div id="collapseBaby" class="accordion-collapse collapse" aria-labelledby="headingBaby" data-bs-parent="#additionalInfoAccordion">
+                <div class="accordion-body">
+                    <p>
+                        La préinscription gratuite permet de choisir un créneau et de réserver une séance d'essai.
+                        Elle ne constitue pas encore une adhésion définitive.
+                    </p>
+                    <p class="mb-0">
+                        Après la séance, le professeur confirme ou non l'admission. En cas d'accord, le club transmet le lien privé
+                        permettant de compléter le dossier, de joindre le justificatif santé et de régler la cotisation de 192€.
+                    </p>
+                </div>
+            </div>
+        </div>
 
+        <!-- Accordéon pour le dossier complet -->
+        <div class="accordion-item">
+            <h3 class="accordion-header" id="headingCompleteFile">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCompleteFile" aria-expanded="false" aria-controls="collapseCompleteFile">
+                    Quand mon inscription est-elle définitive ?
+                </button>
+            </h3>
+            <div id="collapseCompleteFile" class="accordion-collapse collapse" aria-labelledby="headingCompleteFile" data-bs-parent="#additionalInfoAccordion">
+                <div class="accordion-body">
+                    <p>Mon adhésion est définitive lorsque le club dispose :</p>
+                    <ul>
+                        <li>du formulaire HelloAsso correctement renseigné au nom du pratiquant ;</li>
+                        <li>de l'attestation sur l'honneur ou du certificat médical correspondant à ma situation ;</li>
+                        <li>du règlement complet ou des justificatifs d'aide annoncés ;</li>
+                        <li>de l'acceptation du règlement intérieur.</li>
+                    </ul>
+                    <p class="mb-0"><strong>Les dossiers incomplets ne seront pas acceptés.</strong></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="alert alert-light border mt-4" role="alert">
+        <strong>Une question avant de valider ?</strong> J'écris à
+        <a href="mailto:contact@judo-juvisy.org">contact@judo-juvisy.org</a> en indiquant le nom, le prénom et l'année de naissance du pratiquant.
     </div>
 
 </section>
